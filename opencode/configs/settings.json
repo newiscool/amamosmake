@@ -1,0 +1,192 @@
+{"current":{
+  "theme_id":"150699",
+
+      "phones"      :   "(14) 9 8171-8343",
+      "whatsapp"    :   "(14) 9 8717-8343",
+      "emailum"     :   "sac@amamosmake.com",
+      "support"     :   "Horario de atendimento:  Seg à Sex, das 8 às 18h",
+      "phone"       :   "",
+      "facebook"    :   "",
+      "instagram"   :   "",
+      "youtube"     :   "",
+      "blog"        :   "",
+      "emaildois"   :   "",
+
+      "frete": "Tudo em até <strong>3x s/ juros</strong>",
+      "card" : "3x s/juros",
+      "freeShipping": "À partir de R$150,00",
+      "freeShippingActived": "1",
+      "fretevalor": "200",
+  
+      "marca-01": "",
+      "marca-02": "",
+      "marca-03": "",
+      "marca-04": "",
+      "marca-05": "",
+      "marca-06": "",
+      "marca-07": "",
+      "marca-08": "",
+      "marca-09": "",
+      "marca-10": "",
+
+      "favicon": "",
+
+      "vitrine1": "Oba, Baixaram de preço",
+      "quantidade1": "9",
+      "filtros1": "",
+      "ordem1": "rand",
+      "showCase1active":"1",
+      "categories1":"",
+    
+      "vitrine2": "Nossas promoções",
+      "quantidade2": "9",
+      "filtros2": "",
+      "ordem2": "rand",
+      "showCase2active":"1",
+      "categories2":"",
+
+      "copyright " : "CNPJ: 27.615.225/0001-09 - End: Rua Dr Gelás, 288 - Bassan - Marília/SP CEP: 17.506-161 - Tel: (14) 4101.2310 - E-mail: sac@amamosmake.com Horário de atendimento: Seg à Sex das 9h às 18h - Sáb das 9h às 13h ",
+         
+      "vitrine3": "Kits e Presentes",
+      "quantidade3": "9",
+      "filtros3": "",
+      "ordem3": "rand",
+      "showCase3active":"2",
+      "categories3":"",
+
+      "vitrine4": "Preferidos das Blogueiras",
+      "quantidade4": "9",
+      "filtros4": "",
+      "ordem4": "rand",
+      "showCase4active":"2",
+      "categories4":"",
+
+      "vitrine5": "Arrasar na Make",
+      "quantidade5": "9",
+      "filtros5": "",
+      "ordem5": "rand",
+      "showCase5active":"1",
+      "categories5":"",
+
+      "vitrine6": "Mais Vendidos",
+      "quantidade6": "9",
+      "filtros6": "",
+      "ordem6": "rand",
+      "showCase6active":"1",
+      "categories6":"",
+
+      "vitrine7": "Para Pele",
+      "quantidade7": "9",
+      "filtros7": "",
+      "ordem7": "rand",
+      "showCase7active":"1",
+      "categories7":"",
+
+      "vitrine8": "Olhos",
+      "quantidade8": "9",
+      "filtros8": "",
+      "ordem8": "rand",
+      "showCase8active":"1",
+      "categories8":"",
+
+      "vitrine9": "Boca",
+      "quantidade9": "9",
+      "filtros9": "",
+      "ordem9": "rand",
+      "showCase9active":"1",
+      "categories9":"" ,
+
+      "chamadafrete":"Frete grátis",
+      "condicaofrete":"Compras Acima De R$99",
+
+      "chamadajuros":"6X SEM JUROS",
+      "condicaojuros":"Parcele Nos Cartões",
+      
+      "chamadadesconto":"8% de desconto",
+      "condicaodesconto":"compras à vista",
+
+      "chamadasobrealoja":"20 ANOS LOJÃO DO TONER",
+      "condicaosobrealoja":"Experiência No Segmento De Copiadoras",
+
+      "institucional01":"/quem-somos",
+      "institucional01nome":"Quem Somos",
+
+      "institucional02":"/loja-segura-privacidade",
+      "institucional02nome":"Loja Segura - Privacidade",
+
+      "institucional03":"/clube-divas",
+      "institucional03nome":"Clube das Divas Fidelidade",
+
+      "institucional04":"/noticias",
+      "institucional04nome":"Dica das Divas - Acompanhe!",
+
+      "institucional05":"/programa-fidelidade",
+      "institucional05nome":"Programa de Afiliados",
+
+      "institucional06":"",
+      "institucional06nome":"",
+
+      "institucional07":"",
+      "institucional07nome":"",
+
+      
+
+      "duvidas01":"/central-de-ajuda",
+      "duvidas01nome":"Central de Ajuda",
+
+      "duvidas02":"/como-comprar",
+      "duvidas02nome":"Como Comprar",
+
+      "duvidas03":"/regras-de-frete",
+      "duvidas03nome":"Regras de Frete",
+
+      "duvidas04":"/envios-e-prazos",
+      "duvidas04nome":"Trocas e Devoluções!",
+
+      "duvidas05":"/pagamento",
+      "duvidas05nome":"Pagamentos",
+
+      "duvidas06":"",
+      "duvidas06nome":"",
+
+      "duvidas07":"",
+      "duvidas07nome":"",
+
+
+
+      "servicos01":"{{ links.account }}",
+      "servicos01nome":"Dados Pessoais",
+
+      "servicos02":"{{ links.orders }}",
+      "servicos02nome":"Meus Pedidos",
+
+      "servicos03":"{{ links.orders }}",
+      "servicos03nome":"Meus Pontos",
+
+      "servicos04":"/listas",
+      "servicos04nome":"Lista de Desejos!",
+
+      "servicos05":"{{links.register}}",
+      "servicos05nome":"Cadastre-se",
+
+      "servicos06":"",
+      "servicos06nome":"",
+
+      "servicos07":"",
+      "servicos07nome":"",
+
+      "ruler1":"Cadastre-se e ganhe",
+      "ruler2":"R$ 10,00 de desconto!",
+
+      "ruler3":"FRETE GRÁTIS",
+      "ruler4":"PARA SUL E SUDESTE NAS COMPRAS ACIMA DE R$199,99",
+
+      "ruler5":"Loja certificada",
+      "ruler6":"Garantia de compra segura",
+
+      "ruler7":"Ganhe um brinde",
+      "ruler8":"Comprando no cartão"
+
+    
+  }
+}

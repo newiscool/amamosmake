@@ -1,0 +1,32 @@
+/**
+ * Base / Settings
+ */
+/* line 8, ../sass/bkp/base.scss */
+body {
+  background: #fff;
+  color: #25282a;
+}
+
+/* line 14, ../sass/bkp/base.scss */
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* line 22, ../sass/bkp/base.scss */
+.vspace-xs,
+.vspace-sm,
+.vspace-lg {
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+/* line 27, ../sass/bkp/base.scss */
+.vspace-sm {
+  margin-bottom: 10px;
+}
+
+/* line 31, ../sass/bkp/base.scss */
+.vspace-lg {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,29 @@
+{% if product.available %}
+<div class="labels">
+    {% if product.featured %}
+        {% if Image('featured') %}
+            <span class="featured">{{ Image('featured') }}</span>
+        {% else %}
+    <span class="label featured">Destaque</span>
+        {% endif %}
+    {% endif %}
+    {% if product.free_shipping %}
+        {% if Image('free_shipping') %}
+        <span class="free-shipping">{{ Image('free_shipping') }}</span>
+            {% else %}
+        <span class="label free-shipping">Frete Grátis</span>
+        {% endif %}
+    {% endif %}
+
+    {% if product.new %}
+        {% if Image('new') %}
+            <span class=" botao-new">{{ Image('new') }}</span>
+        {% else %}
+            <span class="label new">Novidade</span>
+        {% endif %}
+    {% endif %}
+    {% if product.promotion %}
+    <span class="label promotion">Promoção</span>
+    {% endif %}
+</div>
+{% endif %}

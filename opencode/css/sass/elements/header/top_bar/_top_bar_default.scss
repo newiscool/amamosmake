@@ -1,0 +1,114 @@
+.info-lane {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0 8px 13.66%;
+}
+
+.card-info {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+
+  span {
+    color: $cor01;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -.1px;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+}
+
+.card-info__icon {
+  flex: 0 0 auto;
+  margin-right: 5px;
+}
+
+
+.icon--cards {
+  fill: $cor01;
+  height: 18px;
+  width: 18px;
+}
+
+.user-links {
+  align-items: stretch;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.user-links__item {
+  align-items: center;
+  border-right: 1px solid #e7e7e7;
+  display: flex;
+  flex: 0 0 auto;
+  padding: 0 10px;
+
+  &:last-child {
+    border: 0 none;
+    padding-right: 0;
+  }
+}
+
+.user-links__icon {
+  fill: $cor01;
+  flex: 0 0 auto;
+  margin-right: 3px;
+}
+
+.user-links__title {
+  align-items: center;
+  color: #787878;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .3px;
+}
+
+.user-links__arrow {
+  margin-left: 3px;
+}
+
+.social-list {
+  align-items: center;
+  display: flex;
+  margin-left: 5px;
+  padding: 0;
+}
+
+.icon--chat {
+  height: 16px;
+  width: 16px;
+}
+
+.icon--help {
+  height: 17px;
+  width: 11px;
+}
+
+.icon--orders {
+  height: 17px;
+  width: 17px;
+}
+
+.icon--arrow {
+  fill: #797979;
+  height: 8px;
+  transform: rotate(-90deg);
+  width: 8px;
+}
+
+.icon--facebook {
+  height: 18px;
+  width: 18px;
+}
+
+.icon--instagram {
+  height: 17px;
+  margin: 0;
+  width: 17px;
+}

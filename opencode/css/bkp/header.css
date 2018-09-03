@@ -1,0 +1,14 @@
+/**
+ * Header
+ */
+/* line 5, ../sass/bkp/header.scss */
+.header {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+/* line 9, ../sass/bkp/header.scss */
+.header .header-customer {
+  text-transform: uppercase;
+  font-size: 0.87em;
+  padding-top: 7px;
+}

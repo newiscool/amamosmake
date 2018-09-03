@@ -1,0 +1,19 @@
+<ul class="breadcrumb">
+    <li class="breadcrumb__item">
+        <a href="{{ links.home }}" class="breadcrumb__link home">
+            Home
+        </a>
+    </li>
+    
+        {% if breadcrumb %}
+        {% for item in breadcrumb %}
+        <li class="breadcrumb__item"><a href="{{ item.link }}" class="breadcrumb__link" title="{{ item.name }}">{{ item.name|slice(0,70) }}</a></li>
+        {% endfor %}
+        {% endif %}
+        {% if pages.current == 'product' %}
+        <li class="breadcrumb__item"><span class="breadcrumb__link product">{{ product.name }}</span></li>
+        {% else %}
+        <li class="breadcrumb__item"><span class="breadcrumb__link category">{{ category.name }}</span></li>
+        {% endif %}
+    
+</ul>
