@@ -165,8 +165,8 @@
 
   .produto-imagem-miniaturas {
     max-width: 90px;   
-    @media (max-width:1199px) {
-      margin: 0;
+    @media (max-width:992px) {
+      max-width: 100%;
     }
     li {
       display: flex;
@@ -176,13 +176,19 @@
       align-items: center;
       margin: 5px;
 
-      @media(max-width: 768px) {
+      @media(max-width: 992px) {
         display: block!important;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
       }
 
       img {
         height: auto;
         width: 100%;
+        @media(max-width: 992px) {
+          border-radius: 100%;
+        }
       }
     }
   }
@@ -1526,6 +1532,9 @@ ul#carousel {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items:  center;
+  @media(max-width: 992px) {
+    justify-content: center;
+  }
 }
 
 .jcarousel-skin-tango .jcarousel-direction-rtl {
@@ -2118,9 +2127,8 @@ img#imgView{
 }
 #colFotos{
   display: flex;
-  @media (max-width:768px){
-    // height: 250px;
-    // display: block;
+  @media (max-width:992px){
+    display: block;
   }
 }
 
@@ -2154,6 +2162,7 @@ img#imgView{
 .variation-qtd-vazio {
   h3{
     background: none;
+    margin: 0;
   }
 }
 
@@ -2207,4 +2216,149 @@ img#imgView{
 
 .star5 {
   background-position: 0px 0
+}
+
+
+
+// CONFIGURACOES KIT
+
+
+
+.tray-kit {
+  border: 1px solid $light-gray;
+  padding: 15px;
+  margin-bottom: 15px;
+
+  .tray-kit-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+}
+
+.tray-kit div[style="clear:both;"] {
+  display: none;
+}
+
+.tray-kit-item {
+  max-width: 45%;
+  padding: 10px;
+  border: 1px solid $light-gray;
+  margin: 5px;
+}
+
+.tray-kit-item:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.tray-kit-item > div {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:  center;
+}
+
+.tray-kit-image {
+  float: left;
+  width: 90px;
+  margin-right: 15px;
+  border: 1px solid $light-gray;
+}
+
+.tray-kit-name {
+  color: $cor02;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 5px 0;
+}
+
+.tray-kit-info {
+  overflow: hidden;
+}
+
+.tray-kit-unity {
+  overflow: hidden;
+  margin-left: 0;
+  position: absolute;
+  left: 0;
+  top: 95px;
+  width: 90px;
+  text-align: center;
+}
+
+.tray-kit-show-all {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.tray-kit-title h3 {
+  font-weight: 300;
+  border-bottom: 1px solid $light-gray;
+  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.tray-kit-additional-info .onVar,
+.tray-kit-additional-info .onVar:hover{
+  color: $cor02;
+  font-size: 1.2rem;
+}
+
+.tray-kit-additional-info .select,
+.tray-kit-additional-info .text,
+.tray-kit-additional-info .textarea,
+.tray-kit-additional-info .table,
+.tray-kit-additional-info .dd,
+.tray-kit-additional-info .ddTitle{
+  display: block;
+  width: 100% !important;
+}
+
+.tray-kit-additional-info .text,
+.tray-kit-additional-info .textarea{
+  margin-bottom: 5px !important;
+}
+
+.tray-kit-additional-info .dd .ddTitle span.ddTitleText{
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.tray-kit-additional-info .select,
+.tray-kit-additional-info .ddTitle,
+.tray-kit-additional-info .textarea{
+  border: 1px solid $light-gray;
+  font-weight: 400;
+  font-size: 1.2rem;
+  height: 24px;
+}
+
+.tray-kit-additional-info .varCont > *{
+  color: $cor02;
+  display: block;
+}
+
+.tray-kit-variation img {
+  width: 30px;
+  height: 30px;
+  display: block;
+  overflow: hidden;
+}
+
+.tray-kit-variation li {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+  min-width: 30px;
+  min-height: 30px;
+  border: 1px solid $light-gray;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 30px;
 }

@@ -31,33 +31,12 @@
                         {{ productHelper.gallery() }}
                     </div>
                     <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
-                        <div class="product-main__prices">
-                            <div id="preco" align="left">
-                                {{ productHelper.pricing() }}
-                                <div id="produto_nao_disp">
-                                    <input type="hidden" name="verifica_variacao" id="verifica_variacao" value="">
-                                    <input type="hidden" name="verifica_clientes_aguardando" id="verifica_clientes_aguardando" value="1">
-                                    <input type="hidden" name="verifica_estoque_venda" id="verifica_estoque_venda" value="">
-                                    <input type="hidden" name="verifica_variacao_dupla_valor" id="verifica_variacao_dupla_valor" value="0">
-                                    <input type="hidden" name="layout_variacao" id="layout_variacao" value="1">
-                                    <input type="hidden" name="define_radio_select" id="define_radio_select" value="">
-                                </div>
-                            </div>
-                        
-                        </div>
-                        <!-- {% if product.description %}
-                        <article class="product__description-small">
-                            <span class="description__title">Descrição do produto</span>
-                            {{ product.description }}
-                        </article>
-                        {% endif %} -->
-                        {% if productHelper.variants() %}
                         <div class="product__variations">{{ productHelper.variants() }}</div>
-                        {% endif%}
+                        <div class="product__variations">{{ productHelper.kit() }}</div>
                         {% if product.available %}
-                        <div class="product__buy">
-                            <button type="submit" id="product__button--buy">Comprar</button>
-                        </div>
+                            <div class="product__buy">
+                                <button type="submit" id="product__button--buy">Comprar</button>
+                            </div>
                         {% endif %}
 <!-- 
                         <div class="product__shipping">
@@ -157,28 +136,10 @@
                     </div>
                     {% endif %}
                         <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
-                            <div class="product-main__prices">
-                                <div id="preco" align="left">
-                                    {{ productHelper.pricing() }}
-                                    <div id="produto_nao_disp">
-                                        <input type="hidden" name="verifica_variacao" id="verifica_variacao" value="">
-                                        <input type="hidden" name="verifica_clientes_aguardando" id="verifica_clientes_aguardando" value="1">
-                                        <input type="hidden" name="verifica_estoque_venda" id="verifica_estoque_venda" value="">
-                                        <input type="hidden" name="verifica_variacao_dupla_valor" id="verifica_variacao_dupla_valor" value="0">
-                                        <input type="hidden" name="layout_variacao" id="layout_variacao" value="1">
-                                        <input type="hidden" name="define_radio_select" id="define_radio_select" value="">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- {% if product.description %}
-                            <article class="product__description-small">
-                                <span class="description__title">Descrição do produto</span>
-                                {{ product.description }}
-                            </article>
-                            {% endif %} -->
-                            {% if productHelper.variants() %}
+                            {{ productHelper.pricing() }}
+                            {{ productHelper.gifts() }}
                             <div class="product__variations">{{ productHelper.variants() }}</div>
-                            {% endif%}
+                            <div class="product__kit">{{ productHelper.kit() }}</div>
                             {% if product.available %}
                             <div class="product__buy">
                                 <button type="submit" id="product__button--buy">Comprar</button>

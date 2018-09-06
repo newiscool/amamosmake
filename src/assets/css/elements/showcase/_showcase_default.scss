@@ -77,10 +77,10 @@
     }
 
     img {
-      height: auto;
-      max-height: 100%;
-      max-width: 100%;
-      width: auto;
+      // height: auto;
+      // max-height: 100%;
+      // max-width: 100%;
+      // width: auto;
     }
   }
 
@@ -99,10 +99,9 @@
       font-size: .875rem;
       font-weight: 100;
       text-align: left;
-
       @media (max-width:992px){      
         line-height: 15px;
-        
+        height: auto;
         font-weight: 100;
         margin: 5px 0px;
       } 
@@ -152,7 +151,7 @@
 
   .preco-por {
     display: inline-block;
-    line-height: 14px;
+    line-height: 20px;
     vertical-align: middle;
 
     > strong {
@@ -347,9 +346,10 @@
     position: absolute;
     top: 20px;
     left: 20px;
+    flex-direction: column;
     @media (max-width:992px){
-      bottom: 53%;
-      left: 0px;
+      position: relative;
+      left: 0;
     }
   }
 }
@@ -545,7 +545,7 @@
     text-align: left;
     text-decoration: line-through;
     @media (max-width:992px){
-      font-size: 10px;
+      font-size: 14px;
     }
   }
 
@@ -556,7 +556,7 @@
     display: block;
     text-align: left;
     @media (max-width:992px){
-      font-size: 16px;
+      font-size: 20px;
       margin: 0;
     }
   }

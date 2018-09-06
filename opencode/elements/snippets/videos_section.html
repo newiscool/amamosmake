@@ -1,0 +1,41 @@
+{% set url = 'https://www.youtube.com/embed/'  %}
+{% set code = settings.ruler9  %}
+{% set list = '?playlist='  %}
+{% set aditional = ';autoplay=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;loop=1&amp;modestbranding=0&amp;wmode=transparent&amp;enablejsapi=0&mute=1&color=white' %}
+
+<section class="movie__one">
+    <div class="movie__container">
+        <div class="movie__item">
+            <button type="button" class="btn-modal-movie" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                <svg id="diva-play" viewBox="0 0 32 32"><path d="M16 32c-8.816 0-16-7.184-16-16s7.184-16 16-16 16 7.184 16 16-7.184 16-16 16zM16 0.816c-8.367 0-15.184 6.816-15.184 15.184s6.816 15.184 15.184 15.184 15.184-6.816 15.184-15.184-6.816-15.184-15.184-15.184z"></path> <path d="M11.674 25.184c-0.163 0-0.367-0.041-0.531-0.122-0.408-0.204-0.694-0.612-0.694-1.102v-15.878c0-0.49 0.245-0.898 0.653-1.102s0.898-0.163 1.265 0.082l11.347 7.959c0.327 0.245 0.531 0.612 0.531 1.020s-0.204 0.776-0.49 1.020l-11.388 7.878c-0.204 0.163-0.449 0.245-0.694 0.245zM11.674 7.633c-0.082 0-0.122 0-0.163 0.041-0.082 0.041-0.204 0.122-0.204 0.367v15.878c0 0.204 0.122 0.327 0.245 0.367 0.082 0.041 0.204 0.082 0.367-0.041l11.347-7.918c0.082-0.082 0.163-0.204 0.163-0.327s-0.082-0.286-0.163-0.327l-11.388-7.959c-0.041-0.041-0.122-0.082-0.204-0.082z"></path></svg>
+            </button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="exampleModalLabel">{{ store.name }}</h4>
+                        </div>
+                        <div class="modal-body"></div>
+                        <div class="modal_item-save" hidden>
+                            <iframe width="854" height="480" src="{{ url ~ code ~ '?rel=0&amp;showinfo=0' }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" class="style-scope yt-sharing-embed-renderer"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <iframe src="{{ url ~ code ~ list ~ code ~ aditional }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" class="style-scope yt-sharing-embed-renderer"></iframe>
+        </div>
+        <div class="movie__product">
+            <h3 class="title-showcase">{{ settings.ruler9b}}</h3>
+            <h4 class="title-showcase-sub">{{ settings.ruler9c}}</h4>
+            <section class="showcase-list">
+                {% set products = Products({
+                    'categories': [30],
+                    'limit': 8,
+                    'order': 'rand'
+                }) %}
+                {% element 'snippets/showcase' {"products": products} %}
+            </section>
+        </div>
+    </div>
+</section>

@@ -1,7 +1,7 @@
 {"current":{
   "theme_id":"150699",
 
-      "phones"      :   "(14) 9 8171-8343",
+      "phones"      :   "(14) 4101-2310",
       "whatsapp"    :   "(14) 9 8717-8343",
       "emailum"     :   "sac@amamosmake.com",
       "support"     :   "Horario de atendimento:  Seg à Sex, das 8 às 18h",
@@ -33,14 +33,14 @@
 
       "vitrine1": "Oba, Baixaram de preço",
       "quantidade1": "9",
-      "filtros1": "",
+      "filtros1": "available",
       "ordem1": "rand",
       "showCase1active":"1",
       "categories1":"",
     
       "vitrine2": "Nossas promoções",
       "quantidade2": "9",
-      "filtros2": "",
+      "filtros2": "promotion",
       "ordem2": "rand",
       "showCase2active":"1",
       "categories2":"",
@@ -53,48 +53,6 @@
       "ordem3": "rand",
       "showCase3active":"2",
       "categories3":"",
-
-      "vitrine4": "Preferidos das Blogueiras",
-      "quantidade4": "9",
-      "filtros4": "",
-      "ordem4": "rand",
-      "showCase4active":"2",
-      "categories4":"",
-
-      "vitrine5": "Arrasar na Make",
-      "quantidade5": "9",
-      "filtros5": "",
-      "ordem5": "rand",
-      "showCase5active":"1",
-      "categories5":"",
-
-      "vitrine6": "Mais Vendidos",
-      "quantidade6": "9",
-      "filtros6": "",
-      "ordem6": "rand",
-      "showCase6active":"1",
-      "categories6":"",
-
-      "vitrine7": "Para Pele",
-      "quantidade7": "9",
-      "filtros7": "",
-      "ordem7": "rand",
-      "showCase7active":"1",
-      "categories7":"",
-
-      "vitrine8": "Olhos",
-      "quantidade8": "9",
-      "filtros8": "",
-      "ordem8": "rand",
-      "showCase8active":"1",
-      "categories8":"",
-
-      "vitrine9": "Boca",
-      "quantidade9": "9",
-      "filtros9": "",
-      "ordem9": "rand",
-      "showCase9active":"1",
-      "categories9":"" ,
 
       "chamadafrete":"Frete grátis",
       "condicaofrete":"Compras Acima De R$99",
@@ -185,7 +143,11 @@
       "ruler6":"Garantia de compra segura",
 
       "ruler7":"Ganhe um brinde",
-      "ruler8":"Comprando no cartão"
+      "ruler8":"Comprando no cartão",
+      
+      "ruler9":"s7YroPNaLOI",
+      "ruler9b":"Resenha Corretivo Ruby Rose Naked Skin",
+      "ruler9c":"Experimentamos o corretivo Ruby Rose e descobrimos porque ele é o mais amado do Brasil!!!"
 
     
   }

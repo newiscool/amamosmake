@@ -50,6 +50,18 @@ jQuery(document).ready(function ($) {
                 pagination: false,
                 singxleItem: false
             });
+
+            jQuery(".showcase-list ul").owlCarousel({
+                autoPlay: false,
+                items: 8,
+                itemsCustom: [[320, 2], [768, 2], [992, 3], [1200, 3]],
+                itemsScaleUp: false,
+                itemsTabletSmall: false,
+                navigation: true,
+                navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+                pagination: false,
+                singxleItem: false
+            });
             jQuery(".product__related ul").owlCarousel({
                 autoPlay: true,
                 items: 4,
@@ -301,84 +313,59 @@ jQuery( document ).ready(function() {
 
 jQuery( document ).ready(function() {
     if (window.innerWidth < 992) {
-
-        jQuery( "svg.cat__icon.icon--arrow-bottom" ).on( "click", function() {
-            
+        jQuery( ".dropdown" ).on( "click", function() {
             jQuery(this).addClass("rotateDrop");
-            
             if(jQuery(".dropdown-switcher").hasClass("active__dropdown")) {
                 jQuery(".dropdown-switcher").removeClass("active__dropdown");
-                jQuery("svg.cat__icon.icon--arrow-bottom").removeClass("rotateDrop");
+                jQuery(".dropdown").removeClass("rotateDrop");
             } else {
                 jQuery(".dropdown-switcher").addClass("active__dropdown");
             }
-
         });
-
     }
 
-    // jQuery("#shippingSimulatorButton").click(function(e){
-    //    e.preventDefault();
-    // });
 
-    // //Script para colocar o calculo de frete em bloco
-    // modalFrete();
+    if (window.innerWidth < 992) {
+        // jQuery( "svg.arrow-down" ).on( "click", function() {
+        //     if(jQuery(".nv-03").hasClass("active__dropdown-novo")) {
+        //         jQuery(".nv-03").removeClass("active__dropdown-novo");
+        //     } else {
+        //         jQuery(".nv-03").addClass("active__dropdown-novo");
+        //     }
+        // });
 
-    // function modalFrete() {
-    //     var button = jQuery("#shippingSimulatorButton");
-    //     var newbutton = jQuery("<button>");
-    //     newbutton
-    //         .text("Calcular")
-    //         .addClass("botao__frete");
 
-    //     button.after(newbutton);
-    //     newbutton.click(function(){
-    //         if(jQuery("#cep1").val() == null || jQuery("#cep1").val() == "" || jQuery("#cep2").val() == null || jQuery("#cep2").val() == ""){
-    //             document.getElementById("erro__retorno").innerHTML = "Preencha os campos corretamente.";
-    //         } else {
-    //             jQuery("body").addClass("load__frete");
-    //         }
+        jQuery("svg.arrow-down").click(function () {    
+            var item = jQuery(this).closest('.dropdown-nv2');
+            var hasOpen = !item.hasClass('drop');
 
-    //         var url = button.attr("data-url");
-    //         if(jQuery("#cep1").val() == null || jQuery("#cep1").val() == "" || jQuery("#cep2").val() == null || jQuery("#cep2").val() == ""){
-    //             document.getElementById("erro__retorno").innerHTML = "Preencha os campos corretamente.";
-    //         } else { 
-    //             jQuery.get(url).then(function(data){ 
-    //                 var dadosFull = data;
-    //                 document.getElementById("frete__block").innerHTML = dadosFull;
-    //                 jQuery("body").removeClass("load__frete");
-    //             });
-    //         }
-    //     });
-    // }
+            jQuery('.dropdown-nv2').removeClass('drop');
+            if(hasOpen) item.addClass("drop");
+            else{ item.removeClass("drop") }
+        
+        });
+        
 
+    }
+    
 });
 
-function addCart(dataProductId){
-    var dataSession = jQuery("html").attr("data-session");
-    jQuery.ajax({
-        method: "POST",
-        url: "/web_api/cart/",
-        contentType: "application/json; charset=utf-8",
-        data: '{"Cart":{"session_id":"'+dataSession+'","product_id":"'+dataProductId+'","quantity":"1"}}'
-    }).done(function( response, textStatus, jqXHR ) {
-        console.log(response);
-        jQuery('.addcart-' + dataProductId).html('Adicionado!!');
-        setTimeout(function(){
-            jQuery('.addcart-' + dataProductId).html('<svg class="addCart__icon icon--cart"><use xlink:href="#cart"></use></svg> Adicionar à Sacola');
-        }, 2000);
-        var qtdCart = parseInt(jQuery("span[data-cart=amount]").html());
-        jQuery("span[data-cart=amount]").html(qtdCart + 1);
 
-        const UPDATECART = new CustomEvent('UPDATECART', { detail: response.data });
-        window.dispatchEvent(UPDATECART);
-    }).fail(function( jqXHR, status, errorThrown ){
-        var response = jQuery.parseJSON( jqXHR.responseText );
-        console.log(response);
-    });
-}
+   //Movie
+   var movieItem = jQuery('.modal_item-save').html();
+   jQuery('.btn-modal-movie').click(function(){
+       jQuery('.movie__one .modal-body').html( movieItem );
+   });
 
+   jQuery('.modal').click(function(e){
+      if( jQuery(e.target).hasClass('modal') ){
+         jQuery('.movie__one .modal-body').html('');
+         jQuery('#modal-video-produto .modal-body').html('');
+      }
+   });
 
-jQuery('.jcarousel-clip').jcarousel({
-    vertical: true
-});
+   jQuery('.modal .close').click(function(e){
+       jQuery('.movie__one .modal-body').html('');
+       jQuery('#modal-video-produto .modal-body').html('');
+   });
+   

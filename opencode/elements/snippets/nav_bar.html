@@ -21,7 +21,7 @@
             {% for category in categories %}
             {% if loop.index <= 8 %}
             <li class="cat_id-{{ category.id }} dropdown">
-                <a href="{{ category.link }}">
+                <a href="{{ category.link }}" class="dropdown-link">
                     {{ category.name }}
                 </a>
                 {% if category.children %}
@@ -30,14 +30,22 @@
                     </svg>
                 {% endif %}
                 {% if category.children %}
+                
                 <div class="dropdown-switcher">
                     <div class="nv-02">
                         <ul class="nv-02">
                             {% for child in category.children %}
-                            <li class="cat_id-{{ child.id }} dropdown">
+                            {% if loop.index <= 6 %}
+                            <li class="cat_id-{{ child.id }} dropdown dropdown-nv2">
                                 <a href="{{ child.link }}">
                                     {{child.name }}
                                 </a>
+                                {% if child.children %}
+                                    <svg class="arrow-down hidden-lg hidden-md">
+                                        <use xlink:href="#icon-arrow-bottom"></use>
+                                    </svg>
+                                {% endif %}
+                                
                                 {% if child.children %}
                                     <ul class="nv-03">
                                     {% for child2 in child.children %}
@@ -45,10 +53,17 @@
                                             <a href="{{ child2.link }}">{{child2.name }}</a>
                                         </li>
                                     {% endfor %}
+                                  
                                     </ul>
                                 {% endif %}
                             </li>
+                            {% endif %}
                             {% endfor %}
+                            {% if utils.is_mobile %}
+                                <a href="{{ category.link }}" class="link-vertodos">
+                                    <span>Ver todos: {{ category.name }}</span>
+                                </a>
+                            {% endif %}
                         </ul>
                     </div>
                 </div>
@@ -56,6 +71,8 @@
             </li>
             {% endif %}
             {% endfor %}
+
+
         </ul>
     </div>
 </nav>
