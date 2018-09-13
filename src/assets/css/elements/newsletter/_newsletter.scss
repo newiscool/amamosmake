@@ -3,20 +3,23 @@
   flex-wrap: wrap;
 }
 
-.newsletter {
-  align-items: center;
-  border-bottom: 1px solid #dfdfdf;
-  border-top: 1px solid #dfdfdf;
-  display: flex;
-  flex: 1 1 200px;
-  justify-content: center;
-  padding: 30px 0;
-  margin-bottom: 30px;
 
-  @media (max-width: 1199px) {
-    margin-right: 0;
-    padding: 15px 0 25px;
-    margin-bottom: 15px;
+#newsletter{
+  border: solid $light-gray;
+  border-width: 1px 0;
+  margin: 25px 0;
+  .newsletter {
+    display: flex;
+    padding: 30px 0;
+    position: relative;
+    max-width: 1140px;
+    left: 50%;
+    transform: translateX(-50%);
+    @media (max-width: 1199px) {
+      margin-right: 0;
+      padding: 15px 15px 25px 15px;
+      margin-bottom: 15px;
+    }
   }
 }
 

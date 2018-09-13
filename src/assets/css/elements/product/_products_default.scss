@@ -1813,7 +1813,7 @@ ul#carousel {
 }
 
 .product__rating-wrapper {
-  margin-top: 10px;
+  margin-bottom: 10px;
   @media (max-width: 990px) {
     margin: 0;
   }
@@ -2149,7 +2149,7 @@ img#imgView{
   h3{
     font-size: 12px;
     text-transform: uppercase;
-    background:$light-gray;
+    background:#f5f5f7;
     text-align: center;
     height: 25px;
     display: flex;
@@ -2162,7 +2162,6 @@ img#imgView{
 .variation-qtd-vazio {
   h3{
     background: none;
-    margin: 0;
   }
 }
 

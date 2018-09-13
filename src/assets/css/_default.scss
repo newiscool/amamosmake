@@ -382,6 +382,7 @@ h1.color {
       display: block;
       margin: 0 auto;
       max-width: 200px;
+      font-size: 11px;
 
       &:nth-child(2),
       &:nth-child(3),
@@ -510,6 +511,15 @@ h1.color {
 
 .owl-theme .owl-controls {
   display: none;
+  .owl-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    @media (max-width:992px){
+      bottom: 0;
+    }
+  }
 }
 
 .banners-extra__title {
@@ -668,16 +678,18 @@ button {
     img {
       position: relative;
       left: 50%;
-      max-width: 100%;
+      max-width: 120%;
       transform: translateX(-50%);
       width: auto;
+      max-height: 370px;      
+      width: 100%;
     }
   }
 
 }
 
 .banners-extras {
-  margin: 20px 0 25px;
+  margin: 20px 0 60px;
 
   @media (max-width: 680px) {
     margin: 5px 0;
@@ -762,14 +774,15 @@ main {
   .title-showcase{
       text-align: left;
       margin-top: 0;
-      @media(min-width: 992px){
-          padding: 0 0 0 25px;
+      @media(min-width: 992px){        
+        margin: 15px 0;
+        text-align: center;
       }
   }
   .title-showcase-sub{
       margin-bottom: 15px;
       @media(min-width: 992px){
-          padding: 0 0 0 25px;
+          
       }
   }
   .movie__container{
@@ -794,13 +807,12 @@ main {
       overflow: hidden;
       position: relative;
       iframe{
-          width: 180%;
-          height: 180%;
-          z-index: 0;
-          left: 50%;
-          top: 50%;
-          position: absolute;
-          transform: translate(-50%, -50%);
+        width: 100%;
+        height: 321px;
+        z-index: 0;
+        left: 0;
+        top: 0;
+        position: relative;
 
       }
       svg{
@@ -822,17 +834,19 @@ main {
           z-index: 10;
           width: 100%;
           cursor: pointer;
+          max-height: 320px;
           &:before{
-              cursor: pointer;
-              content: '';
-              background: #000;
-              opacity: 0.6;
-              z-index: 1;
-              position: absolute;
-              top: 0;
-              bottom: 0;
-              left: 0;
-              right: 0;
+            cursor: pointer;
+            content: '';
+            background: #000;
+            opacity: 0.6;
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 320px;
+            transform: translateY(-50%);
           }
       }
   }

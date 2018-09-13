@@ -36,8 +36,13 @@
   .owl-page {
     span {
       background: $cor02 !important;
-      height: 10px !important;
-      width: 10px !important;
+      height: 15px !important;
+      width: 15px !important;
+      @media (max-width:992px){
+        width: 10px !important;
+        height: 10px !important;
+        
+      }
     }
 
     &.active {
