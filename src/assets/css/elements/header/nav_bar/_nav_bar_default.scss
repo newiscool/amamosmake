@@ -304,6 +304,10 @@
     transition: all 150ms ease-in-out;
     z-index: -1;
     > li {
+      height: 35px;
+      display: flex;
+      align-items: center;
+      
       > a {
         color: $cor02;
         display: block;
@@ -314,6 +318,7 @@
         text-transform: none;
         transition: all 150ms ease-in-out;
         white-space: nowrap;
+        font-weight: 100;
 
         &:hover {
           background-color: $cor01;

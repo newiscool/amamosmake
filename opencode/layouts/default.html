@@ -59,7 +59,9 @@
                 <section id="full-banner">{{ banner.home }}</section>
             {% endif %}
             
-            {% element 'snippets/newsletter' %}
+            {% if pages.current == 'home'  %}
+                {% element 'snippets/newsletter' %}
+            {% endif %}
 
             <div class="container">
                 {% if pages.current == 'product' or pages.current == 'catalog' %}

@@ -12,8 +12,9 @@
                             {% if product.ranking %}
                             <div class="product__rating-wrapper">
                                 <span class="product__rating__stars" data-stars-count="{{ product.ranking.rating }}">
-                                  <span class="star{{ product.ranking.rating }}"></span><span class="ranking-nota-final"></span>
+                                    <span class="star{{ product.ranking.rating }}"></span><span class="ranking-nota-final"></span>
                                 </span>
+                                
                             </div>
                             {% endif %}
                         </li>
@@ -38,23 +39,6 @@
                                 <button type="submit" id="product__button--buy">Comprar</button>
                             </div>
                         {% endif %}
-<!-- 
-                        <div class="product__shipping">
-                            {{ productHelper.shipping() }}
-                            {% if settings.freeShippingActived == '1' %}
-                            <div class="free-shipping">
-                                <svg class="free-shipping__icon icon--shipping">
-                                    <use xlink:href="#icon-shipping"></use>
-                                </svg>
-                                <span class="free-shipping__title">
-                                    Frete Grátis
-                                </span>
-                                <span class="free-shipping__desc">
-                                    {{ settings.freeShipping }}
-                                </span>
-                            </div>
-                            {% endif %}
-                        </div> -->
                     </form>
                 </header>
             <div class="social-midias">{{ productHelper.social() }}</div>
@@ -132,6 +116,7 @@
                     <div class="product__rating-wrapper">
                         <span class="product__rating__stars" data-stars-count="{{ product.ranking.rating }}">
                           <span class="star{{ product.ranking.rating }}"></span><span class="ranking-nota-final"></span>
+                          <a href="#descricaoanchor" id="avalieClick">Avalie agora</a>
                         </span>
                     </div>
                     {% endif %}
@@ -184,37 +169,36 @@
                 </section>
             {% endif %}
             <section id="ProdBlock" class="product__tabs col-xs-12 ">
-                <a name="formaPagto"></a>
-                <div id="ProdAbas" class="abasProduto">
-                    <ul>
-                        {% for key, tab in productTabs %}
-                                <li id="{{ tab.id }}" {% if key=='description' %} class="aberta" {% endif %}>
-                                    <a href="#" data-tab-container-id="{{ tab.container_id }}" data-tab-url="{{ tab.url }}">{{tab.description }}</a>
-                                </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div id="descricao" class="prodBox">
-                    <div class="board">
-                        <div class="board_htm description">
-                            {{ product.description ? product.description : product.description_small }}
+                    <a name="formaPagto"></a>
+                    <div id="descricao" class="prodBox dispblock">
+                        <div class="board">
+                            <h3 class="triger_btn-tabs">{{ productTabs.description.description }} </h3>
+                            <div class="board_htm description tabs_wrap">
+                                {{ product.description ? product.description : product.description_small }}
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div id="itensInclusos" class="prodBox">
-                    <div class="board">
-                        {{ product.included_items }}
+                    <div id="itensInclusos" class="prodBox dispblock">
+                        <h3 class="triger_btn-tabs">{{ productTabs.properties.description }} </h3>
+                        <div class="board tabs_wrap">
+                            {{ product.included_items }}
+                        </div>
                     </div>
-                </div>
-                <div id="coments" class="prodBox product-comments product-comments-tab">
-                    <div class="board">
-                        {% element 'product/comments' %}
+                    <div id="coments" class="prodBox dispblock ">
+                        <h3 class="triger_btn-tabs">{{ productTabs.comments.description }} </h3>
+                        <div class="board tabs_wrap">
+                            {% element 'product/comments' %}
+                        </div>
                     </div>
-                </div>
-                {{ productTabs.custom.content }}
-                {{ productTabs.downloads.content }}
-                <div data-app="product.payment-methods" id="formasPagto" class="prodBox" style="display:none;"></div>
-            </section>
+                    <div id="coments" class="prodBox {{productTabs.custom.description }}">
+                        <h3 class="triger_btn-tabs">{{ productTabs.AdditionalTab8.description }} </h3>
+                        <div class="board ">
+                            {{ productTabs.custom.content }}
+                        </div>
+                    </div>
+                    {{ productTabs.downloads.content }}
+                    <div data-app="product.payment-methods" id="formasPagto" class="prodBox dispblock" style="display:none;"></div>
+                </section>
         </section>
     </div>
     {% if product.related_products %}
