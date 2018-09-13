@@ -1,22 +1,24 @@
-<section id="newsletter" class="newsletter">
-    <div class="newsletter__title">
-        <div class="newsletter__info">
-            <span>{{ settings.ruler1 }} </span>
-            <strong>{{ settings.ruler2 }}</strong>
+<section id="newsletter" >
+    <div class="newsletter">
+        <div class="newsletter__title">
+            <div class="newsletter__info">
+                <span>{{ settings.ruler1 }} </span>
+                <strong>{{ settings.ruler2 }}</strong>
+            </div>
         </div>
+        <form action="{{ links.newsletter }}" class="newsletter__form" method="POST">
+            <input type="hidden" name="loja" value="{{ store.id }}">
+            <div class="input-box">
+                <label for="news-nome">             
+                </label>
+                <input name="nome" id="news-nome" type="text" class="newsletter__name newsletter__input" placeholder="Seu nome">
+            </div>
+            <div class="input-box">
+                <label for="news-email">            
+                </label>
+                <input name="email" type="text" id="news-email" class="newsletter__email newsletter__input" placeholder="Seu e-mail">
+            </div>
+            <button type="input" class="newsletter__button">Quero me cadastrar</button>
+        </form>
     </div>
-    <form action="{{ links.newsletter }}" class="newsletter__form" method="POST">
-        <input type="hidden" name="loja" value="{{ store.id }}">
-        <div class="input-box">
-            <label for="news-nome">             
-            </label>
-            <input name="nome" id="news-nome" type="text" class="newsletter__name newsletter__input" placeholder="Seu nome">
-        </div>
-        <div class="input-box">
-            <label for="news-email">            
-            </label>
-            <input name="email" type="text" id="news-email" class="newsletter__email newsletter__input" placeholder="Seu e-mail">
-        </div>
-        <button type="input" class="newsletter__button">Quero me cadastrar</button>
-    </form>
 </section>

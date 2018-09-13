@@ -54,7 +54,7 @@ jQuery(document).ready(function ($) {
             jQuery(".showcase-list ul").owlCarousel({
                 autoPlay: false,
                 items: 8,
-                itemsCustom: [[320, 2], [768, 2], [992, 3], [1200, 3]],
+                itemsCustom: [[320, 1], [768, 1], [992, 2], [1200, 2]],
                 itemsScaleUp: false,
                 itemsTabletSmall: false,
                 navigation: true,

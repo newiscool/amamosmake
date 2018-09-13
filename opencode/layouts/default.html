@@ -58,6 +58,8 @@
             {% if pages.current == 'home' and banner.home %}
                 <section id="full-banner">{{ banner.home }}</section>
             {% endif %}
+            
+            {% element 'snippets/newsletter' %}
 
             <div class="container">
                 {% if pages.current == 'product' or pages.current == 'catalog' %}

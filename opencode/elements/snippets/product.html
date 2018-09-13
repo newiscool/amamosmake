@@ -24,7 +24,7 @@
                         {% if Image('new') %}
                             <span class=" botao-new">{{ Image('new') }}</span>
                         {% else %}
-                            <span class="label new">Novidade</span>
+                            <span class="label new">Novo</span>
                         {% endif %}
                     {% endif %}
                     {% if product.featured %}
@@ -51,6 +51,13 @@
                     <h3>{{ product.name|slice(0,80) }}</h3>
                 </a>
             </div>
+            {% if product.ranking %}
+            <div class="product__rating-wrapper">
+                <span class="product__rating__stars" data-stars-count="{{ product.ranking.rating }}">
+                  <span class="star{{ product.ranking.rating }}"></span><span class="ranking-nota-final">({{ product.ranking.rating }})</span>
+                </span>
+            </div>
+            {% endif %}
         {% if product.available and product.stock > 0  %}
         <div class="product__prices">
             {% if product.price_offer > 0 %}
