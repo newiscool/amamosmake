@@ -31,11 +31,9 @@
                 {% endif %}
                 {% if category.children %}
                 
-                <div class="dropdown-switcher">
-                    <div class="nv-02">
-                        <ul class="nv-02">
-                            {% for child in category.children %}
-                            {% if loop.index <= 6 %}
+                <div class="dropdown-switcher">                   
+                    <ul class="nv-02 carrossel-navbar">
+                        {% for child in category.children %}
                             <li class="cat_id-{{ child.id }} dropdown dropdown-nv2">
                                 <a href="{{ child.link }}">
                                     {{child.name }}
@@ -53,19 +51,17 @@
                                             <a href="{{ child2.link }}">{{child2.name }}</a>
                                         </li>
                                     {% endfor %}
-                                  
+                                    
                                     </ul>
                                 {% endif %}
                             </li>
-                            {% endif %}
-                            {% endfor %}
-                            {% if utils.is_mobile %}
-                                <a href="{{ category.link }}" class="link-vertodos">
-                                    <span>Ver todos: {{ category.name }}</span>
-                                </a>
-                            {% endif %}
-                        </ul>
-                    </div>
+                        {% endfor %}
+                        {% if utils.is_mobile %}
+                            <a href="{{ category.link }}" class="link-vertodos">
+                                <span>Ver todos: {{ category.name }}</span>
+                            </a>
+                        {% endif %}
+                    </ul>
                 </div>
                 {% endif %}
             </li>

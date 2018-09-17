@@ -62,6 +62,19 @@ jQuery(document).ready(function ($) {
                 pagination: false,
                 singxleItem: false
             });
+
+            jQuery(".carrossel-navbar").owlCarousel({
+                autoPlay: false,
+                items: 8,
+                itemsCustom: [[320, 2], [768, 2], [992, 3], [1200, 6]],
+                itemsScaleUp: false,
+                itemsTabletSmall: false,
+                navigation: true,
+                navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+                pagination: false,
+                singxleItem: false
+            });
+            
             jQuery(".product__related ul").owlCarousel({
                 autoPlay: true,
                 items: 4,

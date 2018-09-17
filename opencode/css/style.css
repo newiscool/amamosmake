@@ -489,7 +489,7 @@ table p {
     .cart__env-amount {
       font-size: 15px; } }
 
-/* line 286, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 285, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .icon--cart {
   display: block;
   fill: #fb0067;
@@ -497,89 +497,89 @@ table p {
   position: relative;
   width: 28px; }
 
-/* line 294, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 293, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .env-cart {
   padding-right: 0; }
 
-/* line 299, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 298, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .fa-navicon:before, .fa-reorder:before, .fa-bars:before {
   color: #fb0067;
   font-size: 27px; }
 
 @media (max-width: 1199px) {
-  /* line 306, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+  /* line 305, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
   #header_bar {
     padding: 15px 0;
     width: auto; }
-    /* line 310, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+    /* line 309, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
     #header_bar .row {
       align-items: center;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       width: 100%; }
-      /* line 317, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+      /* line 316, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
       #header_bar .row > * {
         flex: 0 0 auto;
         justify-content: flex-start; }
-      /* line 322, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+      /* line 321, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
       #header_bar .row .env-brand {
         flex: 0 0 50%;
         width: auto; }
-      /* line 327, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+      /* line 326, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
       #header_bar .row:before, #header_bar .row:after {
         display: none; }
-  /* line 334, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+  /* line 333, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
   .env-cart {
     padding: 0;
     width: 56px; }
-  /* line 339, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+  /* line 338, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
   .cart__link {
     align-items: center;
     display: flex;
     justify-content: center;
     margin: 0;
     padding: 0; }
-  /* line 347, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+  /* line 346, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
   .cart__link {
     padding: 0; }
-  /* line 351, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+  /* line 350, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
   .env-brand {
     padding: 0;
     text-align: center; }
-    /* line 355, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+    /* line 354, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
     .env-brand a {
       display: block; }
-  /* line 361, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+  /* line 360, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
   .info-lane {
     display: none; }
-  /* line 365, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+  /* line 364, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
   .env-menu-mobile {
     margin: 0;
     padding: 0;
     width: auto; }
-  /* line 371, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+  /* line 370, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
   .env-search {
     margin-top: 14px;
     padding: 0;
     order: 12;
     max-width: none;
     width: 100%; }
-  /* line 379, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+  /* line 378, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
   #nav_bar {
     z-index: 900; } }
 
-/* line 384, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 383, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .ac_sm_ft, .ac_sm_menu {
   position: static; }
 
-/* line 388, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 387, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .owl-buttons .owl-prev i, .owl-buttons .owl-next i {
   font-size: 21px !important;
   line-height: 38px !important; }
 
 @media (min-width: 1200px) {
-  /* line 394, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+  /* line 393, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
   .cart__dropdown {
     background-color: white;
     box-shadow: 0 0 3px 0 rgba(3, 3, 3, 0.31);
@@ -593,16 +593,16 @@ table p {
     z-index: 400;
     transition: all 150ms ease-in-out; } }
 
-/* line 410, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 409, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .cart__dropdown {
   display: none; }
 
 @media (min-width: 768px) and (max-width: 1199px) {
-  /* line 415, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+  /* line 414, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
   .container {
     width: auto; } }
 
-/* line 422, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 421, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .suggestion {
   background-color: white;
   border: 1px solid #fb0067;
@@ -612,15 +612,15 @@ table p {
   z-index: 320;
   top: 49px;
   left: 0; }
-  /* line 432, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+  /* line 431, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
   .suggestion.is-hidden {
     display: none; }
   @media (max-width: 1199px) {
-    /* line 422, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+    /* line 421, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
     .suggestion {
       display: none; } }
 
-/* line 441, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 440, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .suggestion-title {
   color: #fb0067;
   display: block;
@@ -631,10 +631,10 @@ table p {
   padding: 0;
   text-transform: uppercase; }
 
-/* line 452, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 451, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .suggestion-words {
   padding: 10px 20px; }
-  /* line 455, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+  /* line 454, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
   .suggestion-words > span {
     color: #7f7f7f;
     cursor: hand;
@@ -644,16 +644,16 @@ table p {
     font-weight: 400;
     line-height: 22px;
     transition: all 200ms ease-in-out; }
-    /* line 465, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+    /* line 464, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
     .suggestion-words > span:hover {
       color: #fb0067; }
 
-/* line 471, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 470, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .suggestion-products {
   border-top: 1px solid #fb0067;
   padding: 10px 20px; }
 
-/* line 477, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 476, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .suggestion-product > a {
   align-items: center;
   display: flex;
@@ -665,22 +665,22 @@ table p {
     color: #000;
     text-decoration: none; }
 
-/* line 488, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 487, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .suggestion-img {
   display: inline-block;
   flex: 0 0 80px;
   text-align: center;
   vertical-align: middle; }
-  /* line 494, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+  /* line 493, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
   .suggestion-img > img {
     max-height: 100px; }
 
-/* line 499, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 498, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .suggestion-desc {
   display: inline-block;
   margin-left: 10px;
   vertical-align: middle; }
-  /* line 504, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+  /* line 503, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
   .suggestion-desc .titlep {
     color: #fb0067;
     display: block;
@@ -689,10 +689,10 @@ table p {
     line-height: 20px;
     margin: 0 0 5px;
     transition: all 200ms ease-in-out; }
-    /* line 513, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+    /* line 512, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
     .suggestion-desc .titlep:hover {
       color: #ff2f84; }
-  /* line 518, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+  /* line 517, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
   .suggestion-desc .idp {
     color: #7f7f7f;
     display: block;
@@ -700,7 +700,7 @@ table p {
     font-weight: 400;
     line-height: 15px; }
 
-/* line 527, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 526, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .cat__icon {
   fill: #666;
   flex: 0 0 auto;
@@ -708,7 +708,7 @@ table p {
   margin-left: 5px;
   width: 15px; }
 
-/* line 536, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 535, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 #full-banner .owl-buttons {
   max-width: 1140px;
   margin: 0 auto;
@@ -718,36 +718,36 @@ table p {
   top: 50%;
   width: 100%; }
 
-/* line 546, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 545, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .cart__dropdown {
   display: none !important; }
 
-/* line 550, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 549, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .active__dropdown {
   display: block !important;
   opacity: 1 !important;
   box-shadow: none !important;
   position: relative !important;
   margin-bottom: 10px; }
-  /* line 559, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+  /* line 558, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
   .active__dropdown ul li a {
     padding: 0 !important;
     padding-left: 15px !important; }
 
-/* line 567, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 566, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .cat__icon {
   transition: all 200ms ease-in-out; }
 
-/* line 572, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 571, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .rotateDrop {
   transform: rotate(0deg);
   transition: all 200ms ease-in-out; }
 
-/* line 579, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 578, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .row:after {
   display: none; }
 
-/* line 580, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
+/* line 579, src/assets/css/elements/header/header_bar/_header_bar_default.scss */
 .row:before {
   display: none; }
 
@@ -835,7 +835,7 @@ table p {
     #nav_bar ul.nv-01 > li .dropdown-switcher {
       background-color: white;
       box-shadow: 0 0 0 1px #f6f6f6;
-      left: -150px;
+      left: -105px;
       padding: 0;
       top: 100%;
       margin-top: -1px;
@@ -958,7 +958,12 @@ table p {
     width: auto;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-right: 50px; }
+    margin-right: 20px;
+    border-right: 1px solid #7f7f7f;
+    padding-right: 20px; }
+    /* line 245, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+    #nav_bar .nv-02 > li:last-child {
+      border: 0; }
     @media (max-width: 992px) {
       /* line 233, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
       #nav_bar .nv-02 > li {
@@ -968,25 +973,25 @@ table p {
         border: solid #7f7f7f;
         border-width: 0px 0 1px;
         margin: -1px -15px; }
-        /* line 250, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+        /* line 255, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
         #nav_bar .nv-02 > li:first-child {
           border-top: 1px solid #7f7f7f; } }
-    /* line 256, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+    /* line 261, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
     #nav_bar .nv-02 > li:hover > a {
       background-color: #f6f6f6;
       color: #fb0067; }
       @media (max-width: 992px) {
-        /* line 256, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+        /* line 261, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
         #nav_bar .nv-02 > li:hover > a {
           background: none;
           color: #000; } }
-    /* line 265, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+    /* line 270, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
     #nav_bar .nv-02 > li:hover .nv-03 {
       opacity: 1;
       visibility: visible;
       z-index: 200;
       background: #fff; }
-    /* line 275, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+    /* line 280, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
     #nav_bar .nv-02 > li > a {
       color: #000;
       display: flex;
@@ -994,12 +999,12 @@ table p {
       font-weight: 600;
       height: 30px;
       padding: 5px 10px;
-      text-transform: none;
       transition: all 150ms ease-in-out;
       white-space: nowrap;
-      align-items: center; }
+      align-items: center;
+      text-transform: uppercase; }
       @media (max-width: 992px) {
-        /* line 275, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+        /* line 280, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
         #nav_bar .nv-02 > li > a {
           height: 45px;
           border-width: 1px 0;
@@ -1008,43 +1013,38 @@ table p {
           color: #000;
           width: 92%;
           padding: 0 30px !important; } }
-  /* line 300, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  /* line 305, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   #nav_bar ul.nv-03 {
     padding: 0;
     left: 100%;
     top: 0;
     transition: all 150ms ease-in-out;
     z-index: -1; }
-    /* line 306, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+    /* line 311, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
     #nav_bar ul.nv-03 > li {
       height: 35px;
       display: flex;
       align-items: center; }
-      /* line 311, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+      /* line 316, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
       #nav_bar ul.nv-03 > li > a {
-        color: #000;
+        color: #7f7f7f;
         display: block;
         font-size: 13px;
         font-weight: 600;
         line-height: 20px;
-        padding: 5px 10px;
         text-transform: none;
         transition: all 150ms ease-in-out;
         white-space: nowrap;
         font-weight: 100; }
-        /* line 323, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
-        #nav_bar ul.nv-03 > li > a:hover {
-          background-color: #fb0067;
-          color: white; }
     @media (max-width: 992px) {
-      /* line 300, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+      /* line 305, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
       #nav_bar ul.nv-03 {
         position: initial;
         visibility: visible;
         opacity: 1;
         display: none;
         width: 100%; }
-        /* line 335, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+        /* line 334, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
         #nav_bar ul.nv-03 li {
           height: 45px;
           border: solid #7f7f7f;
@@ -1053,7 +1053,7 @@ table p {
           align-items: center;
           margin: -1px;
           padding: 0 30px; }
-          /* line 343, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+          /* line 342, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
           #nav_bar ul.nv-03 li a {
             font-weight: 400;
             padding: 0 10px;
@@ -1061,25 +1061,35 @@ table p {
             color: gray; } }
 
 /* line 354, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+.carrossel-navbar .dropdown-nv2 a {
+  text-transform: uppercase;
+  color: #000; }
+
+/* line 361, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+.carrossel-navbar .owl-item {
+  display: flex;
+  margin-right: 5px; }
+
+/* line 366, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
 .icon--menu {
   fill: #fb0067;
   height: 15px;
   margin-right: 2px;
   width: 18px; }
 
-/* line 361, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+/* line 373, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
 #nav_bar .nv-01 > .you-need {
   background-color: #fb0067;
   flex: 0 0 auto;
   position: relative;
   margin-right: 10px; }
-  /* line 369, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  /* line 381, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   #nav_bar .nv-01 > .you-need:hover .you-need__list {
     opacity: 1;
     visibility: visible;
     z-index: 200; }
 
-/* line 378, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+/* line 390, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
 .you-need__title {
   align-items: center;
   color: white;
@@ -1094,7 +1104,7 @@ table p {
   text-align: center;
   white-space: nowrap; }
 
-/* line 393, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+/* line 405, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
 .you-need__icon {
   fill: white;
   flex: 0 0 auto;
@@ -1102,7 +1112,7 @@ table p {
   margin-left: 3px;
   width: 8px; }
 
-/* line 401, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+/* line 413, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
 .you-need__list {
   background-color: white;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
@@ -1116,7 +1126,7 @@ table p {
   width: 265px;
   z-index: -1; }
 
-/* line 415, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+/* line 427, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
 .you-need__link {
   color: #000;
   display: block;
@@ -1125,22 +1135,22 @@ table p {
   line-height: 20px;
   padding: 5px 25px;
   transition: all 150ms ease-in-out; }
-  /* line 424, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  /* line 436, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   .you-need__link:hover {
     background-color: #fb0067;
     color: white; }
 
 @media (max-width: 990px) {
-  /* line 431, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  /* line 443, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   #nav_bar .nv-01 > .you-need {
     margin: 0 0 10px;
     position: relative; }
-  /* line 436, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  /* line 448, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   .you-need__title {
     justify-content: flex-start;
     position: relative;
     width: 100%; }
-  /* line 442, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  /* line 454, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   #nav_bar ul.nv-01 > li > a {
     justify-content: flex-start;
     height: 50px;
@@ -1148,14 +1158,14 @@ table p {
     align-items: center;
     display: flex;
     pointer-events: none; }
-  /* line 451, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  /* line 463, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   .you-need__list {
     display: none;
     position: static;
     opacity: 1;
     visibility: visible;
     transition: none; }
-  /* line 460, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  /* line 472, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   .you-need__icon {
     right: 15px;
     height: 16px;
@@ -1164,15 +1174,15 @@ table p {
     transform: translateY(-50%);
     width: 16px;
     z-index: 200; }
-  /* line 470, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  /* line 482, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   .you-need__link {
     padding: 5px 20px; } }
 
-/* line 476, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+/* line 488, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
 li.dropdown.dropdown-nv2.drop .nv-03 {
   display: block !important; }
 
-/* line 480, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+/* line 492, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
 .link-vertodos {
   display: flex;
   align-items: center;
@@ -1587,11 +1597,11 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
 
 /* line 454, src/assets/css/elements/showcase/_showcase_default.scss */
 .owl-buttons .owl-prev {
-  left: 0; }
+  left: -30px; }
 
 /* line 458, src/assets/css/elements/showcase/_showcase_default.scss */
 .owl-buttons .owl-next {
-  right: 0; }
+  right: -30px; }
 
 @media (max-width: 1199px) {
   /* line 463, src/assets/css/elements/showcase/_showcase_default.scss */
