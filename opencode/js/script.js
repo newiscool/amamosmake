@@ -62,18 +62,19 @@ jQuery(document).ready(function ($) {
                 pagination: false,
                 singxleItem: false
             });
-
-            jQuery(".carrossel-navbar").owlCarousel({
-                autoPlay: false,
-                items: 8,
-                itemsCustom: [[320, 2], [768, 2], [992, 3], [1200, 6]],
-                itemsScaleUp: false,
-                itemsTabletSmall: false,
-                navigation: true,
-                navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-                pagination: false,
-                singxleItem: false
-            });
+            if (window.innerWidth > 992) {
+                jQuery(".carrossel-navbar").owlCarousel({
+                    autoPlay: false,
+                    items: 8,
+                    itemsCustom: [[1200, 5]],
+                    itemsScaleUp: false,
+                    itemsTabletSmall: false,
+                    navigation: true,
+                    navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+                    pagination: false,
+                    singxleItem: false
+                });
+            }
             
             jQuery(".product__related ul").owlCarousel({
                 autoPlay: true,
@@ -240,21 +241,15 @@ jQuery(document).ready(function ($) {
         });
     };
 
-    /* Menu "sanduíche" no topo flutuante. */
-    // var $menuFloat = $('#header_bar .float-menu');
-    // var $navBar = $('#nav_bar');
-    //
-    // $menuFloat.on('click', function(){
-    //     $menuFloat.toggleClass("open");
-    //     $navBar.toggleClass("on");
-    // });
-    //
-    // var $btnOpen = $('#nav_bar .see-category');
-    // var $subCategories = $('#nav_bar .nv-01 .dropdown-switcher');
-    //
-    // $btnOpen.on('click', function(){
-    //     $subCategories.toggleClass("on");
-    // });
+    jQuery(".triger_btn-tabs").click(function () {    
+        var item = jQuery(this).closest('.dispblock');
+        var hasOpen = !item.hasClass('drop');
+        jQuery('.dispblock').removeClass('drop');
+        if(hasOpen) item.addClass("drop");
+        else{ item.removeClass("drop") }
+    
+    });
+
 
     jQuery('#foto_p').attr('data-target', "");
 

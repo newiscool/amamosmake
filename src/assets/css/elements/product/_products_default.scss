@@ -1165,12 +1165,10 @@
 
   #coments {
     h3 {
-      color: $cor01;
       font-size: 17px;
-      font-weight: 600;
+      font-weight: 100;
       line-height: 25px;
       position: relative;
-      text-align: center;
       text-decoration: none;
       text-transform: uppercase;
     }
@@ -1183,7 +1181,9 @@
       line-height: normal;
       margin: 0;
       text-align: left;
-      text-transform: uppercase;
+      text-transform: uppercase;  
+      padding: 15px 0;
+      text-align: center;
 
       &:nth-of-type(2) {
         display: none;
@@ -1235,7 +1235,6 @@
           font-weight: 600;
           margin: 0 auto;
           text-transform: uppercase;
-          width: 50%;
 
           @media(max-width: 991px) {
             width: 100%;
@@ -1276,7 +1275,6 @@
                 float: none;
                 padding-left: 0;
                 padding-right: 0;
-                width: 50%;
 
                 @media(max-width: 991px) {
                   width: 100%;
@@ -1373,7 +1371,7 @@
 
       h3 {
         color: $cor02;
-        display: inline-block;
+        display: flex;
         font-size: 15px;
         font-weight: 600;
         line-height: 15px;
@@ -1381,6 +1379,8 @@
         text-align: left;
         text-transform: none;
         vertical-align: middle;
+        justify-content: space-between;
+        width: 100%;
       }
 
       h4 {
@@ -2363,4 +2363,50 @@ img#imgView{
 }
 
 
+.dispblock{
+  display: block !important;
+  h3{
+    font-size: 16px;
+    text-transform: uppercase;    
+    border-top: 1px solid $dark-gray;
+    padding: 15px 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+   /* 
+    &:after {
+      content: '+';
+      position: relative;
+      right: 5%;
+      font-size: 20px;
+      cursor: pointer;
+    }
+*/
+  }
+}
+.tabs_wrap{ display: none}
+
+.prodBox.dispblock.drop svg {
+  transform: rotate(-0deg);
+}
+
+.dispblock.drop{ 
+h3{
+  color: $cor01;
+  /* 
+  &:after {
+    content: '-';
+    position: relative;
+    right: 5%;
+    color: $cor01;
+    font-size: 20px;
+  }
+  */
+}
+.tabs_wrap {
+  display: block !important;
+  border-top: 1px solid $light-gray; 
+  padding: 10px 15px;
+  }
+}
 

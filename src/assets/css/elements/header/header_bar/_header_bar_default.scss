@@ -563,10 +563,14 @@
   }
 }
 
-.cat__icon {
-  
+.cat__icon {  
+  transform: rotate(-90deg);
   transition: $transition;
 }
+.dropdown.rotateDrop svg {
+  transform: rotate(0);
+}
+
 
 .rotateDrop {
   transform: rotate(0deg);

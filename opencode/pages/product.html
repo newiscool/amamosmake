@@ -1,3 +1,6 @@
+<pre>
+    {{dump(product.variants)}}
+</pre>
 {% if utils.is_mobile %}
 <div id="product-page" class="product-page">
     <div class="produto-wrapper" itemscope itemtype="http://schema.org/Product">  
@@ -34,7 +37,7 @@
                     <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
                         <div class="product__variations">{{ productHelper.variants() }}</div>
                         <div class="product__variations">{{ productHelper.kit() }}</div>
-                        {% if product.available %}
+                        {% if product.available and product.stock > 0 %}
                             <div class="product__buy">
                                 <button type="submit" id="product__button--buy">Comprar</button>
                             </div>
@@ -44,46 +47,42 @@
             <div class="social-midias">{{ productHelper.social() }}</div>
         </div>
         </section>  
-        <section class="container-right_block">            
-            {% if productHelper.bundle %}
-                <section class="product__bundle ">
-                    <h4 class="product__title">Compre Junto</h4>
-                    {{ productHelper.bundle }}
-                </section>
-            {% endif %}
-            <section id="ProdBlock" class="product__tabs col-xs-12 ">
+        <section id="ProdBlock" class="product__tabs col-xs-12 ">
                 <a name="formaPagto"></a>
-                <div id="ProdAbas" class="abasProduto">
-                    <ul>
-                        {% for key, tab in productTabs %}
-                            {% if tab.container_id %}
-                                <li id="{{ tab.id }}" {% if key=='description' %}class="aberta" {% endif %}>
-                                    <a href="#" data-tab-container-id="{{ tab.container_id }}" data-tab-url="{{ tab.url }}">{{tab.description }}</a>
-                                </li>
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div id="descricao" class="prodBox">
+                <div id="descricao" class="prodBox dispblock">
                     <div class="board">
-                        <div class="board_htm description">
+                        <h3 class="triger_btn-tabs">{{ productTabs.description.description }}  
+                    <svg class="cat__icon icon--arrow-bottom ">
+                        <use xlink:href="#icon-arrow-bottom"></use>
+                    </svg>
+                        </h3>
+                        <div class="board_htm description tabs_wrap">
                             {{ product.description ? product.description : product.description_small }}
                         </div>
                     </div>
                 </div>
-                <div id="itensInclusos" class="prodBox">
-                    <div class="board">
-                        {{ product.included_items }}
-                    </div>
-                </div>
-                <div id="coments" class="prodBox product-comments product-comments-tab">
-                    <div class="board">
+                <div id="coments" class="prodBox dispblock ">
+                    <h3 class="triger_btn-tabs">{{ productTabs.comments.description }} 
+                    <svg class="cat__icon icon--arrow-bottom ">
+                        <use xlink:href="#icon-arrow-bottom"></use>
+                    </svg>
+                    </h3>
+                    <div class="board tabs_wrap">
                         {% element 'product/comments' %}
                     </div>
                 </div>
-                {{ productTabs.custom.content }}
+                <div id="coments" class="prodBox {{productTabs.custom.description }}">
+                    <h3 class="triger_btn-tabs">{{ productTabs.AdditionalTab8.description }}  
+                    <svg class="cat__icon icon--arrow-bottom ">
+                        <use xlink:href="#icon-arrow-bottom"></use>
+                    </svg>
+                    </h3>
+                    <div class="board ">
+                        {{ productTabs.custom.content }}
+                    </div>
+                </div>
                 {{ productTabs.downloads.content }}
-                <div data-app="product.payment-methods" id="formasPagto" class="prodBox" style="display:none;"></div>
+                <div data-app="product.payment-methods" id="formasPagto" class="prodBox dispblock" style="display:none;"></div>
             </section>
         </section>
     </div>
@@ -125,7 +124,7 @@
                             {{ productHelper.gifts() }}
                             <div class="product__variations">{{ productHelper.variants() }}</div>
                             <div class="product__kit">{{ productHelper.kit() }}</div>
-                            {% if product.available %}
+                            {% if product.available and product.stock > 0 %}
                             <div class="product__buy">
                                 <button type="submit" id="product__button--buy">Comprar</button>
                             </div>
@@ -172,26 +171,32 @@
                     <a name="formaPagto"></a>
                     <div id="descricao" class="prodBox dispblock">
                         <div class="board">
-                            <h3 class="triger_btn-tabs">{{ productTabs.description.description }} </h3>
+                            <h3 class="triger_btn-tabs">{{ productTabs.description.description }}  
+                    <svg class="cat__icon icon--arrow-bottom ">
+                        <use xlink:href="#icon-arrow-bottom"></use>
+                    </svg>
+                            </h3>
                             <div class="board_htm description tabs_wrap">
                                 {{ product.description ? product.description : product.description_small }}
                             </div>
                         </div>
                     </div>
-                    <div id="itensInclusos" class="prodBox dispblock">
-                        <h3 class="triger_btn-tabs">{{ productTabs.properties.description }} </h3>
-                        <div class="board tabs_wrap">
-                            {{ product.included_items }}
-                        </div>
-                    </div>
                     <div id="coments" class="prodBox dispblock ">
-                        <h3 class="triger_btn-tabs">{{ productTabs.comments.description }} </h3>
+                        <h3 class="triger_btn-tabs">{{ productTabs.comments.description }} 
+                    <svg class="cat__icon icon--arrow-bottom ">
+                        <use xlink:href="#icon-arrow-bottom"></use>
+                    </svg>
+                        </h3>
                         <div class="board tabs_wrap">
                             {% element 'product/comments' %}
                         </div>
                     </div>
                     <div id="coments" class="prodBox {{productTabs.custom.description }}">
-                        <h3 class="triger_btn-tabs">{{ productTabs.AdditionalTab8.description }} </h3>
+                        <h3 class="triger_btn-tabs">{{ productTabs.AdditionalTab8.description }}  
+                    <svg class="cat__icon icon--arrow-bottom ">
+                        <use xlink:href="#icon-arrow-bottom"></use>
+                    </svg>
+                        </h3>
                         <div class="board ">
                             {{ productTabs.custom.content }}
                         </div>
