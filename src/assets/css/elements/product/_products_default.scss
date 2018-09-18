@@ -1107,14 +1107,14 @@
     background-color: $cor01;
     border-radius: 3px;
     color: white;
-    display: inline-block;
+    display: flex;
     font-size: 14px;
-    font-weight: 800;
-    height: 30px;
-    line-height: 30px;
-    padding: 0 25px;
+    font-weight: 700;
+    height: 35px;
     text-align: center;
     text-transform: uppercase;
+    align-items: center;
+    margin: 5px 0 15px;
 
     @include link-action('', '', '', darken($cor01, 10%));
 
@@ -1146,6 +1146,9 @@
       margin-bottom: 5px;
       text-transform: uppercase;
       width: 100%;
+      &:before {
+       content: 'digite ';
+      }
     }
 
     input {
@@ -2165,10 +2168,31 @@ img#imgView{
   }
 }
 
+div#quantidade {
+    display: none;
+}
+
+div#bt_comprar {
+    padding: 20px;
+    background: $cor01;
+    display: flex;
+    align-items:  center;
+    justify-content:  center;
+    max-width: 50%;
+    color:  #fff;
+    border-radius: 3px;    
+    @include link-action('', '', '', darken($cor01, 10%));
+    @media(max-width:992px){
+      max-width:100%;
+    }
+}
+
+h3#img_nao_disp {
+    font-size: 15px;
+}
 
 .product__rating__stars{
   display: flex;
-  padding: 0 10px;
   align-items: center;
   @media(max-width: 991px){
     padding: 0;
@@ -2181,7 +2205,7 @@ img#imgView{
 
 }
 .star0, .star1, .star2, .star3, .star4, .star5 {
-  background: url(../img/star-ratingb.png)no-repeat;
+  background: url(../img/star-ratingc.png)no-repeat;
   float: left;
   height: 15px;
   width: 90px;

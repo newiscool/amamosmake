@@ -1,6 +1,5 @@
-<pre>
-    {{dump(product.variants)}}
-</pre>
+
+{% element 'snippets/breadcrumb' %}
 {% if utils.is_mobile %}
 <div id="product-page" class="product-page">
     <div class="produto-wrapper" itemscope itemtype="http://schema.org/Product">  
@@ -34,15 +33,17 @@
                     <div class="product-img" id="visualBlock">
                         {{ productHelper.gallery() }}
                     </div>
-                    <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
-                        <div class="product__variations">{{ productHelper.variants() }}</div>
-                        <div class="product__variations">{{ productHelper.kit() }}</div>
-                        {% if product.available and product.stock > 0 %}
-                            <div class="product__buy">
-                                <button type="submit" id="product__button--buy">Comprar</button>
-                            </div>
-                        {% endif %}
-                    </form>
+            <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
+                            {{ productHelper.pricing() }}
+                            {{ productHelper.gifts() }}
+                            <div class="product__variations">{{ productHelper.variants() }}</div>
+                            <div class="product__kit">{{ productHelper.kit() }}</div>
+                            {% if productHelper.form() %}
+                                <div class="tray-product-form-wrapper">
+                                    {{ productHelper.form() }}
+                                </div>
+                            {% endif %}
+                        </form>
                 </header>
             <div class="social-midias">{{ productHelper.social() }}</div>
         </div>
@@ -124,10 +125,10 @@
                             {{ productHelper.gifts() }}
                             <div class="product__variations">{{ productHelper.variants() }}</div>
                             <div class="product__kit">{{ productHelper.kit() }}</div>
-                            {% if product.available and product.stock > 0 %}
-                            <div class="product__buy">
-                                <button type="submit" id="product__button--buy">Comprar</button>
-                            </div>
+                            {% if productHelper.form() %}
+                                <div class="tray-product-form-wrapper">
+                                    {{ productHelper.form() }}
+                                </div>
                             {% endif %}
                         </form>
                         <!-- <div class="product__shipping">
