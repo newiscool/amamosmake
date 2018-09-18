@@ -835,12 +835,12 @@ table p {
           padding-top: 3px; }
       /* line 85, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
       #nav_bar ul.nv-01 > li:hover .dropdown-switcher {
-        height: 40vh;
+        height: 70vh;
         display: flex;
-        align-items: center; } }
+        justify-content: center; } }
     /* line 92, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
     #nav_bar ul.nv-01 > li .dropdown-switcher {
-      background-color: white;
+      background-color: #fafafa;
       box-shadow: 0 0 0 1px #f6f6f6;
       left: -110px;
       padding: 0;
@@ -947,13 +947,15 @@ table p {
     align-items: stretch; }
   /* line 222, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   #nav_bar ul.nv-02 {
-    flex: 1 1 auto;
-    display: flex;
+    display: flex !important;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 1140px;
-    height: 30vh; }
+    max-width: 920px;
+    height: 35vh;
+    margin: 0 45px;
+    align-items: center; }
+    /* line 229, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+    #nav_bar ul.nv-02 .owl-wrapper-outer {
+      padding: 10px 0; }
     @media (max-width: 992px) {
       /* line 222, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
       #nav_bar ul.nv-02 {
@@ -962,7 +964,7 @@ table p {
         transform: translateX(0%);
         left: 0%;
         height: auto; } }
-  /* line 241, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  /* line 244, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   #nav_bar .nv-02 > li {
     display: flex;
     margin: -1px 0;
@@ -975,11 +977,11 @@ table p {
     margin-right: 20px;
     border-right: 1px solid #7f7f7f;
     padding-right: 20px; }
-    /* line 253, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+    /* line 256, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
     #nav_bar .nv-02 > li:last-child {
       border: 0; }
     @media (max-width: 992px) {
-      /* line 241, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+      /* line 244, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
       #nav_bar .nv-02 > li {
         flex-direction: row;
         align-items: center;
@@ -988,25 +990,25 @@ table p {
         border-width: 0px 0 1px;
         margin: -1px -15px;
         padding: 0; }
-        /* line 264, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+        /* line 267, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
         #nav_bar .nv-02 > li:first-child {
           border-top: 1px solid #7f7f7f; } }
-    /* line 270, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+    /* line 273, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
     #nav_bar .nv-02 > li:hover > a {
       background-color: #f6f6f6;
       color: #fb0067; }
       @media (max-width: 992px) {
-        /* line 270, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+        /* line 273, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
         #nav_bar .nv-02 > li:hover > a {
           background: none;
           color: #000; } }
-    /* line 279, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+    /* line 282, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
     #nav_bar .nv-02 > li:hover .nv-03 {
       opacity: 1;
       visibility: visible;
       z-index: 200;
       background: #fff; }
-    /* line 289, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+    /* line 292, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
     #nav_bar .nv-02 > li > a {
       color: #000;
       display: flex;
@@ -1019,7 +1021,7 @@ table p {
       align-items: center;
       text-transform: uppercase; }
       @media (max-width: 992px) {
-        /* line 289, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+        /* line 292, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
         #nav_bar .nv-02 > li > a {
           height: 45px;
           border-width: 1px 0;
@@ -1028,19 +1030,19 @@ table p {
           color: #000;
           width: 92%;
           padding: 0 30px !important; } }
-  /* line 314, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  /* line 317, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   #nav_bar ul.nv-03 {
-    padding: 10px 0;
+    padding: 15px 0;
     left: 100%;
     top: 0;
     transition: all 150ms ease-in-out;
     z-index: -1; }
-    /* line 320, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+    /* line 323, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
     #nav_bar ul.nv-03 > li {
       height: 25px;
       display: flex;
       align-items: center; }
-      /* line 325, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+      /* line 328, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
       #nav_bar ul.nv-03 > li > a {
         color: #7f7f7f;
         display: block;
@@ -1052,7 +1054,7 @@ table p {
         white-space: nowrap;
         font-weight: 100; }
     @media (max-width: 992px) {
-      /* line 314, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+      /* line 317, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
       #nav_bar ul.nv-03 {
         position: initial;
         visibility: visible;
@@ -1060,7 +1062,7 @@ table p {
         display: none;
         width: 100%;
         padding: 0; }
-        /* line 344, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+        /* line 347, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
         #nav_bar ul.nv-03 li {
           height: 45px;
           border: solid #7f7f7f;
@@ -1069,44 +1071,46 @@ table p {
           align-items: center;
           margin: -1px;
           padding: 0 30px; }
-          /* line 352, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+          /* line 355, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
           #nav_bar ul.nv-03 li a {
             font-weight: 400;
             padding: 0 10px;
             font-size: 12px;
             color: gray; } }
 
-/* line 364, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+/* line 367, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
 .carrossel-navbar .dropdown-nv2 a {
   text-transform: uppercase;
-  color: #000;
-  font-size: 14px; }
+  color: #fb0067;
+  font-size: 14px;
+  font-weight: 600; }
 
-/* line 372, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+/* line 376, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
 .carrossel-navbar .owl-item {
   display: flex;
-  margin-right: 5px; }
+  align-items: center;
+  justify-content: center; }
 
-/* line 377, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+/* line 382, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
 .icon--menu {
   fill: #fb0067;
   height: 15px;
   margin-right: 2px;
   width: 18px; }
 
-/* line 384, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+/* line 389, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
 #nav_bar .nv-01 > .you-need {
   background-color: #fb0067;
   flex: 0 0 auto;
   position: relative;
   margin-right: 10px; }
-  /* line 392, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  /* line 397, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   #nav_bar .nv-01 > .you-need:hover .you-need__list {
     opacity: 1;
     visibility: visible;
     z-index: 200; }
 
-/* line 401, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+/* line 406, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
 .you-need__title {
   align-items: center;
   color: white;
@@ -1121,7 +1125,7 @@ table p {
   text-align: center;
   white-space: nowrap; }
 
-/* line 416, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+/* line 421, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
 .you-need__icon {
   fill: white;
   flex: 0 0 auto;
@@ -1129,7 +1133,7 @@ table p {
   margin-left: 3px;
   width: 8px; }
 
-/* line 424, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+/* line 429, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
 .you-need__list {
   background-color: white;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
@@ -1143,7 +1147,7 @@ table p {
   width: 265px;
   z-index: -1; }
 
-/* line 438, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+/* line 443, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
 .you-need__link {
   color: #000;
   display: block;
@@ -1152,22 +1156,22 @@ table p {
   line-height: 20px;
   padding: 5px 25px;
   transition: all 150ms ease-in-out; }
-  /* line 447, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  /* line 452, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   .you-need__link:hover {
     background-color: #fb0067;
     color: white; }
 
 @media (max-width: 990px) {
-  /* line 454, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  /* line 459, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   #nav_bar .nv-01 > .you-need {
     margin: 0 0 10px;
     position: relative; }
-  /* line 459, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  /* line 464, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   .you-need__title {
     justify-content: flex-start;
     position: relative;
     width: 100%; }
-  /* line 465, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  /* line 470, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   #nav_bar ul.nv-01 > li > a {
     justify-content: flex-start;
     height: 50px;
@@ -1175,14 +1179,14 @@ table p {
     align-items: center;
     display: flex;
     pointer-events: none; }
-  /* line 474, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  /* line 479, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   .you-need__list {
     display: none;
     position: static;
     opacity: 1;
     visibility: visible;
     transition: none; }
-  /* line 483, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  /* line 488, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   .you-need__icon {
     right: 15px;
     height: 16px;
@@ -1191,15 +1195,24 @@ table p {
     transform: translateY(-50%);
     width: 16px;
     z-index: 200; }
-  /* line 493, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  /* line 498, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
   .you-need__link {
     padding: 5px 20px; } }
 
-/* line 499, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+/* line 502, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+.product_navbar {
+  padding: 10px 0;
+  width: 15%; }
+  /* line 505, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+  .product_navbar .border {
+    max-height: 443px;
+    background: #fff; }
+
+/* line 511, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
 li.dropdown.dropdown-nv2.drop .nv-03 {
   display: block !important; }
 
-/* line 503, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
+/* line 515, src/assets/css/elements/header/nav_bar/_nav_bar_default.scss */
 .link-vertodos {
   display: flex;
   align-items: center;
@@ -1271,15 +1284,18 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
     justify-content: center;
     position: relative;
     width: 100%; }
+    /* line 73, src/assets/css/elements/showcase/_showcase_default.scss */
+    .showcase .product-image a img {
+      height: 100%; }
     @media (max-width: 1199px) {
       /* line 66, src/assets/css/elements/showcase/_showcase_default.scss */
       .showcase .product-image a {
         height: 115px; } }
   @media (min-width: 768px) {
-    /* line 87, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 90, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase .product-name {
       margin-top: 10px; } }
-  /* line 92, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 95, src/assets/css/elements/showcase/_showcase_default.scss */
   .showcase .product-name h3 {
     color: gray;
     margin: 0;
@@ -1291,16 +1307,16 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
     font-weight: 100;
     text-align: left; }
     @media (max-width: 992px) {
-      /* line 92, src/assets/css/elements/showcase/_showcase_default.scss */
+      /* line 95, src/assets/css/elements/showcase/_showcase_default.scss */
       .showcase .product-name h3 {
         line-height: 15px;
         height: auto;
         font-weight: 100;
         margin: 7px 0px; } }
-    /* line 109, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 112, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase .product-name h3:hover {
       color: #fb0067; }
-  /* line 115, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 118, src/assets/css/elements/showcase/_showcase_default.scss */
   .showcase .product-desc a {
     color: #000;
     display: block;
@@ -1310,17 +1326,17 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
     line-height: 13px;
     height: 39px;
     overflow: hidden; }
-  /* line 126, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 129, src/assets/css/elements/showcase/_showcase_default.scss */
   .showcase .product-price {
     min-height: 41px; }
-  /* line 130, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 133, src/assets/css/elements/showcase/_showcase_default.scss */
   .showcase .product-price > .preco-de {
     color: #000;
     display: inline-block;
     line-height: 14px;
     text-decoration: line-through;
     vertical-align: middle; }
-    /* line 137, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 140, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase .product-price > .preco-de > span {
       color: #000;
       display: none;
@@ -1328,20 +1344,20 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
       font-weight: 400;
       letter-spacing: -.1px;
       margin-right: 6px; }
-      /* line 145, src/assets/css/elements/showcase/_showcase_default.scss */
+      /* line 148, src/assets/css/elements/showcase/_showcase_default.scss */
       .showcase .product-price > .preco-de > span[itemprop="price"] {
         display: block; }
-  /* line 152, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 155, src/assets/css/elements/showcase/_showcase_default.scss */
   .showcase .preco-por {
     display: inline-block;
     line-height: 20px;
     vertical-align: middle; }
-    /* line 157, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 160, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase .preco-por > strong {
       color: #fb0067;
       font-size: 15px;
       font-weight: bold; }
-  /* line 164, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 167, src/assets/css/elements/showcase/_showcase_default.scss */
   .showcase .parcelamento {
     color: #000;
     font-size: 11px;
@@ -1351,25 +1367,25 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
     line-height: normal;
     margin-top: 2px;
     min-height: 24px; }
-    /* line 174, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 177, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase .parcelamento br:first-of-type {
       display: none; }
-    /* line 178, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 181, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase .parcelamento * {
       color: #000;
       font-size: 11px;
       font-weight: 400;
       letter-spacing: -.1px; }
-    /* line 186, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 189, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase .parcelamento strong, .showcase .parcelamento strong span {
       color: #000;
       font-size: 11px;
       font-weight: 700; }
   @media (max-width: 1199px) {
-    /* line 194, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 197, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase .owl-wrapper {
       border-right: 1px solid #f1f1f1; } }
-  /* line 202, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 205, src/assets/css/elements/showcase/_showcase_default.scss */
   .showcase .showcase-brand {
     font-size: 15px;
     font-weight: 700;
@@ -1377,7 +1393,7 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
     display: block;
     text-align: left;
     margin: 7px 0; }
-  /* line 211, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 214, src/assets/css/elements/showcase/_showcase_default.scss */
   .showcase .border {
     border: 1px solid transparent;
     border-radius: 0;
@@ -1390,34 +1406,34 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
     -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out; }
     @media (max-width: 1199px) {
-      /* line 211, src/assets/css/elements/showcase/_showcase_default.scss */
+      /* line 214, src/assets/css/elements/showcase/_showcase_default.scss */
       .showcase .border {
         height: 330px;
         padding: 20px 5px; } }
     @media (min-width: 1200px) {
-      /* line 228, src/assets/css/elements/showcase/_showcase_default.scss */
+      /* line 231, src/assets/css/elements/showcase/_showcase_default.scss */
       .showcase .border:hover {
         border: 1px solid #fb0067; } }
-    /* line 233, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 236, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase .border:hover .showcase__buy {
       opacity: 1;
       visibility: visible;
       z-index: 200; }
-    /* line 238, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 241, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase .border:hover .product-image {
       filter: blur(2px); }
   @media (min-width: 1200px) {
-    /* line 250, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 253, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase ul li:hover .butons-actions {
       opacity: 1;
       -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); } }
-  /* line 260, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 263, src/assets/css/elements/showcase/_showcase_default.scss */
   .showcase .butons-actions {
     font-size: 0;
     margin-top: 15px; }
     @media (min-width: 992px) {
-      /* line 260, src/assets/css/elements/showcase/_showcase_default.scss */
+      /* line 263, src/assets/css/elements/showcase/_showcase_default.scss */
       .showcase .butons-actions {
         opacity: 0;
         -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -1425,21 +1441,21 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
         -webkit-transition: all 200ms ease-in-out;
         -o-transition: all 200ms ease-in-out;
         transition: all 200ms ease-in-out; } }
-    /* line 270, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 273, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase .butons-actions.btn-iten2 a, .showcase .butons-actions.btn-iten2 button {
       width: 100%; }
-    /* line 275, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 278, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase .butons-actions.btn-iten3 .addCart,
     .showcase .butons-actions.btn-iten3 .to-view {
       width: 50%; }
-    /* line 279, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 282, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase .butons-actions.btn-iten3 .buy {
       width: 50%; }
-    /* line 284, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 287, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase .butons-actions.btn-iten3 .addCart span,
     .showcase .butons-actions.btn-iten3 .to-view span {
       display: none; }
-    /* line 289, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 292, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase .butons-actions .addCart,
     .showcase .butons-actions .to-view {
       color: #4d4d4d;
@@ -1474,46 +1490,46 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
       .showcase .butons-actions .to-view:active:focus span {
         color: #4d4d4d;
         color: #4d4d4d; }
-      /* line 294, src/assets/css/elements/showcase/_showcase_default.scss */
+      /* line 297, src/assets/css/elements/showcase/_showcase_default.scss */
       .showcase .butons-actions .addCart span,
       .showcase .butons-actions .to-view span {
         color: #000;
         text-decoration: none; }
-    /* line 300, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 303, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase .butons-actions .addCart:before {
       content: '\f217';
       font-family: FontAwesome;
       font-size: 1.3em;
       margin-right: 5px;
       vertical-align: middle; }
-    /* line 309, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 312, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase .butons-actions .to-view:before {
       content: '\f06e';
       font-family: FontAwesome;
       font-size: 1.3em;
       margin-right: 5px;
       vertical-align: middle; }
-    /* line 318, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 321, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase .butons-actions .buy:after {
       content: '\f105';
       font-family: FontAwesome;
       font-size: 1.3em;
       margin-left: 5px;
       vertical-align: middle; }
-  /* line 328, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 331, src/assets/css/elements/showcase/_showcase_default.scss */
   .showcase .action-buttons {
     display: flex;
     align-items: center;
     justify-content: center; }
-    /* line 333, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 336, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase .action-buttons > * {
       flex: 0 0 auto;
       margin: 0 5px; }
-  /* line 339, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 342, src/assets/css/elements/showcase/_showcase_default.scss */
   .showcase .unavailable {
     background-color: #c3c3c3;
     color: #000; }
-  /* line 344, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 347, src/assets/css/elements/showcase/_showcase_default.scss */
   .showcase .labels {
     display: flex;
     position: absolute;
@@ -1521,12 +1537,12 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
     left: 20px;
     flex-direction: column; }
     @media (max-width: 992px) {
-      /* line 344, src/assets/css/elements/showcase/_showcase_default.scss */
+      /* line 347, src/assets/css/elements/showcase/_showcase_default.scss */
       .showcase .labels {
         position: absolute;
         left: 5px; } }
 
-/* line 357, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 360, src/assets/css/elements/showcase/_showcase_default.scss */
 .quickview__button {
   align-items: center;
   background: #f2f2f2 linear-gradient(to bottom, #f2f2f2 0%, #e9e9e9 100%);
@@ -1543,27 +1559,27 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
   text-transform: uppercase;
   transition: all 150ms ease-in-out;
   width: 85px; }
-  /* line 374, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 377, src/assets/css/elements/showcase/_showcase_default.scss */
   .quickview__button:hover {
     background: #fb0067;
     color: white; }
-    /* line 378, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 381, src/assets/css/elements/showcase/_showcase_default.scss */
     .quickview__button:hover .quickview__icon {
       fill: white; }
 
-/* line 384, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 387, src/assets/css/elements/showcase/_showcase_default.scss */
 .quickview__icon {
   flex: 0 0 auto;
   margin-right: 5px;
   transition: all 150ms ease-in-out; }
 
-/* line 391, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 394, src/assets/css/elements/showcase/_showcase_default.scss */
 .icon--quickview {
   fill: #000;
   height: 11px;
   width: 19px; }
 
-/* line 398, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 401, src/assets/css/elements/showcase/_showcase_default.scss */
 .off-sale {
   border: 1px solid #fa6b6b;
   border-radius: 2px;
@@ -1576,19 +1592,19 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
   text-align: center;
   width: 50px; }
 
-/* line 412, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 415, src/assets/css/elements/showcase/_showcase_default.scss */
 .product__category {
   color: #fb0067;
   display: block;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: -.1px; }
-  /* line 419, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 422, src/assets/css/elements/showcase/_showcase_default.scss */
   .product__category:hover {
     color: #fb0067;
     text-decoration: underline; }
 
-/* line 425, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 428, src/assets/css/elements/showcase/_showcase_default.scss */
 .owl-theme .owl-controls .owl-buttons div {
   background-color: transparent !important;
   border-radius: 0;
@@ -1597,47 +1613,47 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
   transition: all 150ms ease-in-out;
   opacity: 1;
   width: 20px; }
-  /* line 436, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 439, src/assets/css/elements/showcase/_showcase_default.scss */
   .owl-theme .owl-controls .owl-buttons div:hover i {
     color: #fb0067; }
 
-/* line 443, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 446, src/assets/css/elements/showcase/_showcase_default.scss */
 .owl-buttons .owl-prev i, .owl-buttons .owl-next i {
   color: #fb0067;
   font-size: 45px !important;
   line-height: 40px;
   transition: all 150ms ease-in-out; }
 
-/* line 450, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 453, src/assets/css/elements/showcase/_showcase_default.scss */
 .owl-buttons .owl-prev {
   left: -30px; }
   @media (max-width: 992px) {
-    /* line 450, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 453, src/assets/css/elements/showcase/_showcase_default.scss */
     .owl-buttons .owl-prev {
       left: 0; } }
 
-/* line 457, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 460, src/assets/css/elements/showcase/_showcase_default.scss */
 .owl-buttons .owl-next {
   right: -30px; }
   @media (max-width: 992px) {
-    /* line 457, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 460, src/assets/css/elements/showcase/_showcase_default.scss */
     .owl-buttons .owl-next {
       right: 0; } }
 
 @media (max-width: 1199px) {
-  /* line 465, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 468, src/assets/css/elements/showcase/_showcase_default.scss */
   .showcase__banner {
     margin-bottom: 15px; } }
 
-/* line 470, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 473, src/assets/css/elements/showcase/_showcase_default.scss */
 .showcase-carousel .banners-extra__title {
   margin: 0 0 5px; }
 
-/* line 474, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 477, src/assets/css/elements/showcase/_showcase_default.scss */
 .banner-showcase {
   margin-bottom: 65px; }
 
-/* line 478, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 481, src/assets/css/elements/showcase/_showcase_default.scss */
 .showcase__buy {
   border-radius: 3px;
   bottom: 50%;
@@ -1654,7 +1670,7 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
   visibility: hidden;
   width: auto;
   z-index: -1; }
-  /* line 495, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 498, src/assets/css/elements/showcase/_showcase_default.scss */
   .showcase__buy a.buy__button {
     background-color: #fb0067;
     color: white;
@@ -1666,7 +1682,7 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
     border-radius: 3px;
     width: 100%;
     justify-content: center; }
-  /* line 508, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 511, src/assets/css/elements/showcase/_showcase_default.scss */
   .showcase__buy button.quick__button.button--quickview {
     width: 45%;
     background: #46c5c0;
@@ -1675,24 +1691,24 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
     justify-content: center;
     border-radius: 2px;
     transition: all 200ms ease-in-out; }
-    /* line 517, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 520, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase__buy button.quick__button.button--quickview:hover {
       background: #fff;
       border: 1px solid #fb0067; }
-      /* line 521, src/assets/css/elements/showcase/_showcase_default.scss */
+      /* line 524, src/assets/css/elements/showcase/_showcase_default.scss */
       .showcase__buy button.quick__button.button--quickview:hover svg {
         fill: #fb0067 !important; }
-    /* line 526, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 529, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase__buy button.quick__button.button--quickview svg#icon-eye {
       height: 30px;
       width: 30px;
       fill: #fff; }
   @media (max-width: 992px) {
-    /* line 478, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 481, src/assets/css/elements/showcase/_showcase_default.scss */
     .showcase__buy {
       display: none; } }
 
-/* line 539, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 542, src/assets/css/elements/showcase/_showcase_default.scss */
 .product__prices .preco-de {
   color: #7f7f7f;
   display: block;
@@ -1704,11 +1720,11 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
   text-align: left;
   text-decoration: line-through; }
   @media (max-width: 992px) {
-    /* line 539, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 542, src/assets/css/elements/showcase/_showcase_default.scss */
     .product__prices .preco-de {
       font-size: 14px; } }
 
-/* line 554, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 557, src/assets/css/elements/showcase/_showcase_default.scss */
 .product__prices .preco-por {
   color: #000;
   font-size: 25px;
@@ -1716,71 +1732,71 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
   display: block;
   text-align: left; }
   @media (max-width: 992px) {
-    /* line 554, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 557, src/assets/css/elements/showcase/_showcase_default.scss */
     .product__prices .preco-por {
       font-size: 20px;
       margin: 0; } }
 
-/* line 567, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 570, src/assets/css/elements/showcase/_showcase_default.scss */
 .formas-pagamento-box {
   display: block;
   font-size: 0;
   text-transform: lowercase;
   text-align: left; }
   @media (max-width: 992px) {
-    /* line 567, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 570, src/assets/css/elements/showcase/_showcase_default.scss */
     .formas-pagamento-box {
       overflow: initial; } }
-  /* line 576, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 579, src/assets/css/elements/showcase/_showcase_default.scss */
   .formas-pagamento-box br {
     line-height: 0; }
-  /* line 580, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 583, src/assets/css/elements/showcase/_showcase_default.scss */
   .formas-pagamento-box br:first-child,
   .formas-pagamento-box .txt-forma-pagamento {
     display: none; }
-  /* line 585, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 588, src/assets/css/elements/showcase/_showcase_default.scss */
   .formas-pagamento-box > * {
     color: #000;
     font-size: 13px;
     font-weight: 400;
     line-height: 10px; }
-  /* line 592, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 595, src/assets/css/elements/showcase/_showcase_default.scss */
   .formas-pagamento-box > * {
     text-transform: none;
     display: none; }
-  /* line 597, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 600, src/assets/css/elements/showcase/_showcase_default.scss */
   .formas-pagamento-box .preco-avista,
   .formas-pagamento-box .txt-avista {
     color: #000;
     font-weight: 700; }
-  /* line 603, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 606, src/assets/css/elements/showcase/_showcase_default.scss */
   .formas-pagamento-box strong,
   .formas-pagamento-box .color {
     font-size: 13px;
     font-weight: 700; }
-  /* line 610, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 613, src/assets/css/elements/showcase/_showcase_default.scss */
   .formas-pagamento-box .txt-corparcelas .preco-parc2 {
     font-size: 0; }
-  /* line 614, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 617, src/assets/css/elements/showcase/_showcase_default.scss */
   .formas-pagamento-box .txt-corparcelas .preco-parc2 {
     margin-right: 4px; }
 
 @media (max-width: 680px) {
-  /* line 622, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 625, src/assets/css/elements/showcase/_showcase_default.scss */
   .txt-com-desconto {
     display: none; }
-  /* line 626, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 629, src/assets/css/elements/showcase/_showcase_default.scss */
   .showcase-carousel, .banners-carousel {
     padding-bottom: 0 !important; }
-  /* line 630, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 633, src/assets/css/elements/showcase/_showcase_default.scss */
   .showcase .owl-wrapper-outer {
     padding-bottom: 0; } }
 
-/* line 635, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 638, src/assets/css/elements/showcase/_showcase_default.scss */
 .footer__pages--support {
   max-width: 320px; }
 
-/* line 640, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 643, src/assets/css/elements/showcase/_showcase_default.scss */
 .border {
   border: 1px solid transparent;
   border-radius: 4px;
@@ -1789,20 +1805,20 @@ li.dropdown.dropdown-nv2.drop .nv-03 {
   position: relative;
   transition: all 200ms ease-in-out; }
   @media (min-width: 1200px) {
-    /* line 651, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 654, src/assets/css/elements/showcase/_showcase_default.scss */
     .border:hover .product-image .image--one {
       display: none; }
-    /* line 654, src/assets/css/elements/showcase/_showcase_default.scss */
+    /* line 657, src/assets/css/elements/showcase/_showcase_default.scss */
     .border:hover .product-image .image--two {
       display: block;
       filter: blur(2px); } }
 
-/* line 665, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 668, src/assets/css/elements/showcase/_showcase_default.scss */
 .showcase .product-image .image--two {
   display: none; }
 
 @media (min-width: 1200px) {
-  /* line 669, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 672, src/assets/css/elements/showcase/_showcase_default.scss */
   .showcase .product-image .image--one {
     display: block; } }
 

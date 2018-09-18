@@ -30,7 +30,7 @@
                     </svg>
                 {% endif %}
                 {% if category.children %}
-                
+                {% set varCat = category.id %}                
                 <div class="dropdown-switcher">                   
                     <ul class="nv-02 carrossel-navbar">
                         {% for child in category.children %}
@@ -62,7 +62,21 @@
                             </a>
                         {% endif %}
                     </ul>
+                    <div class="product_navbar hidden-sm hidden-xs">
+                        {% set products = Products({
+                            'filter': [settings.filtros1],
+                            'limit': 1,
+                            'order': settings.ordem1,
+                            'order': {
+                                'stock': 'desc',
+                                'id': 'desc'
+                            },
+                            'categories': [ varCat ] 
+                        }) %}
+                        {% element 'snippets/showcase' {"products": products} %}
+                    </div>
                 </div>
+           
                 {% endif %}
             </li>
             {% endif %}
