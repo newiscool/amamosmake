@@ -403,7 +403,7 @@ h1.color {
     }
 
     &.free-shipping {
-      background-color: #0dec8b;
+      color: $cor01;
     }
 
     &.new {
@@ -689,13 +689,17 @@ button {
 
     }
     img {
+      width: auto;
+      max-width: none;
+      max-height: none;
+      min-width: 100%;
+      min-height: 100%;
       position: relative;
       left: 50%;
-      max-width: 120%;
       transform: translateX(-50%);
-      width: auto;
-      max-height: 370px;      
-      width: 100%;
+      @media (max-width:992px){
+        max-height: 120px;
+      }
     }
   }
 
@@ -748,7 +752,12 @@ button {
 
 
 .banner-title {
-  margin-bottom: 15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 160px;
+  overflow: hidden;
+  top: 226px;
 }
 
 main {

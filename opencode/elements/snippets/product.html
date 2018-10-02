@@ -12,14 +12,7 @@
             </div>
         {% endif %}
         {% if product.available  %}
-            <div class="labels">
-                    {% if product.free_shipping %}
-                        {% if Image('free_shipping') %}
-                                <span class="free-shipping">{{ Image('free_shipping') }}</span>
-                        {% else %}
-                                <span class="label free-shipping">Frete Grátis</span>
-                        {% endif %}
-                        {% endif %}
+            <div class="labels">        
                     {% if product.new %}
                         {% if Image('new') %}
                             <span class=" botao-new">{{ Image('new') }}</span>
@@ -34,8 +27,24 @@
                         <span class="label featured">Destaque</span>
                     {% endif %}
                 {% endif %}
+               
             </div>
-        {% endif %}
+            {% endif %}
+            {% if product.additional_button %}
+                {% if Image('additional_button') %}
+                        <span class="free-shipping">{{ Image('additional_button') }}</span>
+                {% else %}
+                        <span class="free-shipping">Frete Grátis Sul e Sudeste</span>
+                {% endif %}
+            {% endif %}
+
+            {% if product.additional_button == 0 %}
+            <div class="blackspace">
+                <br>        
+            </div>    
+            {% endif %}
+
+
         {% if product.has_variation %}
             <div class="variation-qtd">
                 <h3>+{{product.variants|length}} opções</h3>

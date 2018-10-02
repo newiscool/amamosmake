@@ -1,4 +1,47 @@
+<!--     {% set currentPrice = 0 %}
+{% set apartirde = false %}
+{% set costPrice = 0 %}
+{% for index, variant in product.variants %}
+    {% if index == 0 %} 
+        {% set currentPrice = variant.price %}
+        {% set costPrice = variant.price_offer %}
+    {% else %}
+        {% if currentPrice != variant.price %} 
+            {% set currentPrice = variant.price %}
+            {% set apartirde = true %}
+        {% endif %}
+    {% endif %}
+    
+
+    <pre>
+        {{dump(currentPrice ~ ' - ' ~ costPrice)}}
+    </pre>
+   
+{% endfor %} -->
+
+
+<!-- 
+{% set currentPrice = 0 %}
+{% set apartirde = false %}
+{% set costPrice = 0 %}
+{% for index, variant in products %}
+    {% if index == 0 %} 
+        {% set currentPrice = variant.color_id_1 %}
+        {% set costPrice = color_id_2 %}
+    {% endif %}
+    
+
+    <pre>
+        {{dump(variants)}}
+    </pre>
+   
+{% endfor %} -->
+
+
 {% element 'snippets/breadcrumb' %}
+
+<!-- <figure class="banner-title">{{ banner.title }}</figure> -->
+
 {% if products|length > 0 %}
 <aside class="smart_filter col-xs-3 visible-lg">
     <button class="mobileFilter btn btn-primary pull-right hidden-lg">
@@ -7,12 +50,13 @@
 
     {% element('snippets/smart_filter') %}
 </aside>
-
+{% if banner.title %}
+    
+{% endif %}
 <section class="products-categorys col-xs-12 col-lg-9">
+
     <div class="row">
-        {% if banner.title %}
-        <div class="banner-title">{{ banner.title }}</div>
-        {% endif %}
+  
 
         <div class="category__description">
             {{ category.small_description }}

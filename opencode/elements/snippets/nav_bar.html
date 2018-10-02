@@ -16,8 +16,9 @@
             <i class="fa fa-times" aria-hidden="true"></i>
         </button>
     </div>
-    <div class="container">
-        <ul class="nv-01">
+    <div class="container-navbar">
+        <div class="navbar-full">
+        <ul class="nv-01">            
             {% for category in categories %}
             {% if loop.index <= 8 %}
             <li class="cat_id-{{ category.id }} dropdown">
@@ -28,7 +29,8 @@
                     <svg class="cat__icon icon--arrow-bottom hidden-lg hidden-md">
                         <use xlink:href="#icon-arrow-bottom"></use>
                     </svg>
-                {% endif %}
+                    
+                {% endif %}           
                 {% if category.children %}
                 {% set varCat = category.id %}                
                 <div class="dropdown-switcher">                   
@@ -43,19 +45,31 @@
                                         <use xlink:href="#icon-arrow-bottom"></use>
                                     </svg>
                                 {% endif %}
+                                {% if not child.children %}
+                                    <a href="{{ category.link }}" class="link-vertodos">
+                                        <span>Ver todos: {{ child.name }}</span>
+                                    </a>
+                                {% endif %}
                                 
                                 {% if child.children %}
                                     <ul class="nv-03">
-                                    {% for child2 in child.children %}
-                                        <li class="cat_id-{{ child2.id }} dropdown">
-                                            <a href="{{ child2.link }}">{{child2.name }}</a>
+                                    {% for child in child.children %}
+                                        <li class="cat_id-{{ child.id }} dropdown">
+                                            <a href="{{ child.link }}">{{child.name }}</a>
+                                          
                                         </li>
+                                      
                                     {% endfor %}
-                                    
+                                        <li class="cat_id-{{ child.id }} dropdown">
+                                            <a href="{{ child.link }}" class="link-vertodos">
+                                                <span>Ver todos: {{ child.name }}</span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 {% endif %}
                             </li>
                         {% endfor %}
+                        
                         {% if utils.is_mobile %}
                             <a href="{{ category.link }}" class="link-vertodos">
                                 <span>Ver todos: {{ category.name }}</span>
@@ -81,8 +95,7 @@
             </li>
             {% endif %}
             {% endfor %}
-
-
         </ul>
+    </div>
     </div>
 </nav>

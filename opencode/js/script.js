@@ -15,8 +15,9 @@ jQuery(document).ready(function ($) {
             $trayBanner.remove();
             $fullBanner.find('ul').show();
             $fullBanner.find('ul').owlCarousel({
-                autoHeight: true,
-                autoPlay: true,
+                autoHeight: false,
+                autoWidth:true,
+                autoPlay: false,
                 goToFirstSpeed: 2000,
                 navigation: true,
                 navigationText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
@@ -62,7 +63,7 @@ jQuery(document).ready(function ($) {
                 pagination: false,
                 singxleItem: false
             });
-            if (window.innerWidth > 992) {
+            /*if (window.innerWidth > 992) {
                 jQuery(".carrossel-navbar").owlCarousel({
                     autoPlay: false,
                     items: 8,
@@ -74,7 +75,7 @@ jQuery(document).ready(function ($) {
                     pagination: false,
                     singxleItem: false
                 });
-            }
+            }*/
             
             jQuery(".product__related ul").owlCarousel({
                 autoPlay: true,

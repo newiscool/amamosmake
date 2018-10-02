@@ -58,7 +58,7 @@
 		{% elseif myFilter|length %}
 			{% for var in myFilter %}
 				<h3>{{ var.title }}</h3>
-				<ul>
+				<ul class="testee">
 					{% for item in var.items %}
 					<li>
 						{% if item.type == "link" %}
@@ -68,6 +68,7 @@
 							{% set checked = item.applied ? 'checked="checked"' %}
 							<input type="checkbox" name="{{ item.name }}" value="{{ item.value }}" {{ checked }} />
 							<a href="{{ item.url }}">{{ item.title }}</a>
+							
 						</label>
 						{% endif %}
 					</li>

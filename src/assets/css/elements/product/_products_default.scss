@@ -194,10 +194,10 @@
   }
 
   .product__name {
-    color: $cor02;
+    color: #667;
     display: block;
     font-size: 18px;
-    margin: 5px 0;
+    margin: 5px 0 20px;
   }
 
   #yv-review-quickreview {
@@ -631,17 +631,11 @@
 
   .free-shipping {
     align-items: center;
-    background: $light-pattern center center;
-    border: 1px solid $cor01;
-    border-radius: 2px;
+    color: $cor01;
     display: flex;
-    flex: 0 0 auto;
-    flex-flow: column nowrap;
-    height: 80px;
-    justify-content: center;
-    padding: 0 13px;
-    text-align: center;
-    white-space: nowrap;
+    z-index: 999;
+    padding: 10px 0 15px;
+    font-size: 18px;
   }
 
   .free-shipping__icon {
@@ -772,10 +766,6 @@
       }
 
     }
-  }
-
-  .free-shipping {
-    display: none!important;
   }
 
   .precosCompreJunto {
@@ -2173,7 +2163,6 @@ div#quantidade {
 }
 
 div#bt_comprar {
-    padding: 20px;
     background: $cor01;
     display: flex;
     align-items:  center;
@@ -2182,6 +2171,11 @@ div#bt_comprar {
     color:  #fff;
     border-radius: 3px;    
     @include link-action('', '', '', darken($cor01, 10%));
+
+    button{
+      padding: 20px;
+      width: 100%;
+    }
     @media(max-width:992px){
       max-width:100%;
     }
@@ -2392,7 +2386,7 @@ h3#img_nao_disp {
   h3{
     font-size: 16px;
     text-transform: uppercase;    
-    border-top: 1px solid $dark-gray;
+    border-top: 1px solid $light-gray;
     padding: 15px 0;
     margin: 0;
     display: flex;
@@ -2429,7 +2423,6 @@ h3{
 }
 .tabs_wrap {
   display: block !important;
-  border-top: 1px solid $light-gray; 
   padding: 10px 15px;
   }
 }

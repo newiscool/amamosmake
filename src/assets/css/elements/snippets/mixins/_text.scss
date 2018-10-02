@@ -1,9 +1,9 @@
 @mixin text(
 	$color          		: 		$text-color,
-	$font-family         	: 		$text-font-family,
-	$font-size           	: 		$text-font-size,
+	$font-family        : 		$text-font-family,
+	$font-size          : 		$text-font-size,
 	$line-height    		: 		$text-line-height,
-	$font-weight         	: 		$text-font-weight,
+	$font-weight        : 		$text-font-weight,
 	$text-transform 		: 		$text-text-transform,
 	$text-align     		: 		'',
 	$display        		: 		''
@@ -18,32 +18,32 @@
 	@if $display       		!= '' 	{  display: $display;  					}
 }
 @mixin link(
-    $color          		: 		$link-color,
-    $background				:		$link-background,
-	$font-family         	: 		$link-font-family,
-	$font-size           	: 		$link-font-size,
+	$color          		: 		$link-color,
+	$background					:			$link-background,
+	$font-family        : 		$link-font-family,
+	$font-size          : 		$link-font-size,
 	$line-height    		: 		$link-line-height,
-	$font-weight         	: 		$link-font-weight,
+	$font-weight        : 		$link-font-weight,
 	$text-transform 		: 		$link-text-transform,
 	$text-decoration		: 		$link-decoration,
 	$text-align     		: 		$link-text-align,
 	$display        		: 		''
 ){
   @include text($color, $font-family, $font-size, $line-height, $font-weight, $text-transform, $text-align, $display);
-  @if $background 			!= '' 	{  background: $background; 			}
+  @if $background 				!= '' 	{  background: $background; 			}
   @if $text-decoration 		!= '' 	{  text-decoration: $text-decoration; 	}
 }
 
 
 @mixin link-action(
 	$action         		: 		'',
-	$tag					:		'',
-  	$color          		: 		$link-hover-color,
-    $background				:		$link-hover-background,
-	$font-family         	: 		$link-hover-font-family,
-	$font-size           	: 		$link-hover-font-size,
+	$tag								:			'',
+	$color          		: 		$link-hover-color,
+  $background					:			$link-hover-background,
+	$font-family        : 		$link-hover-font-family,
+	$font-size          : 		$link-hover-font-size,
 	$line-height    		: 		$link-hover-line-height,
-	$font-weight         	: 		$link-hover-font-weight,
+	$font-weight        : 		$link-hover-font-weight,
 	$text-transform 		: 		$link-hover-text-transform,
 	$text-decoration		: 		$link-hover-decoration,
 	$text-align     		: 		$link-hover-text-align,
@@ -51,7 +51,7 @@
 
 ){
 	@if ( $action == '' ) {
-	  	&:hover,
+		&:hover,
 		&:focus,
 		&:active{
 			@if ( $tag == '' ) {
@@ -94,3 +94,26 @@
 		}
 	}
 }
+
+
+@mixin after {
+	display: block;
+&:after{
+	display: block;
+	content: '';
+	border-bottom: solid 2px $cor01;
+	transform: scaleX(0);
+	transition: transform 250ms ease-in-out;
+	}
+	&:hover{		
+		&:after{
+			display: block;
+			content: '';
+			border-bottom: solid 2px $cor01;
+			transform: scaleX(1);
+			transition: transform 250ms ease-in-out;
+		
+			}
+		}
+}
+
