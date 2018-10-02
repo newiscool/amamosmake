@@ -35,6 +35,7 @@
                     </div>
 
                     <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
+<<<<<<< HEAD
                             <div class="product-main__prices">
                                 <div id="preco" align="left">
                                     {{ productHelper.pricing() }}                  
@@ -67,6 +68,16 @@
                             {% endif %}
                         </form>
 
+=======
+                        <div class="product__variations">{{ productHelper.variants() }}</div>
+                        <div class="product__variations">{{ productHelper.kit() }}</div>
+                        {% if productHelper.form() %}
+                        <div class="tray-product-form-wrapper">
+                            {{ productHelper.form() }}
+                        </div>
+                        {% endif %}
+                    </form>
+>>>>>>> bb272c28662458480c4636b94e3b8b7867e53403
                 </header>
             <div class="social-midias">{{ productHelper.social() }}</div>
         </div>
@@ -165,9 +176,15 @@
                                 
                             <div class="product__kit">{{ productHelper.kit() }}</div>
                             {% if productHelper.form() %}
+<<<<<<< HEAD
                                 <div class="tray-product-form-wrapper">
                                     {{ productHelper.form() }}
                                 </div>
+=======
+                            <div class="tray-product-form-wrapper">
+                                {{ productHelper.form() }}
+                            </div>
+>>>>>>> bb272c28662458480c4636b94e3b8b7867e53403
                             {% endif %}
                          
                         </form>
