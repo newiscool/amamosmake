@@ -28,11 +28,12 @@
   align-items: center;
   background-color: white;
   display: flex;
-  padding: 10px 15px;
+  padding: 20px 0 10px;
   position: relative;
   z-index: 200 !important;
   transition: all 150ms ease-in-out;
   width: 100%;
+  border-top: 1px solid #dfdfdf;
 
   @media(max-width: 1199px) {
     margin: 0 15px;

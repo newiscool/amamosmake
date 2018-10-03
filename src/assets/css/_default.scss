@@ -9,7 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   @media(min-width: 1200px) {
-    padding-top: 151px;
+    padding-top: 165px;
   }
 }
 // body {visibility:hidden;}
@@ -748,16 +748,6 @@ button {
   @media (min-width: 1200px) {
     padding-left: 20px;
   }
-}
-
-
-.banner-title {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 160px;
-  overflow: hidden;
-  top: 226px;
 }
 
 main {
