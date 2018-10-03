@@ -35,40 +35,6 @@
                     </div>
 
                     <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
-<<<<<<< HEAD
-                            <div class="product-main__prices">
-                                <div id="preco" align="left">
-                                    {{ productHelper.pricing() }}                  
-                                </div>
-                            </div>
-                            
-                            {% if product.additional_button %}
-                                {% if Image('additional_button') %}
-                                        <span class="free-shipping">{{ Image('additional_button') }}</span>
-                                {% else %}
-                                        <span class="free-shipping">Frete Grátis Sul e Sudeste</span>
-                                {% endif %}
-                            {% endif %}
-                            
-                            {% if product.available and product.stock > 0 %}
-                            <div class="product__buy">
-                                <div data-app="product.quantity" class="product__quantity">
-                                    <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma opção para variação do produto</span>
-                                </div>
-                            </div>
-                            {% endif %}
-                            {% if productHelper.variants() %}
-                                <div class="product__variations">{{ productHelper.variants() }}</div>
-                            {% endif%}
-                            <div class="product__kit">{{ productHelper.kit() }}</div>
-                            {% if productHelper.form() %}
-                                <div class="tray-product-form-wrapper">
-                                    {{ productHelper.form() }}
-                                </div>
-                            {% endif %}
-                        </form>
-
-=======
                         <div class="product__variations">{{ productHelper.variants() }}</div>
                         <div class="product__variations">{{ productHelper.kit() }}</div>
                         {% if productHelper.form() %}
@@ -77,7 +43,6 @@
                         </div>
                         {% endif %}
                     </form>
->>>>>>> bb272c28662458480c4636b94e3b8b7867e53403
                 </header>
             <div class="social-midias">{{ productHelper.social() }}</div>
         </div>
@@ -176,15 +141,9 @@
                                 
                             <div class="product__kit">{{ productHelper.kit() }}</div>
                             {% if productHelper.form() %}
-<<<<<<< HEAD
-                                <div class="tray-product-form-wrapper">
-                                    {{ productHelper.form() }}
-                                </div>
-=======
                             <div class="tray-product-form-wrapper">
                                 {{ productHelper.form() }}
                             </div>
->>>>>>> bb272c28662458480c4636b94e3b8b7867e53403
                             {% endif %}
                          
                         </form>
