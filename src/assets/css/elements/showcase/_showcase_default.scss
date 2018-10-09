@@ -684,3 +684,45 @@
     }
   }
 }
+
+
+
+.showcase-list{
+  .showcase{
+    ul{
+      align-items: center;
+  
+    }
+    .border{
+      display: flex;
+      height: 222px;
+      @media (max-width:992px){
+        height: auto;
+      }
+      .right{
+        .product-price{
+          text-align: left;
+          .preco-de{
+            span{
+              font-size: 20px;
+            }
+          }
+          .preco-por{
+            strong{
+              font-size: 22px;
+            }
+          }
+        }
+      }
+      .showcase__buy{
+        transform: translateY(50%);
+      }
+    }
+  }
+}
+.slick-arrow {
+  font-size: 35px;
+}
+.border:focus{
+  outline: none;
+}

@@ -539,7 +539,7 @@ h1.color {
   color: $cor02;
   font-size: 30px;
   font-weight: 400;
-  margin: 40px 0 5px;
+  margin: 20px 0 20px;
   text-align: center;
   @media (max-width: 1199px) {
     font-size: 23px;
@@ -783,12 +783,13 @@ main {
 
 .movie__one{
   margin-top: 25px;
+  background: #fafafa;
+  padding: 20px 0 50px;
   .title-showcase{
       text-align: left;
       margin-top: 0;
       @media(min-width: 992px){        
         margin: 15px 0;
-        text-align: center;
       }
   }
   .title-showcase-sub{
@@ -798,7 +799,6 @@ main {
       }
   }
   .movie__container{
-      border-bottom: 1px solid #e9e9e9;
       width: 100%;
       max-width: 1170px;
       margin: 0 auto;
@@ -815,7 +815,6 @@ main {
 
   .movie__item{
       border-radius: 3px;
-      background: #fff;
       overflow: hidden;
       position: relative;
       iframe{

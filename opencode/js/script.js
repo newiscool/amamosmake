@@ -52,16 +52,25 @@ jQuery(document).ready(function ($) {
                 singxleItem: false
             });
 
-            jQuery(".showcase-list ul").owlCarousel({
-                autoPlay: false,
-                items: 8,
-                itemsCustom: [[320, 1], [768, 1], [992, 2], [1200, 2]],
+            /*jQuery(".dep_lista ").owlCarousel({
+                autoPlay: true,
+                items: 2,
+                itemsCustom: [[320, 1], [768, 1], [992, 1], [1200, 2]],
                 itemsScaleUp: false,
                 itemsTabletSmall: false,
                 navigation: true,
                 navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
                 pagination: false,
                 singxleItem: false
+            });*/
+
+            jQuery(".showcase-videoproduct").slick({            
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite:false,
+                    vertical:true,
+                    nextArrow: '<i class="fa fa-angle-down" aria-hidden="true"></i>',
+                    prevArrow: '<i class="fa fa-angle-up" aria-hidden="true"></i>',
             });
             /*if (window.innerWidth > 992) {
                 jQuery(".carrossel-navbar").owlCarousel({

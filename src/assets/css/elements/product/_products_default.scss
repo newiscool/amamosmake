@@ -1759,6 +1759,9 @@ ul#carousel {
   &:last-child {
     margin-right: 0;
   }
+  @media (max-width:992px){
+    margin-right: 0;
+  }
 }
 
 .product-info__title,

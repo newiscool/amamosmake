@@ -1,0 +1,66 @@
+<div class="border {% if not product.available %} off {% endif %}">
+    <div class="left">
+        <figure class="product-image">
+            <img class="img-responsive" src="{{ product.images[0].large }}" alt="{{ product.name }}">
+        </figure>
+    </div>
+    <div class="right">
+        <ul class="product-info__list">
+            <li class="product-info__item">
+                <span class="product-info__desc">{{ product.brand }}</span>
+            </li>
+            <li class="product-info__item">
+                {% if product.ranking %}
+                <div class="product__rating-wrapper">
+                    <span class="product__rating__stars" data-stars-count="{{ product.ranking.rating }}">
+                        <span class="star{{ product.ranking.rating }}"></span><span class="ranking-nota-final"></span>
+                    </span>
+                    
+                </div>
+                {% endif %}
+            </li>
+        </ul>
+        <div class="product-name" itemprop="name">
+            <h3>{{ product.name|slice(0,80) }}</h3>
+        </div>
+        {% if product.available %}
+
+            <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            {% if product.upon_request %}
+                <span class="sob-consulta">Preço sob consulta</span>
+            {% else %}
+            {% if product.price_offer > 0 %}
+            <div class="preco-de">
+                <span itemprop="price">R$ {{ product.price|currency }}</span>
+            </div>
+            <div class="preco-por">
+                <strong itemprop="price">R$ {{ product.price_offer|currency }}</strong>
+            </div>
+            {% else %}
+            <div class="preco-por">
+                <strong itemprop="price">R$ {{ product.price|currency }}</strong>
+            </div>
+            {% endif %}
+
+            <meta itemprop="priceCurrency" content="BRL">
+            {% if product.payment %}
+                <span class="parcelamento">{{ product.payment }}</span>
+                {% endif %}
+            {% endif %}
+        </div>
+        {% else %}
+        {% if Image('unavailable_button') %}
+            <div class="labels">
+                <span class="unavailable">{{ Image('unavailable_button') }}</span>
+            </div>
+        {% else %}
+        <div class="labels">
+            <span class="label label-default unavailable">Indisponível</span>
+        </div>
+        {% endif %}
+        {% endif %}
+        <div class="showcase__buy">
+            <a class="buy__button" href="{{ product.link }}">Comprar</a>
+        </div>
+    </div>
+</div>  

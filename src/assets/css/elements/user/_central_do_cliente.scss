@@ -436,3 +436,78 @@
   }
 
 }
+
+
+
+
+//depoimentos do cliente
+
+
+.page-depoimentos{
+  h2{
+    font-size: 15px;
+  }
+  
+  h3{
+    font-size: 15px;
+  }
+  br:nth-of-type(-n+2){
+    display: none;
+  }
+  .nota_dep{
+    br{
+      display: block;
+    }
+    label{
+      margin-right: 5px;
+      input{
+        height: auto;
+      }
+  
+    }
+  }
+  textarea#msg_depoimento{
+    width: 320px !important;
+    height: 150px !important;
+  }
+  .box-captcha {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+}
+
+.dep_lista{
+  display: flex;
+  .dep_item{
+    max-width: 270px;
+    padding: 10px;
+    margin: 0 5px;
+    background: $light-gray;
+    .dep_dados{
+      .dep_nome{
+        span{
+          font-weight: 600;
+        }
+      }
+      .dep_nota{
+        span{
+          font-weight: 600;
+        }
+      }
+      .dep_msg{
+        span{
+          font-weight: 600;
+        }
+      }
+      .dep_data{
+        span{
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
