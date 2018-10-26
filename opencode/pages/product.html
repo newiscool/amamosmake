@@ -1,4 +1,4 @@
-{% element 'snippets/breadcrumb' %}
+
 {% if utils.is_mobile %}
 <div id="product-page" class="product-page">
     <div class="produto-wrapper" itemscope itemtype="http://schema.org/Product">  
@@ -136,6 +136,7 @@
                                 {% endif %}
                             </div> 
                             <div class="product__variations">{{ productHelper.variants() }}</div>
+                            
 
                         
                                 
@@ -232,5 +233,17 @@
             </div>
         </section>
     {% endif %}
+
+    <div id="prognoos_ib"></div>
+    {% if settings.history_position == 1 %}
+        <section class="products-visited col-sm-12">
+            <h3 class="related-title">Últimos produtos visitados</h3>
+            {% element 'snippets/history' {
+                'store.id': store.id,
+                'pages.current': pages.current,
+                'category.id': category.id
+            } %} 
+        </section>
+    {% endif %} 
 </div>
 {% endif%}

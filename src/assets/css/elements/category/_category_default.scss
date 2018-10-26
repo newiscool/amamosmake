@@ -2,6 +2,9 @@
   display: inline-block;
   flex: 1 1 auto;
   font-size: 0;
+  @media (max-width:992px){
+    max-width: 45%;
+  }
 
   label {
     padding: 0 15px;
@@ -50,7 +53,7 @@
 
 .smart_filter {
   background-color: white;
-  padding: 15px 0;
+  padding: 45px 0;
 
   form {
     > ul {
@@ -140,7 +143,6 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin: 15px 0;
   padding: 0 15px;
   text-align: right;
   flex-wrap: wrap;
@@ -163,9 +165,12 @@
       width: 100%;
       margin: 0;
       flex: 0 0 100%;
-      position: fixed;
-      bottom: 40px;
       left: 0;
+      max-width: 45%;        
+      background: transparent;
+      color: #000;
+      border: 1px solid;
+      height: 40px;
     }
 
 
@@ -569,3 +574,82 @@ button.filter-button {
     margin: 5px 0;
   }
 } 
+
+.products-visited {
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  margin-bottom: 30px;
+  padding: 0 30px;
+  #NavVisitados {
+    width: 100%;
+  }
+  .visitados_itens{
+    display: none;
+  }
+  .visitados_produtos{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .clearVisiteds {
+      height: 30px;
+      display: flex;
+      align-items: center;
+      width: 120px;
+      background: $cor02;
+      justify-content: center;
+      color: #fff;
+      border-radius: 100px;
+    }
+    #produtos{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 15px;
+      ul{
+        max-width: 350px;
+        text-align: center;
+        li{
+          h3{
+            text-align: left;
+            font-size: 15px;
+          }
+          .precode{
+            color: #7f7f7f;
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            height: 14px;
+            line-height: 14px;
+            margin: 0px 0 5px;
+            text-align: left;
+            text-decoration: line-through;
+          }
+          .oculta_destaque{
+            display: none;
+          }
+          .precoAvista{
+            color: #000;
+            font-size: 25px;
+            font-weight: 600;
+            display: block;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+span#linksPag{
+  display: inline-flex;
+  a{
+    display: flex;
+    height: 30px;
+    width: 30px;
+    border: 1px solid;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+  }
+}

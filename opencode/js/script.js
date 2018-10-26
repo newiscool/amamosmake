@@ -64,6 +64,20 @@ jQuery(document).ready(function ($) {
                 singxleItem: false
             });*/
 
+            /*
+               jQuery(".visitados_produtos #produtos").owlCarousel({
+                autoPlay: true,
+                items: 2,
+                itemsCustom: [[320, 2], [768, 2], [992, 4], [1200, 4]],
+                itemsScaleUp: false,
+                itemsTabletSmall: false,
+                navigation: true,
+                navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+                pagination: false,
+                singxleItem: false
+            })
+            */
+
             jQuery(".showcase-videoproduct").slick({            
                     slidesToShow: 2,
                     slidesToScroll: 1,
@@ -327,7 +341,11 @@ if(jQuery('.product__addcart').length > 0) {
 
 jQuery( document ).ready(function() {
     jQuery("body").addClass("active__body");
+
+    jQuery("li[class='']").addClass("bbox");
 });
+
+
 
 jQuery( document ).ready(function() {
     if (window.innerWidth < 992) {

@@ -37,7 +37,6 @@
    
 {% endfor %} -->
 
-
 {% element 'snippets/breadcrumb' %}
 <figure class="banner-title">{{ banner.title }}</figure>
 
@@ -55,17 +54,11 @@
 <section class="products-categorys col-xs-12 col-lg-9">
 
     <div class="row">
+            {% element 'SmartTopMenu.smart_top_menu' %}
   
-
-        <div class="category__description">
-            {{ category.small_description }}
-        </div>
         
         <div class="col-xs-12 pagination-search-and-category top">
-            <button class="mobileFilter btn btn-primary pull-left hidden-lg" data-id="sm-filter">
-                <i class="fa fa-search-plus" aria-hidden="true"></i>
-                Filtro
-            </button>
+            <button class="mobileFilter btn btn-primary pull-left hidden-lg" data-id="sm-filter">Filtro</button>
             
             <span class="catalogo-display">{{ paginate.counter('Resultado <strong>{:count} Produtos</strong> em <strong>{:pages} Páginas</strong>') }}</span>
   
@@ -78,6 +71,11 @@
 
         <div class="products col-xs-12">
             {% element 'snippets/showcase' {"products": products} %}
+        </div>
+        
+
+        <div class="category__description">
+            {{ category.small_description }}
         </div>
 
         <div class="col-xs-12 pagination-search-and-category bottom">

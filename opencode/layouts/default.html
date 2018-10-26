@@ -45,6 +45,21 @@
         
     </head>
     <body>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5bc635bb08387933e5bb8be0/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
         {% element 'snippets/svg-sprite' %}
         {{ googleTagManager.top(pages.current, tagManagerData) }}
         {{ store.chat }}
@@ -64,10 +79,12 @@
                 {% element 'snippets/newsletter' %}
             {% endif %}
 <!---->
-            <div class="container">
-     
-                {{ content_for_layout }}
+            <div class="container">     
+                {{ content_for_layout }}               
             </div>
+            
+      
+            
         </main>
 
         {% element 'footer' %}
@@ -84,5 +101,12 @@
         <script defer type="text/javascript" src="{{ asset('js/script.js') }}"></script>
         <script defer type="text/javascript" src="{{ asset('js/newiscool.js') }}"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+
+        <script defer type="text/javascript" src="{{ asset('js/color-thief.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('js/js/jquery.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('js/js/mustache.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('js/js/demo.js')}}"></script>
     </body>
 </html>
