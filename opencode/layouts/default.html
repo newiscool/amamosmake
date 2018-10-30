@@ -42,7 +42,7 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
 
-        
+
     </head>
     <body>
 
@@ -58,6 +58,9 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
+
+
+
 <!--End of Tawk.to Script-->
 
         {% element 'snippets/svg-sprite' %}
@@ -74,17 +77,17 @@ s0.parentNode.insertBefore(s1,s0);
             {% if pages.current == 'home' and banner.home %}
                 <section id="full-banner">{{ banner.home }}</section>
             {% endif %}
-            
+
             {% if pages.current == 'home'  %}
                 {% element 'snippets/newsletter' %}
             {% endif %}
 <!---->
-            <div class="container">     
-                {{ content_for_layout }}               
+            <div class="container">
+                {{ content_for_layout }}
             </div>
-            
-      
-            
+
+
+
         </main>
 
         {% element 'footer' %}

@@ -1,4 +1,4 @@
-<li itemscope itemtype="http://schema.org/SomeProducts">
+<li itemscope itemtype="http://schema.org/Product">
     <div class="border {% if not product.available %} off {% endif %}">
         <div class="left">
             <figure class="product-image">
@@ -43,11 +43,11 @@
                     <span itemprop="price">R$ {{ product.price|currency }}</span>
                 </div>
                 <div class="preco-por">
-                    <strong itemprop="price">R$ {{ product.price_offer|currency }}</strong>
+                    <strong itemprop="price"><span itemprop="priceCurrency" content="BRL">R$</span><span itemprop="price" content="{{ product.price_offer|currency }}">{{ product.price_offer|currency }}</span></strong>
                 </div>
                 {% else %}
                 <div class="preco-por">
-                    <strong itemprop="price">R$ {{ product.price|currency }}</strong>
+                  <strong itemprop="price"><span itemprop="priceCurrency" content="BRL">R$</span><span itemprop="price" content="{{ product.price_offer|currency }}">{{ product.price_offer|currency }}</span></strong>
                 </div>
                 {% endif %}
 

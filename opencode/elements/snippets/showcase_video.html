@@ -4,7 +4,7 @@
     {% if showcaseTitle %}
     {{ showcaseTitle }}
     {% endif %}
-    <div class="showcase-videoproduct">
+    <div class="showcase-videoproduct" itemscope itemtype="http://schema.org/SomeProducts" itemid="#product">
         {% for product in products %}
         {% element 'snippets/product-video' {"product": product} %}
         {% endfor %}

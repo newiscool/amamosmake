@@ -2,39 +2,39 @@
 {% set apartirde = false %}
 {% set costPrice = 0 %}
 {% for index, variant in product.variants %}
-    {% if index == 0 %} 
+    {% if index == 0 %}
         {% set currentPrice = variant.price %}
         {% set costPrice = variant.price_offer %}
     {% else %}
-        {% if currentPrice != variant.price %} 
+        {% if currentPrice != variant.price %}
             {% set currentPrice = variant.price %}
             {% set apartirde = true %}
         {% endif %}
     {% endif %}
-    
+
 
     <pre>
         {{dump(currentPrice ~ ' - ' ~ costPrice)}}
     </pre>
-   
+
 {% endfor %} -->
 
 
-<!-- 
+<!--
 {% set currentPrice = 0 %}
 {% set apartirde = false %}
 {% set costPrice = 0 %}
 {% for index, variant in products %}
-    {% if index == 0 %} 
+    {% if index == 0 %}
         {% set currentPrice = variant.color_id_1 %}
         {% set costPrice = color_id_2 %}
     {% endif %}
-    
+
 
     <pre>
         {{dump(variants)}}
     </pre>
-   
+
 {% endfor %} -->
 
 {% element 'snippets/breadcrumb' %}
@@ -42,26 +42,25 @@
 
 {% if products|length > 0 %}
 <aside class="smart_filter col-xs-3 visible-lg">
+    <h1 class="head_title">{{ category.name }}</h1>
     <button class="mobileFilter btn btn-primary pull-right hidden-lg">
         <i class="fa fa-times" aria-hidden="true"></i>
     </button>
-
     {% element('snippets/smart_filter') %}
 </aside>
 {% if banner.title %}
-    
+
 {% endif %}
 <section class="products-categorys col-xs-12 col-lg-9">
 
     <div class="row">
-            {% element 'SmartTopMenu.smart_top_menu' %}
-  
-        
+
+
         <div class="col-xs-12 pagination-search-and-category top">
             <button class="mobileFilter btn btn-primary pull-left hidden-lg" data-id="sm-filter">Filtro</button>
-            
+
             <span class="catalogo-display">{{ paginate.counter('Resultado <strong>{:count} Produtos</strong> em <strong>{:pages} Páginas</strong>') }}</span>
-  
+
             <div class="filter-category">
                 {% element 'snippets/filter' {'brands': category.brands } %}
             </div>
@@ -72,7 +71,7 @@
         <div class="products col-xs-12">
             {% element 'snippets/showcase' {"products": products} %}
         </div>
-        
+
 
         <div class="category__description">
             {{ category.small_description }}

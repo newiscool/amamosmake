@@ -22,6 +22,11 @@ body {
   opacity: 1;
 }
 
+.head_title{
+  font-size: 25px;
+  margin: 10px 0;
+}
+
 *, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -424,7 +429,7 @@ h1.color {
       color: $cor02;
       @media (max-width:992px){
         top: 135px;
-        
+
       }
     }
   }
@@ -789,14 +794,14 @@ main {
   .title-showcase{
       text-align: left;
       margin-top: 0;
-      @media(min-width: 992px){        
+      @media(min-width: 992px){
         margin: 15px 0;
       }
   }
   .title-showcase-sub{
       margin-bottom: 15px;
       @media(min-width: 992px){
-          
+
       }
   }
   .movie__container{
@@ -928,7 +933,7 @@ main {
 
   .movie__product{
       .showcase-list{
- 
+
           padding: 0;
           @media(min-width: 992px){
               padding: 0 25px;
@@ -1102,4 +1107,3 @@ main {
 
 
 //SELECIONAR COR
-

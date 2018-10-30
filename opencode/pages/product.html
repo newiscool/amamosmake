@@ -1,7 +1,7 @@
 
 {% if utils.is_mobile %}
 <div id="product-page" class="product-page">
-    <div class="produto-wrapper" itemscope itemtype="http://schema.org/Product">  
+    <div class="produto-wrapper" itemscope itemtype="http://schema.org/Product">
         <section class="price-shipping__block-bottom">
             <div class="price-shipping__block">
                 <header>
@@ -9,28 +9,27 @@
                         <li class="product-info__item">
                             <span class="product-info__desc">{{ product.brand }}</span>
                         </li>
-                        <li class="product-info__item">
+                        <li class="product-info__item" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
                             {% if product.ranking %}
                             <div class="product__rating-wrapper">
                                 <span class="product__rating__stars" data-stars-count="{{ product.ranking.rating }}">
-                                    <span class="star{{ product.ranking.rating }}"></span><span class="ranking-nota-final"></span>
+                                    <span class="star{{ product.ranking.rating }}"></span><span class="ranking-nota-final" itemprop="ratingValue"></span>
                                 </span>
-                                
                             </div>
                             {% endif %}
                         </li>
                     </ul>
 
-                    <h1 class="product__name">{{ product.name }}</h1>
+                    <h1 class="product__name" itemprop="name">{{ product.name }}</h1>
                     <section class="product__general-information">
                         <div class="product__offer">
                             {% set percent = 100 - ( product.price_offer / product.price ) * 100 %}
-                            <span>-{{ percent|number_format }}%</span>                            
-                        </div>                              
+                            <span>-{{ percent|number_format }}%</span>
+                        </div>
                     </section>
-                     
-                    
-                    <div class="product-img" id="visualBlock">
+
+
+                    <div class="product-img" id="visualBlock" itemprop="image">
                         {{ productHelper.gallery() }}
                     </div>
 
@@ -46,12 +45,12 @@
                 </header>
             <div class="social-midias">{{ productHelper.social() }}</div>
         </div>
-        </section>  
+        </section>
         <section id="ProdBlock" class="product__tabs col-xs-12 ">
                 <a name="formaPagto"></a>
                 <div id="descricao" class="prodBox dispblock">
                     <div class="board">
-                        <h3 class="triger_btn-tabs">{{ productTabs.description.description }}  
+                        <h3 class="triger_btn-tabs">{{ productTabs.description.description }}
                     <svg class="cat__icon icon--arrow-bottom ">
                         <use xlink:href="#icon-arrow-bottom"></use>
                     </svg>
@@ -62,7 +61,7 @@
                     </div>
                 </div>
                 <div id="coments" class="prodBox dispblock ">
-                    <h3 class="triger_btn-tabs">{{ productTabs.comments.description }} 
+                    <h3 class="triger_btn-tabs">{{ productTabs.comments.description }}
                     <svg class="cat__icon icon--arrow-bottom ">
                         <use xlink:href="#icon-arrow-bottom"></use>
                     </svg>
@@ -72,7 +71,7 @@
                     </div>
                 </div>
                 <div id="coments" class="prodBox {{productTabs.custom.description }}">
-                    <h3 class="triger_btn-tabs">{{ productTabs.AdditionalTab8.description }}  
+                    <h3 class="triger_btn-tabs">{{ productTabs.AdditionalTab8.description }}
                     <svg class="cat__icon icon--arrow-bottom ">
                         <use xlink:href="#icon-arrow-bottom"></use>
                     </svg>
@@ -100,21 +99,21 @@
 
 {% else %}
 <div id="product-page" class="product-page">
-    <div class="produto-wrapper" itemscope itemtype="http://schema.org/Product">  
+    <div class="produto-wrapper" itemscope itemtype="http://schema.org/Product">
         <section class="product__general-price-information price-shipping__block-bottom">
             <div class="price-shipping__block">
                 <header>
                     <div class="product-info__item">
                         <span class="product-info__desc">{{ product.brand }}</span>
                     </div>
-                    <h1 class="product__name hidden-xs hidden-sm">{{ product.name }}</h1>
+                    <h1 class="product__name hidden-xs hidden-sm" itemprop="name">{{ product.name }}</h1>
                     <ul class="product-info__list">
                         <!-- <li class="product-info__item">
                             <span class="product-info__title">SKU:</span>
                             <span class="product-info__desc">{{ product.id }}</span>
                         </li> -->
                     </ul>
-                    
+
                     {% if product.ranking %}
                     <div class="product__rating-wrapper">
                         <span class="product__rating__stars" data-stars-count="{{ product.ranking.rating }}">
@@ -123,7 +122,7 @@
                         </span>
                     </div>
                     {% endif %}
-                        <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
+                        <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                             {{ productHelper.pricing(price) }}
                             {{ productHelper.gifts() }}
                             <div class="tag-freeshiping">
@@ -134,19 +133,16 @@
                                             <span class="free-shipping">Frete Grátis Sul e Sudeste</span>
                                     {% endif %}
                                 {% endif %}
-                            </div> 
+                            </div>
                             <div class="product__variations">{{ productHelper.variants() }}</div>
-                            
 
-                        
-                                
                             <div class="product__kit">{{ productHelper.kit() }}</div>
                             {% if productHelper.form() %}
                             <div class="tray-product-form-wrapper">
                                 {{ productHelper.form() }}
                             </div>
                             {% endif %}
-                         
+
                         </form>
                         <!-- <div class="product__shipping">
                             {{ productHelper.shipping() }}
@@ -167,19 +163,18 @@
                 </header>
             <div class="social-midias">{{ productHelper.social() }}</div>
         </div>
-        </section>  
-        <section class="container-right_block">            
+        </section>
+        <section class="container-right_block">
         <section class="product__general-information">
-            <div class="product__offer">
+            <div class="product__offer" >
                 {% set percent = 100 - ( product.price_offer / product.price ) * 100 %}
-                <span>-{{ percent|number_format }}%</span>                            
+                <span>-{{ percent|number_format }}%</span>
             </div>
-                                    
+
             <div class="product-img" id="visualBlock">
-                         
                 {{ productHelper.gallery() }}
             </div>
-        </section>                          
+        </section>
             {% if productHelper.bundle %}
                 <section class="product__bundle ">
                     <h4 class="product__title">Compre Junto</h4>
@@ -190,18 +185,18 @@
                     <a name="formaPagto"></a>
                     <div id="descricao" class="prodBox dispblock drop">
                         <div class="board">
-                            <h3 class="triger_btn-tabs">{{ productTabs.description.description }}  
+                            <h3 class="triger_btn-tabs">{{ productTabs.description.description }}
                     <svg class="cat__icon icon--arrow-bottom ">
                         <use xlink:href="#icon-arrow-bottom"></use>
                     </svg>
                             </h3>
-                            <div class="board_htm description tabs_wrap">
+                            <div class="board_htm description tabs_wrap" itemprop="description">
                                 {{ product.description ? product.description : product.description_small }}
                             </div>
                         </div>
                     </div>
                     <div id="coments" class="prodBox dispblock ">
-                        <h3 class="triger_btn-tabs">{{ productTabs.comments.description }} 
+                        <h3 class="triger_btn-tabs">{{ productTabs.comments.description }}
                     <svg class="cat__icon icon--arrow-bottom ">
                         <use xlink:href="#icon-arrow-bottom"></use>
                     </svg>
@@ -211,7 +206,7 @@
                         </div>
                     </div>
                     <div id="coments" class="prodBox {{productTabs.custom.description }}">
-                        <h3 class="triger_btn-tabs">{{ productTabs.AdditionalTab8.description }}  
+                        <h3 class="triger_btn-tabs">{{ productTabs.AdditionalTab8.description }}
                     <svg class="cat__icon icon--arrow-bottom ">
                         <use xlink:href="#icon-arrow-bottom"></use>
                     </svg>
@@ -242,8 +237,8 @@
                 'store.id': store.id,
                 'pages.current': pages.current,
                 'category.id': category.id
-            } %} 
+            } %}
         </section>
-    {% endif %} 
+    {% endif %}
 </div>
 {% endif%}

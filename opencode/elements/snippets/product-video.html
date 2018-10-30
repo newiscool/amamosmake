@@ -1,4 +1,4 @@
-<div class="border {% if not product.available %} off {% endif %}">
+<div class="border {% if not product.available %} off {% endif %}" itemscope itemtype="http://schema.org/SomeProducts">
     <div class="left">
         <figure class="product-image">
             <img class="img-responsive" src="{{ product.images[0].large }}" alt="{{ product.name }}">
@@ -15,7 +15,7 @@
                     <span class="product__rating__stars" data-stars-count="{{ product.ranking.rating }}">
                         <span class="star{{ product.ranking.rating }}"></span><span class="ranking-nota-final"></span>
                     </span>
-                    
+
                 </div>
                 {% endif %}
             </li>
@@ -31,14 +31,14 @@
             {% else %}
             {% if product.price_offer > 0 %}
             <div class="preco-de">
-                <span itemprop="price">R$ {{ product.price|currency }}</span>
+                <span>R$ {{ product.price|currency }}</span>
             </div>
             <div class="preco-por">
-                <strong itemprop="price">R$ {{ product.price_offer|currency }}</strong>
+              <strong><span itemprop="priceCurrency" content="BRL">R$</span><span itemprop="price" content="{{ product.price_offer|currency }}">{{ product.price_offer|currency }}</span></strong>
             </div>
             {% else %}
             <div class="preco-por">
-                <strong itemprop="price">R$ {{ product.price|currency }}</strong>
+              <strong><span itemprop="priceCurrency" content="BRL">R$</span><span itemprop="price" content="{{ product.price_offer|currency }}">{{ product.price_offer|currency }}</span></strong>
             </div>
             {% endif %}
 
@@ -63,4 +63,4 @@
             <a class="buy__button" href="{{ product.link }}">Comprar</a>
         </div>
     </div>
-</div>  
+</div>

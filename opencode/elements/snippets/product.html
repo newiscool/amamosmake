@@ -9,11 +9,11 @@
         {% if product.price_offer > 0 %}
             <div class="product__offer">
                 {% set percent = 100 - ( product.price_offer / product.price ) * 100 %}
-                <span> -{{ percent|number_format }}%</span>                
+                <span> -{{ percent|number_format }}%</span>
             </div>
         {% endif %}
         {% if product.available  %}
-            <div class="labels">        
+            <div class="labels">
                     {% if product.new %}
                         {% if Image('new') %}
                             <span class=" botao-new">{{ Image('new') }}</span>
@@ -28,7 +28,7 @@
                         <span class="label featured">Destaque</span>
                     {% endif %}
                 {% endif %}
-               
+
             </div>
             {% endif %}
             {% if product.additional_button %}
@@ -41,8 +41,8 @@
 
             {% if product.additional_button == 0 %}
             <div class="blackspace">
-                <br>        
-            </div>    
+                <br>
+            </div>
             {% endif %}
 
 
@@ -59,7 +59,7 @@
             <div class="product-name" itemprop="name">
                 <a href="{{ product.link }}">
                     <h3>{{ product.name|slice(0,80) }}</h3>
-                </a>
+                  </a>
             </div>
             {% if product.ranking %}
             <div class="product__rating-wrapper">
