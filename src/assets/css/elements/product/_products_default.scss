@@ -1,5 +1,8 @@
 #product-page {
   padding-top: 30px;
+  @media (max-width:992px){
+    padding: 0;
+  }
   #add,
   // #cor_nome,
   #estoque_variacao,
@@ -1978,10 +1981,11 @@ ul.nav.nav-tabs{
     top:110px;
     height: 20%;
     max-width: 40%;
-    order:2;
     width: 100%;
     @media(max-width: 1199px){
       max-width: 100%;
+      position: relative;
+      top: 0;
     }
   }
   section.product__general-information {
@@ -1990,13 +1994,22 @@ ul.nav.nav-tabs{
     width: 100%;
     position: relative;
     margin-bottom: 50px;
+    flex:0 0 50%;
     .product-img{
       width: 100%;
     }
     @media(max-width: 768px){
       flex-wrap: wrap;
       margin: 0;
+      flex:0 0 100%;
     }
+  }
+}
+section#ProdBlock {
+  flex: 0 0 55%;
+  @media (max-width:992px) {
+    flex:0 0 100%;
+    padding: 0;
   }
 }
 .product-img{
@@ -2022,6 +2035,9 @@ img#imgView{
 
     }
   }
+}
+.header-infoproduct{
+  width: 100%;
 }
 .page-product{
   .breadcrumb__icon{
@@ -2414,6 +2430,9 @@ h3{
 .tabs_wrap {
   display: block !important;
   padding: 10px 15px;
+  @media (max-width:992px){
+    padding: 0;
+    }
   }
 }
 

@@ -21,7 +21,7 @@
   
   a {
     > strong {
-      font-size: 14px;
+      font-size: 17px;
       font-weight: bold;
     }
   }
@@ -51,13 +51,25 @@
     }
   }
 }
+.container3.caixa-botoes {
+  .board{
+    span.botao-commerce.botao-prosseguir-compra.pointer.right {
+      display: block;
+    }
+  }
+}
+.board{
+  span.botao-commerce.botao-prosseguir-compra.pointer.right {
+    display: none;
+  }
+}
 
 .carrinho-tabs {
   margin: 0 0 15px;
   width: 100%;
   ol {
     font-size: 0;
-    display: inline-block;
+    display: flex;
     margin-top: 15px;
     position: relative;
     width: 100%;
@@ -196,24 +208,24 @@
     }
 
     .botao-cupom-desconto {
-      background-color: #333;
-      border: none;
+      background-color: #fff;
       border-radius: 2px;
-      color: white;
+      color: $cor02;
       cursor: pointer;
-      display: inline-block;
+      display: inline-flex;
       font-size: 12px;
       font-weight: 700;
       height: 35px;
-      line-height: 35px;
-      margin-left: 5px;
-      padding: 0 16px;
-      text-align: center;
+      margin-left: 0;
       text-transform: uppercase;
+      align-items: center;
+      justify-content: center;
+      width: 180px;
+      border: 1px solid $cor02;
 
       @media(max-width: 991px) {
-        display: block;
         margin: 0;
+        width: 100%;
       }
     }
   }
@@ -227,6 +239,10 @@ table#tabela_carrinho tbody tr th {
   @media (max-width: 768px) {
     display: none;
   }
+}
+
+table#tabela_carrinho tbody tr td + td h5:nth-child(4) {
+  display: none;
 }
 
 /*Image*/
@@ -277,7 +293,6 @@ table#tabela_carrinho {
           width: 60%;
           font-size: 11px;
           text-align: left;
-          text-transform: uppercase;
           @media (max-width: 768px) {
             padding: 0;
             width: 80%;
@@ -292,7 +307,7 @@ table#tabela_carrinho {
           }
           h5 {
             color: #333;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 400;
             line-height: 18px;
             margin: 0;
@@ -420,6 +435,7 @@ table#tabela_carrinho {
 }
 
 .caixa-frete {
+  display: none;
   h2.color {
     color: #333;
     font-size: 15px;
@@ -438,7 +454,9 @@ table#tabela_carrinho {
     }
   }
 }
-
+.board.caixa-forma-frete {
+  width: 100%;
+}
 .caixa-forma-frete {
   table {
     display: inline-block;
@@ -466,10 +484,10 @@ table#tabela_carrinho {
             font-size: 12px;
           }
           #calculoFrete {
-            border-bottom: 1px solid #eee;
             font-size: 0;
             padding: 20px 0;
-            text-align: right;
+            display: inline-flex;
+            align-items: center;
             @media (max-width: 991px) {
               text-align: center;
               width: 100%;
@@ -498,7 +516,7 @@ table#tabela_carrinho {
               line-height: 35px;
               margin-left: 2px;
               padding: 0 10px;
-              width: 100px;
+              width: 115px;
               vertical-align: middle;
               &#cep2 {
                 margin-right: 10px;
@@ -514,16 +532,15 @@ table#tabela_carrinho {
               border-radius: 2px;
               color: white;
               cursor: pointer;
-              display: inline-block;
+              display: inline-flex;
               font-size: 12px;
               font-weight: 700;
               height: 35px;
-              line-height: 35px;
-              margin-left: 5px;
-              padding: 0 16px;
-              text-align: center;
+              margin-left: 0;
               text-transform: uppercase;
-              vertical-align: middle;
+              align-items: center;
+              justify-content: center;
+              width: 180px;
             }
             + .carFretePara {
               color: #333;
@@ -597,6 +614,9 @@ table#tabela_carrinho {
                           padding: 0 0 15px 25px;
                           width: 80%;
                           text-align: left;
+                          @media (max-width:992px){
+                            padding: 0 0 15px 0px;
+                          }
                           a {
                             @include link();
                             @include link-action('', '', $cor01);
@@ -613,7 +633,6 @@ table#tabela_carrinho {
               display: block;
               width: 100%;
               h3 {
-                border-bottom: 1px solid #eee;
                 color: #333;
                 font-size: 15px;
                 font-weight: 500;
@@ -648,17 +667,11 @@ table#tabela_carrinho {
 .caixa-total {
   width: 100%;
   .board {
-    align-items: baseline;
     border-bottom: 1px solid #eee;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0;
-    float: right;
-    margin-bottom: 15px;
     padding: 15px 0;
     width: 100%;
-    max-width: 350px;
-
+    display: flex;
+    justify-content: flex-end;
     @media (max-width: 991px) {
       flex-wrap: wrap;
       justify-content: center;
@@ -674,7 +687,8 @@ table#tabela_carrinho {
     margin: 0 10px 0 0;
     text-transform: uppercase;
     vertical-align: middle;
-
+    display: flex;
+    align-items: center;
     @media (max-width: 991px) {
       display: block;
       font-size: 18px;
@@ -695,13 +709,13 @@ table#tabela_carrinho {
           display: block;
           width: 100%;
           h3 {
-            color: #333;
-            font-size: 16px;
+            color: $cor01;
+            font-size: 25px;
             font-weight: 700;
             margin: 0;
             div {
-              color: #333;
-              font-size: 16px;
+              color: $cor01;
+              font-size: 25px;
               font-weight: 700;
               display: inline-block;
             }
@@ -717,6 +731,7 @@ table#tabela_carrinho {
 
 .caixa-botoes {
   position: relative;
+  margin: 40px 0 0;
 
   @media(min-width: 992px) {
     .board {
@@ -1294,4 +1309,10 @@ button.bt-efetua-login.clear img {
   transform: translateX(-50%);
   line-height: 50px;
   font-weight: 700;
+}
+
+.caixa-forma-frete table tbody{
+  th{
+    text-align: right;
+  }
 }

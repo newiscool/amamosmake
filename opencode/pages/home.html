@@ -9,8 +9,9 @@
                 'limit': settings.quantidade1,
                 'order': settings.ordem1,
                 'order': {
+                    'quantity_sold': 'asc',
                     'stock': 'desc',
-                    'id': 'desc'
+                    'id': 'asc'
                 },
                 'categories': [ settings.categories1 ]
             }) %}
@@ -20,6 +21,7 @@
                 'limit': settings.quantidade1,
                 'order': settings.ordem1,
                 'order': {
+                    'quantity_sold': 'desc',
                     'stock': 'desc',
                     'id': 'desc'
                 },

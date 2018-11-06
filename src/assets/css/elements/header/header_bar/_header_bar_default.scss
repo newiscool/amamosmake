@@ -396,19 +396,15 @@
     box-shadow: 0 0 3px 0 rgba(3, 3, 3, .31);
     top: 100%;
     right: 0;
-    padding: 15px 25px;
+    padding: 0;
     position: absolute;
     opacity: 0;
     visibility: hidden;
-    width: 290px;
+    width: 300px;
     z-index: 400;
     transition: all 150ms ease-in-out;
   }
 
-}
-
-.cart__dropdown {
-  display: none;
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -541,10 +537,6 @@
   transform: translate(-50%, -50%);
   top: 50%;
   width: 100%;
-}
-
-.cart__dropdown {
-  display: none !important;
 }
 
 .active__dropdown {

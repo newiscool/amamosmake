@@ -117,3 +117,10 @@
 		}
 }
 
+
+@mixin itemCenter {
+	max-width: 1140px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%)
+}

@@ -1,5 +1,4 @@
-
-
+{% element 'snippets/newsletter' %}
 <div class="container block-visted_review">
     {% if pages.current in ['catalog', 'search'] %}
         {% if settings.history_position == 1 %}
@@ -8,7 +7,7 @@
                 {% element 'snippets/history' {
                     'store.id': store.id,
                     'pages.current': pages.current,
-                    'category.id': category.id,                                    
+                    'category.id': category.id,
                 } %}
             </section>
         {% endif %}
@@ -21,7 +20,6 @@
     -->
 </div>
 
-
 <section class="banners-extras">
     {% if pages.current == 'home' %}    
         {% element 'snippets/videos_section' %}
@@ -29,130 +27,47 @@
 </section>
 <footer id="footer">
     <div class="footer__container">
-
         <nav class="footer__nav">
-
             <ul class="footer__list">
-                <li class="footer__title-item">
-                    Institucional            
-                </li>
-                {% if (settings['institucional01']) %}                
-                    <li class="footer__list-item"><a href="{{ settings.institucional01 }}">{{ settings.institucional01nome}}</a></li>
-                {% endif %}
-                {% if (settings['institucional02']) %}
-                    <li class="footer__list-item"><a href="{{ settings.institucional02 }}">{{ settings.institucional02nome}}</a></li>
-                {% endif %}
-                {% if (settings['institucional03']) %}
-                    <li class="footer__list-item"><a href="{{ settings.institucional03 }}">{{ settings.institucional03nome}}</a></li>
-                {% endif %}
-                {% if (settings['institucional04']) %}
-                    <li class="footer__list-item"><a href="{{ settings.institucional04 }}">{{ settings.institucional04nome}}</a></li>
-                {% endif %}
-                {% if (settings['institucional05']) %}
-                    <li class="footer__list-item"><a href="{{ settings.institucional05 }}">{{ settings.institucional05nome}}</a></li>
-                {% endif %}
-                {% if (settings['institucional06']) %}
-                    <li class="footer__list-item"><a href="{{ settings.institucional06 }}">{{ settings.institucional06nome}}</a></li>
-                {% endif %}
-                {% if (settings['institucional07']) %}
-                    <li class="footer__list-item"><a href="{{ settings.institucional07 }}">{{ settings.institucional07nome}}</a></li>
-                {% endif %}
+                <li class="footer__list-item"><a href="/sobre-a-amamos-make">Sobre a {{store.name}}</a></li>
+                <li class="footer__list-item"><a href="/como-comprar">Como comprar</a></li>
+                <li class="footer__list-item"><a href="/seguranca">Segurança</a></li>
+                <li class="footer__list-item"><a href="/envio">Envio e Prazos</a></li>
+                <li class="footer__list-item"><a href="/pagamento">Pagamento</a></li>
             </ul>
-
             <ul class="footer__list">
-                <li class="footer__list-item footer__title-item">
-                    Dúvidas            
-                </li>
-
-                {% if (settings['duvidas01']) %}
-                    <li class="footer__list-item"><a href="{{ settings.duvidas01 }}">{{ settings.duvidas01nome }}</a></li>
-                {% endif %}
-                {% if (settings['duvidas02']) %}  
-                    <li class="footer__list-item"><a href="{{ settings.duvidas02 }}">{{ settings.duvidas02nome }}</a></li>
-                {% endif %}
-                {% if (settings['duvidas03']) %}
-                    <li class="footer__list-item"><a href="{{ settings.duvidas03 }}">{{ settings.duvidas03nome }}</a></li>
-                {% endif %}
-                {% if (settings['duvidas04']) %}
-                    <li class="footer__list-item"><a href="{{ settings.duvidas04 }}">{{ settings.duvidas04nome }}</a></li>
-                {% endif %}
-                {% if (settings['duvidas05']) %}
-                    <li class="footer__list-item"><a href="{{ settings.duvidas05 }}">{{ settings.duvidas05nome }}</a></li>
-                {% endif %}
-                {% if (settings['duvidas06']) %}
-                    <li class="footer__list-item"><a href="{{ settings.duvidas06 }}">{{ settings.duvidas06nome }}</a></li>
-                {% endif %}
-                {% if (settings['duvidas07']) %}
-                    <li class="footer__list-item"><a href="{{ settings.duvidas07 }}">{{ settings.duvidas07nome }}</a></li>
-                {% endif %}
+                <li class="footer__list-item"><a href="/politica-de-privacidade" class="page__link">Política de privacidade</a></li>
+                <li class="footer__list-item"><a href="/politica-de-trocas-e-devolucoes" class="page__link">Política de trocas e devoluções</a></li>
+                <li class="footer__list-item"><a href="{{ links.contact }}" class="page__link">Fale conosco</a></li>
+                <li class="footer__list-item"><a href="{{ links.central }}" class="page__link">Minha conta</a></li>
+                <li class="footer__list-item"><a href="{{ links.orders }}" class="page__link">Acompanhamento do pedido</a></li>
             </ul>
-
-            
-
-           <!-- <ul class="footer__list">
-                <li class="footer__list-item footer__title-item">
-                    Serviços            
-                </li>
-
-                {% if (settings['servicos01']) %}
-                    <li class="footer__list-item"><a href="{{ settings.servicos01 }}">{{ settings.servicos01nome}}</a></li>
-                {% endif %}
-
-                {% if (settings['servicos02']) %}
-                    <li class="footer__list-item"><a href="{{ settings.servicos02 }}">{{ settings.servicos02nome}}</a></li>
-                {% endif %}
-
-                {% if (settings['servicos03']) %}
-                    <li class="footer__list-item"><a href="{{ settings.servicos03 }}">{{ settings.servicos03nome}}</a></li>
-                {% endif %}
-
-                {% if (settings['servicos04']) %}
-                    <li class="footer__list-item"><a href="{{ settings.servicos04 }}">{{ settings.servicos04nome}}</a></li>
-                {% endif %}
-
-                {% if (settings['servicos05']) %}
-                    <li class="footer__list-item"><a href="{{ settings.servicos05 }}">{{ settings.servicos05nome}}</a></li>
-                {% endif %}
-
-                {% if (settings['servicos06']) %}
-                    <li class="footer__list-item"><a href="{{ settings.servicos06 }}">{{ settings.servicos06nome}}</a></li>
-                {% endif %}
-
-                {% if (settings['servicos07']) %}
-                    <li class="footer__list-item"><a href="{{ settings.servicos07 }}">{{ settings.servicos07nome}}</a></li>
-                {% endif %}
-            </ul> -->
-
+    
             <ul class="footer__list">
-                <li class="footer__list-item footer__title-item">
-                    Atendimento            
+                <li class="footer__list-item support__contact">
+                    <span>Telefone</span>
+                    <strong>{{ settings.phones }}</strong>
                 </li>
                 <li class="footer__list-item support__contact">
-                    <span>
-                        <em>Telefone</em>
-                        <strong>{{ settings.phones }}</strong>
-                    </span>
-                    <span>
-                        <em>Whatsapp</em>
-                        <strong>{{ settings.whatsapp }}</strong>
-                    </span>
+                    <span>Whatsapp</span>
+                    <strong>{{ settings.whatsapp }}</strong>
                 </li>
-
-                 <li class="footer__list-item support__office-hours">
-                    {{ settings.support }}
-                 </li>
-
                 <li class="footer__list-item support__contact support__contact-mail">
-                    <span>
-                       <em>E-mail</em>
-                       <strong>{{ settings.emailum }}</strong>
-                    </span>
+                    <span>E-mail</span>
+                    <strong>{{ settings.emailum }}</strong>
                 </li>
-                 <li class="footer__list-item"><a href="">Fale Conosco</a></li>
+                <li class="footer__list-item support__contact support__contact-mail">
+                    <span>Horario de atendimento:</span>
+                    <strong>{{ settings.support }}</strong>
+                </li>
             </ul>
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Famamosmakeloja&tabs=timeline&width=320&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="320" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            <ul class="footer__list">
+                <li class="footer__list-item support__contact">
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Famamosmakeloja&tabs=timeline&width=320&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="320" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                </li>
+            </ul>
         </nav>
-
+    
         <section class="payment-and-security">
             <div class="payment">
                 <strong class="footer__title-item">Formas de pagamento</strong>
@@ -164,13 +79,12 @@
                         {% endfor %}
                     </div>
                     <div class="payment__debt">
-                        <em>Transferência Online, Boleto e Depósito</em>
+                        <em>Boleto</em>
                         {% for payment in paymentMethods.order %}
                             <img src="{{ payment.thumbnail.url }}" alt="{{ payment.display_name }}">
                         {% endfor %}
                     </div>
                 </div>
-
             </div>
             <div class="security">
                 <strong class="footer__title-item">Segurança</strong>
@@ -180,7 +94,7 @@
                 </div>
             </div>
         </section>
-    
+        
         <div class="designby">
             <div class="designbyblock">                     
             <figure class="brand-footer">
@@ -199,3 +113,20 @@
         </div>
     </section>
 </footer>
+
+<script defer>
+jQuery( document ).ready(function() {
+    jQuery("body").addClass("active__body");
+    if (window.innerWidth < 992) {
+        jQuery( "svg.cat__icon.icon--arrow-bottom" ).on( "click", function() {
+            jQuery(this).addClass("rotateDrop");
+            if(jQuery(".dropdown-switcher").hasClass("active__dropdown")) {
+                jQuery(".dropdown-switcher").removeClass("active__dropdown");
+                jQuery("svg.cat__icon.icon--arrow-bottom").removeClass("rotateDrop");
+            } else {
+                jQuery(".dropdown-switcher").addClass("active__dropdown");
+            }
+        });
+    }
+});
+</script>

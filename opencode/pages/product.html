@@ -1,225 +1,80 @@
-
-{% if utils.is_mobile %}
 <div id="product-page" class="product-page">
     <div class="produto-wrapper" itemscope itemtype="http://schema.org/Product">
-        <section class="price-shipping__block-bottom">
+        <section class="product__general-information">
+            <div class="product__offer" >
+                {% set percent = 100 - ( product.price_offer / product.price ) * 100 %}
+                <span>-{{ percent|number_format }}%</span>
+            </div>
+            <div class="product-img" id="visualBlock">
+                {{ productHelper.gallery() }}
+            </div>
+        </section>
+        <section class="product__general-price-information price-shipping__block-bottom">
             <div class="price-shipping__block">
-                <header>
-                    <ul class="product-info__list">
-                        <li class="product-info__item">
-                            <span class="product-info__desc">{{ product.brand }}</span>
-                        </li>
-                        <li class="product-info__item" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                            {% if product.ranking %}
-                            <div class="product__rating-wrapper">
-                                <span class="product__rating__stars" data-stars-count="{{ product.ranking.rating }}">
-                                    <span class="star{{ product.ranking.rating }}"></span><span class="ranking-nota-final" itemprop="ratingValue"></span>
-                                </span>
-                            </div>
-                            {% endif %}
-                        </li>
-                    </ul>
-
-                    <h1 class="product__name" itemprop="name">{{ product.name }}</h1>
-                    <section class="product__general-information">
-                        <div class="product__offer">
-                            {% set percent = 100 - ( product.price_offer / product.price ) * 100 %}
-                            <span>-{{ percent|number_format }}%</span>
-                        </div>
-                    </section>
-
-
-                    <div class="product-img" id="visualBlock" itemprop="image">
-                        {{ productHelper.gallery() }}
+                <header class="header-infoproduct">
+                    <div class="product-info__item">
+                        <span class="product-info__desc">{{ product.brand }}</span>
                     </div>
-
-                    <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
-                        <div class="product__variations">{{ productHelper.variants() }}</div>
-                        <div class="product__variations">{{ productHelper.kit() }}</div>
-                        {% if productHelper.form() %}
-                        <div class="tray-product-form-wrapper">
-                            {{ productHelper.form() }}
+                    <h1 class="product__name hidden-xs hidden-sm" itemprop="name">{{ product.name }}</h1>
+                    {% if product.ranking %}
+                        <div class="product__rating-wrapper">
+                            <span class="product__rating__stars" data-stars-count="{{ product.ranking.rating }}">
+                            <span class="star{{ product.ranking.rating }}"></span><span class="ranking-nota-final"></span>
+                            <a href="#descricaoanchor" id="avalieClick">Avalie este produto</a>
+                            </span>
                         </div>
+                    {% endif %}
+                    <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        {{ productHelper.pricing(price) }}
+                        {{ productHelper.gifts() }}
+                        <div class="tag-freeshiping">
+                            {% if product.additional_button %}
+                                {% if Image('additional_button') %}
+                                        <span class="free-shipping">{{ Image('additional_button') }}</span>
+                                {% else %}
+                                        <span class="free-shipping">Frete Grátis Sul e Sudeste</span>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                        <div class="product__variations">{{ productHelper.variants() }}</div>
+                        <div class="product__kit">{{ productHelper.kit() }}</div>
+                        {% if productHelper.form() %}
+                            <div class="tray-product-form-wrapper">{{ productHelper.form() }}</div>
                         {% endif %}
                     </form>
                 </header>
             <div class="social-midias">{{ productHelper.social() }}</div>
         </div>
         </section>
+
         <section id="ProdBlock" class="product__tabs col-xs-12 ">
-                <a name="formaPagto"></a>
-                <div id="descricao" class="prodBox dispblock">
-                    <div class="board">
-                        <h3 class="triger_btn-tabs">{{ productTabs.description.description }}
-                    <svg class="cat__icon icon--arrow-bottom ">
-                        <use xlink:href="#icon-arrow-bottom"></use>
-                    </svg>
-                        </h3>
-                        <div class="board_htm description tabs_wrap">
-                            {{ product.description ? product.description : product.description_small }}
-                        </div>
+            <a name="formaPagto"></a>
+            <div id="descricao" class="prodBox dispblock drop">
+                <div class="board">
+                    <h3 class="triger_btn-tabs">{{ productTabs.description.description }}<svg class="cat__icon icon--arrow-bottom "><use xlink:href="#icon-arrow-bottom"></use></svg></h3>
+                    <div class="board_htm description tabs_wrap" itemprop="description">
+                        {{ product.description ? product.description : product.description_small }}
                     </div>
                 </div>
-                <div id="coments" class="prodBox dispblock ">
-                    <h3 class="triger_btn-tabs">{{ productTabs.comments.description }}
-                    <svg class="cat__icon icon--arrow-bottom ">
-                        <use xlink:href="#icon-arrow-bottom"></use>
-                    </svg>
-                    </h3>
-                    <div class="board tabs_wrap">
-                        {% element 'product/comments' %}
-                    </div>
-                </div>
-                <div id="coments" class="prodBox {{productTabs.custom.description }}">
-                    <h3 class="triger_btn-tabs">{{ productTabs.AdditionalTab8.description }}
-                    <svg class="cat__icon icon--arrow-bottom ">
-                        <use xlink:href="#icon-arrow-bottom"></use>
-                    </svg>
-                    </h3>
-                    <div class="board ">
-                        {{ productTabs.custom.content }}
-                    </div>
-                </div>
-                {{ productTabs.downloads.content }}
-                <div data-app="product.payment-methods" id="formasPagto" class="prodBox dispblock" style="display:none;"></div>
-            </section>
+            </div>
+            <div id="coments" class="prodBox dispblock ">
+                <h3 class="triger_btn-tabs">{{ productTabs.comments.description }}<svg class="cat__icon icon--arrow-bottom "><use xlink:href="#icon-arrow-bottom"></use></svg></h3>
+                <div class="board tabs_wrap">{% element 'product/comments' %}</div>
+            </div>
+            <div id="coments" class="prodBox {{productTabs.custom.description }}">
+                <h3 class="triger_btn-tabs">{{ productTabs.AdditionalTab8.description }}<svg class="cat__icon icon--arrow-bottom "><use xlink:href="#icon-arrow-bottom"></use></svg></h3>
+                <div class="board ">{{ productTabs.custom.content }}</div>
+            </div>
+            {{ productTabs.downloads.content }}
+            <div data-app="product.payment-methods" id="formasPagto" class="prodBox dispblock" style="display:none;"></div>
         </section>
     </div>
-    {% if product.related_products %}
-        <section class="col-xs-12 product__related">
-            <h4  class="banners-extra__title title--main">Produtos Recomendados</h4>
-            <div class="product__related">
-                {% element 'snippets/showcase' {"products": product.related_products } %}
-            </div>
+    {% if productHelper.bundle %}
+        <section class="product__bundle ">
+            <h4 class="product__title">Compre Junto</h4>
+            {{ productHelper.bundle }}
         </section>
     {% endif %}
-</div>
-
-<!-- DESKTOP -->
-
-{% else %}
-<div id="product-page" class="product-page">
-    <div class="produto-wrapper" itemscope itemtype="http://schema.org/Product">
-        <section class="product__general-price-information price-shipping__block-bottom">
-            <div class="price-shipping__block">
-                <header>
-                    <div class="product-info__item">
-                        <span class="product-info__desc">{{ product.brand }}</span>
-                    </div>
-                    <h1 class="product__name hidden-xs hidden-sm" itemprop="name">{{ product.name }}</h1>
-                    <ul class="product-info__list">
-                        <!-- <li class="product-info__item">
-                            <span class="product-info__title">SKU:</span>
-                            <span class="product-info__desc">{{ product.id }}</span>
-                        </li> -->
-                    </ul>
-
-                    {% if product.ranking %}
-                    <div class="product__rating-wrapper">
-                        <span class="product__rating__stars" data-stars-count="{{ product.ranking.rating }}">
-                          <span class="star{{ product.ranking.rating }}"></span><span class="ranking-nota-final"></span>
-                          <a href="#descricaoanchor" id="avalieClick">Avalie este produto</a>
-                        </span>
-                    </div>
-                    {% endif %}
-                        <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                            {{ productHelper.pricing(price) }}
-                            {{ productHelper.gifts() }}
-                            <div class="tag-freeshiping">
-                                {% if product.additional_button %}
-                                    {% if Image('additional_button') %}
-                                            <span class="free-shipping">{{ Image('additional_button') }}</span>
-                                    {% else %}
-                                            <span class="free-shipping">Frete Grátis Sul e Sudeste</span>
-                                    {% endif %}
-                                {% endif %}
-                            </div>
-                            <div class="product__variations">{{ productHelper.variants() }}</div>
-
-                            <div class="product__kit">{{ productHelper.kit() }}</div>
-                            {% if productHelper.form() %}
-                            <div class="tray-product-form-wrapper">
-                                {{ productHelper.form() }}
-                            </div>
-                            {% endif %}
-
-                        </form>
-                        <!-- <div class="product__shipping">
-                            {{ productHelper.shipping() }}
-                            {% if settings.freeShippingActived == '1' %}
-                            <div class="free-shipping">
-                                <svg class="free-shipping__icon icon--shipping">
-                                    <use xlink:href="#icon-shipping"></use>
-                                </svg>
-                                <span class="free-shipping__title">
-                                    Frete Grátis
-                                </span>
-                                <span class="free-shipping__desc">
-                                    {{ settings.freeShipping }}
-                                </span>
-                            </div>
-                            {% endif %}
-                        </div> -->
-                </header>
-            <div class="social-midias">{{ productHelper.social() }}</div>
-        </div>
-        </section>
-        <section class="container-right_block">
-        <section class="product__general-information">
-            <div class="product__offer" >
-                {% set percent = 100 - ( product.price_offer / product.price ) * 100 %}
-                <span>-{{ percent|number_format }}%</span>
-            </div>
-
-            <div class="product-img" id="visualBlock">
-                {{ productHelper.gallery() }}
-            </div>
-        </section>
-            {% if productHelper.bundle %}
-                <section class="product__bundle ">
-                    <h4 class="product__title">Compre Junto</h4>
-                    {{ productHelper.bundle }}
-                </section>
-            {% endif %}
-            <section id="ProdBlock" class="product__tabs col-xs-12 ">
-                    <a name="formaPagto"></a>
-                    <div id="descricao" class="prodBox dispblock drop">
-                        <div class="board">
-                            <h3 class="triger_btn-tabs">{{ productTabs.description.description }}
-                    <svg class="cat__icon icon--arrow-bottom ">
-                        <use xlink:href="#icon-arrow-bottom"></use>
-                    </svg>
-                            </h3>
-                            <div class="board_htm description tabs_wrap" itemprop="description">
-                                {{ product.description ? product.description : product.description_small }}
-                            </div>
-                        </div>
-                    </div>
-                    <div id="coments" class="prodBox dispblock ">
-                        <h3 class="triger_btn-tabs">{{ productTabs.comments.description }}
-                    <svg class="cat__icon icon--arrow-bottom ">
-                        <use xlink:href="#icon-arrow-bottom"></use>
-                    </svg>
-                        </h3>
-                        <div class="board tabs_wrap">
-                            {% element 'product/comments' %}
-                        </div>
-                    </div>
-                    <div id="coments" class="prodBox {{productTabs.custom.description }}">
-                        <h3 class="triger_btn-tabs">{{ productTabs.AdditionalTab8.description }}
-                    <svg class="cat__icon icon--arrow-bottom ">
-                        <use xlink:href="#icon-arrow-bottom"></use>
-                    </svg>
-                        </h3>
-                        <div class="board ">
-                            {{ productTabs.custom.content }}
-                        </div>
-                    </div>
-                    {{ productTabs.downloads.content }}
-                    <div data-app="product.payment-methods" id="formasPagto" class="prodBox dispblock" style="display:none;"></div>
-                </section>
-        </section>
-    </div>
     {% if product.related_products %}
         <section class="col-xs-12 product__related">
             <h4  class="banners-extra__title title--main">Produtos Recomendados</h4>
@@ -241,4 +96,3 @@
         </section>
     {% endif %}
 </div>
-{% endif%}

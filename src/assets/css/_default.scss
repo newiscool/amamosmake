@@ -659,30 +659,6 @@ button {
   background-color: $cor01;
 }
 
-.board_htm.description {
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: .1px;
-  li{
-    a{
-      display: block !important;
-    }
-  }
-}
-
-.board_htm.description p {
-  margin: 0 0 20px;
-}
-
-.board_htm.description span,
-.board_htm.description p {
-  color: #666 !important;
-  line-height: 1.4 !important;
-}
-
-.board_htm.description br {
-  display: none;
-}
 
 #full-banner {
   .owl-carousel .owl-item {

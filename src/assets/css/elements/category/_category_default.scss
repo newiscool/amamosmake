@@ -576,11 +576,7 @@ button.filter-button {
 } 
 
 .products-visited {
-  display: flex;
-  flex-wrap: wrap;
-  height: 300px;
-  margin-bottom: 30px;
-  padding: 0 30px;
+  padding: 0;
   #NavVisitados {
     width: 100%;
   }
@@ -589,11 +585,20 @@ button.filter-button {
   }
   .visitados_produtos{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     flex-wrap: wrap;
+    .paginacao_ajax {
+      order: 2;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0 0;
+    }
     .clearVisiteds {
       height: 30px;
-      display: flex;
+      display: none;
       align-items: center;
       width: 120px;
       background: $cor02;
@@ -609,10 +614,18 @@ button.filter-button {
       ul{
         max-width: 350px;
         text-align: center;
+        width: 100%;
+        padding: 0 1px;
         li{
           h3{
             text-align: left;
             font-size: 15px;
+            @media (max-width:992px){
+              height: 80px;
+            }
+            a{
+              color: #7f7f7f;
+            }
           }
           .precode{
             color: #7f7f7f;
@@ -624,6 +637,9 @@ button.filter-button {
             margin: 0px 0 5px;
             text-align: left;
             text-decoration: line-through;
+            @media (max-width:992px){
+              font-size: 14px;
+            }
           }
           .oculta_destaque{
             display: none;
@@ -634,15 +650,34 @@ button.filter-button {
             font-weight: 600;
             display: block;
             text-align: left;
+            @media (max-width:992px){
+              font-size: 18px;
+            }
+          }
+          span.txt-cadaparcelas {
+            display: none;
+        }
+          .operadora, .preco-parc2, .preco-de  {
+            display: none;
           }
         }
       }
     }
   }
 }
+span#paginacao_ajax_prod {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 0;
+  justify-content: center;
+}
 
 span#linksPag{
-  display: inline-flex;
+  display: flex;
+  font-size: 13px;
+  padding: 10px 0;
   a{
     display: flex;
     height: 30px;
