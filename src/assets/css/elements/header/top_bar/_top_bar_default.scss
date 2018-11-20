@@ -25,7 +25,7 @@
 }
 
 .help__link {
-  color: $cor01;
+  color: $cor02;
   font-size: 14px;
   font-weight: 600;
   margin-left: 3px;
@@ -51,19 +51,22 @@
 
 .info-list__title,
 .info-list__desc {
-  color: $cor02;
   font-size: 13px;
   font-weight: 700;
+  a{
+    color: $cor02;
+  }
 }
 
 .info-list__title {
   align-items: center;
   display: inline-flex;
   margin: 0 5px;
+  color: $cor02;
 }
 
 .info-list__desc {
-  color: $cor01;
+  color: $cor02;
   margin-left: 3px;
 }
 

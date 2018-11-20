@@ -114,6 +114,7 @@
     justify-content: center;
     height: 50px;
     transition: $transition;
+    background: transparent;
 
     &:hover {
       opacity: .9;
@@ -304,7 +305,7 @@
 @media (max-width: 1199px) {
 
   #header_bar {
-    padding: 15px 0;
+    padding: 15px 0 0;
     width: auto;
 
     .row {

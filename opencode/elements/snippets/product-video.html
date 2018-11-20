@@ -21,7 +21,9 @@
             </li>
         </ul>
         <div class="product-name" itemprop="name">
-            <h3>{{ product.name|slice(0,80) }}</h3>
+            <a href="{{ product.link }}">
+                <h3>{{ product.name|slice(0,80) }}</h3>
+            </a>
         </div>
         {% if product.available %}
 

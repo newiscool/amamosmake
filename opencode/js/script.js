@@ -19,7 +19,7 @@ jQuery(document).ready(function ($) {
                 autoWidth:true,
                 autoPlay: false,
                 goToFirstSpeed: 2000,
-                navigation: true,
+                navigation: false,
                 navigationText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
                 pagination: true,
                 paginationSpeed: 1000,
@@ -34,9 +34,9 @@ jQuery(document).ready(function ($) {
                 itemsCustom: [[320, 2], [600, 2], [768, 2], [992, 3], [1200, 4]],
                 itemsScaleUp: false,
                 itemsTabletSmall: false,
-                navigation: true,
+                navigation: false,
                 navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-                pagination: false,
+                pagination: true,
                 singleItem: false
             });
 
@@ -46,9 +46,9 @@ jQuery(document).ready(function ($) {
                 itemsCustom: [[320, 1], [768, 1], [992, 1], [1200, 2]],
                 itemsScaleUp: false,
                 itemsTabletSmall: false,
-                navigation: true,
+                navigation: false,
                 navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-                pagination: false,
+                pagination: true,
                 singxleItem: false
             });
 
@@ -58,9 +58,9 @@ jQuery(document).ready(function ($) {
                 itemsCustom: [[320, 1], [768, 1], [992, 1], [1200, 2]],
                 itemsScaleUp: false,
                 itemsTabletSmall: false,
-                navigation: true,
+                navigation: false,
                 navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-                pagination: false,
+                pagination: true,
                 singxleItem: false
             });*/
 
@@ -71,9 +71,9 @@ jQuery(document).ready(function ($) {
                 itemsCustom: [[320, 2], [768, 2], [992, 4], [1200, 4]],
                 itemsScaleUp: false,
                 itemsTabletSmall: false,
-                navigation: true,
+                navigation: false,
                 navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-                pagination: false,
+                pagination: true,
                 singxleItem: false
             })
             */
@@ -85,6 +85,16 @@ jQuery(document).ready(function ($) {
                     vertical:true,
                     nextArrow: '<i class="fa fa-angle-down" aria-hidden="true"></i>',
                     prevArrow: '<i class="fa fa-angle-up" aria-hidden="true"></i>',
+                    responsive: [
+                        {
+                          breakpoint: 992,
+                          settings: {
+                            vertical:false,
+                            dots:true,
+                            arrows:false,
+                          }
+                    }
+                ]
             });
             /*if (window.innerWidth > 992) {
                 jQuery(".carrossel-navbar").owlCarousel({
@@ -93,22 +103,22 @@ jQuery(document).ready(function ($) {
                     itemsCustom: [[1200, 5]],
                     itemsScaleUp: false,
                     itemsTabletSmall: false,
-                    navigation: true,
+                    navigation: false,
                     navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-                    pagination: false,
+                    pagination: true,
                     singxleItem: false
                 });
             }*/
             
             jQuery(".product__related ul").owlCarousel({
-                autoPlay: true,
+                autoPlay: false,
                 items: 4,
                 itemsCustom: [[320, 2], [768, 2], [992, 3], [1200, 4]],
                 itemsScaleUp: false,
                 itemsTabletSmall: false,
-                navigation: true,
+                navigation: false,
                 navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-                pagination: false,
+                pagination: true,
                 singxleItem: false
             });
             
@@ -118,9 +128,9 @@ jQuery(document).ready(function ($) {
                 itemsCustom: [[320, 3], [768, 3], [992, 5], [1200, 8]],
                 itemsScaleUp: false,
                 itemsTabletSmall: false,
-                navigation: true,
+                navigation: false,
                 navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-                pagination: false,
+                pagination: true,
             });
 
             jQuery(".banners-extra__list").owlCarousel({
@@ -129,9 +139,9 @@ jQuery(document).ready(function ($) {
                 itemsCustom: [[320, 2], [768, 2], [992, 3], [1200, 4]],
                 itemsScaleUp: false,
                 itemsTabletSmall: false,
-                navigation: true,
+                navigation: false,
                 navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-                pagination: false,
+                pagination: true,
                 singxleItem: false
             });
             
@@ -169,9 +179,9 @@ jQuery(document).ready(function ($) {
                     itemsCustom: [[320, 1], [768, 1], [992, 1], [1200, 1]],
                     itemsScaleUp: false,
                     itemsTabletSmall: false,
-                    navigation: true,
+                    navigation: false,
                     navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-                    pagination: false,
+                    pagination: true,
                     singxleItem: false
                 });
             }
@@ -274,7 +284,34 @@ jQuery(document).ready(function ($) {
         else{ item.removeClass("drop") }
     
     });
+    if (screen.width > 992) {
+    jQuery( ".title-triger" ).on( "click", function() {
+        var item = jQuery(this).closest('.filter-block');
+        var hasOpen = !item.hasClass('drop');
+        jQuery('.filter-block').removeClass('drop');
+        if(hasOpen) item.addClass("drop");
+        else{ item.removeClass("drop") }
+    });
+    }
+    if (screen.width < 992) {
+    jQuery( ".title-triger" ).on( "click", function() {
+        var item = jQuery(this).closest('.list-block');
+        var hasOpen = !item.hasClass('drop');
+        jQuery('.list-block').removeClass('drop');
+        if(hasOpen) item.addClass("drop");
+        else{ item.removeClass("drop") }
+    });
+    }
 
+    // jQuery( ".title-triger" ).on( "click", function() {
+    //     if(jQuery(".filter-block").hasClass("active__dropdown")) {
+    //         jQuery(".filter-block").removeClass("active__dropdown");
+    //     } else {
+    //         jQuery(".filter-block").addClass("active__dropdown");
+    //     }
+    // });
+
+    $(".submenu.in").closest(".menu").addClass("in");
 
     jQuery('#foto_p').attr('data-target', "");
 
@@ -342,9 +379,10 @@ if(jQuery('.product__addcart').length > 0) {
 
 jQuery( document ).ready(function() {
     jQuery("body").addClass("active__body");
-
     jQuery("li[class='']").addClass("bbox");
 });
+
+
 
 
 
@@ -362,6 +400,20 @@ jQuery( document ).ready(function() {
     }
 
 
+if (window.innerWidth < 992) {
+    // jQuery( ".condicoes-item" ).on( "click", function() {
+    //     if(jQuery(".dropdown-content").hasClass("dropdown-modal")) {
+    //         jQuery(".dropdown-content").removeClass("dropdown-modal");
+    //     } else {
+    //         jQuery(".dropdown-content").addClass("dropdown-modal");
+    //     }
+    // });
+}
+    
+    
+    
+
+
     if (window.innerWidth < 992) {
         // jQuery( "svg.arrow-down" ).on( "click", function() {
         //     if(jQuery(".nv-03").hasClass("active__dropdown-novo")) {
@@ -375,11 +427,33 @@ jQuery( document ).ready(function() {
         jQuery("svg.arrow-down").click(function () {    
             var item = jQuery(this).closest('.dropdown-nv2');
             var hasOpen = !item.hasClass('drop');
-
             jQuery('.dropdown-nv2').removeClass('drop');
             if(hasOpen) item.addClass("drop");
             else{ item.removeClass("drop") }
         
+        });
+
+        jQuery(".title-triger").click(function () {    
+            var item = jQuery(this).closest('.filter-block');
+            var hasOpen = !item.hasClass('drop');
+            jQuery('.filter-block').removeClass('drop');
+            if(hasOpen) item.addClass("drop");
+            else{ item.removeClass("drop") }
+        
+        });
+
+
+        jQuery("svg.search__icon").click(function () {    
+            var item = jQuery(this).closest('.condicoes-item');
+            var hasOpen = !item.hasClass('drop');
+            jQuery('.condicoes-item').removeClass('drop');
+            if(hasOpen) item.addClass("drop");
+            else{ item.removeClass("drop") }
+        
+        });
+
+        jQuery(".closeModalinfo").click(function () {    
+            jQuery('.condicoes-item').removeClass('drop');
         });
         
 

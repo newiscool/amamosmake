@@ -1,71 +1,24 @@
-<!--     {% set currentPrice = 0 %}
-{% set apartirde = false %}
-{% set costPrice = 0 %}
-{% for index, variant in product.variants %}
-    {% if index == 0 %}
-        {% set currentPrice = variant.price %}
-        {% set costPrice = variant.price_offer %}
-    {% else %}
-        {% if currentPrice != variant.price %}
-            {% set currentPrice = variant.price %}
-            {% set apartirde = true %}
-        {% endif %}
-    {% endif %}
-
-
-    <pre>
-        {{dump(currentPrice ~ ' - ' ~ costPrice)}}
-    </pre>
-
-{% endfor %} -->
-
-
-<!--
-{% set currentPrice = 0 %}
-{% set apartirde = false %}
-{% set costPrice = 0 %}
-{% for index, variant in products %}
-    {% if index == 0 %}
-        {% set currentPrice = variant.color_id_1 %}
-        {% set costPrice = color_id_2 %}
-    {% endif %}
-
-
-    <pre>
-        {{dump(variants)}}
-    </pre>
-
-{% endfor %} -->
-
 {% element 'snippets/breadcrumb' %}
-<figure class="banner-title">{{ banner.title }}</figure>
+{% if not utils.is_mobile %}
+    <figure class="banner-title">{{ banner.title }}</figure>
+{% endif %}
 
 {% if products|length > 0 %}
 <aside class="smart_filter col-xs-3 visible-lg">
-    <h1 class="head_title">{{ category.name }}</h1>
+    <h1 class="head_title">Filtros</h1>
     <button class="mobileFilter btn btn-primary pull-right hidden-lg">
         <i class="fa fa-times" aria-hidden="true"></i>
     </button>
     {% element('snippets/smart_filter') %}
 </aside>
-{% if banner.title %}
-
-{% endif %}
 <section class="products-categorys col-xs-12 col-lg-9">
-
     <div class="row">
-
-
         <div class="col-xs-12 pagination-search-and-category top">
-            <button class="mobileFilter btn btn-primary pull-left hidden-lg" data-id="sm-filter">Filtro</button>
-
+            <button class="mobileFilter btn btn-primary pull-left hidden-lg" data-id="sm-filter">Filtrar</button>
             <span class="catalogo-display">{{ paginate.counter('Resultado <strong>{:count} Produtos</strong> em <strong>{:pages} Páginas</strong>') }}</span>
-
             <div class="filter-category">
                 {% element 'snippets/filter' {'brands': category.brands } %}
             </div>
-
-            {% element 'snippets/pagination' %}
         </div>
 
         <div class="products col-xs-12">

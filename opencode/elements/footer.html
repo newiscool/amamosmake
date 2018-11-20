@@ -1,4 +1,4 @@
-{% element 'snippets/newsletter' %}
+
 <div class="container block-visted_review">
     {% if pages.current in ['catalog', 'search'] %}
         {% if settings.history_position == 1 %}
@@ -25,6 +25,11 @@
         {% element 'snippets/videos_section' %}
     {% endif %}
 </section>
+{% if pages.current == 'home'  %}
+    {% if utils.is_mobile %}    
+        {% element 'snippets/newsletter' %}
+    {% endif %}
+{% endif  %}
 <footer id="footer">
     <div class="footer__container">
         <nav class="footer__nav">
@@ -63,7 +68,7 @@
             </ul>
             <ul class="footer__list">
                 <li class="footer__list-item support__contact">
-                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Famamosmakeloja&tabs=timeline&width=320&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="320" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Famamosmakeloja&tabs=timeline&width=300&height=100&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="100" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                 </li>
             </ul>
         </nav>
@@ -107,11 +112,15 @@
             </a>
         </div>
     </div>
+    {% if utils.is_mobile %}
+        <a href="https://wa.me/+5514981718343" target="_blank" class="whatsapp-floaticon"><i class="fab fa-whatsapp"></i></a>
+    {% endif %}
     <section class="copyright">
         <div class="copyright__container">
             <div class="copyright__text">{{ settings.copyright}}</div>             
         </div>
     </section>
+
 </footer>
 
 <script defer>

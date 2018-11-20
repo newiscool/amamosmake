@@ -4,18 +4,17 @@
 #}
 
 {% if filters %}
-<form name="form-filter" method="get">
-	<input type="hidden" name="loja" value="{{ store.id }}">
-	{% if search.word %}
-	<input name="palavra_busca" type="hidden" value="{{ search.word }}">
-	{% endif %}
+	<form name="form-filter" method="get">
+		<input type="hidden" name="loja" value="{{ store.id }}">
+			{% if search.word %}
+		<input name="palavra_busca" type="hidden" value="{{ search.word }}">
+			{% endif %}
 
 	{% if category.id %}
-	<input type="hidden" name="categoria" value="{{ category.id }}">
+		<input type="hidden" name="categoria" value="{{ category.id }}">
 	{% endif %}
 
 	{% if filters.applied %}
-	<h3>Filtros Aplicados</h3>
 	<ul>
 		{% for applied in filters.applied %}
 			{% for item in applied %}
@@ -27,8 +26,12 @@
 	
 	{% for key, myFilter in filters %}
 		{% if myFilter.items %}
-			<h3 class="{{ key }}">{{ myFilter.title }}</h3>
-			<ul class="{{ key }}-list">
+		<div class="filter-block  ">
+			<h3 class="{{ key }} title-triger">
+				{{ myFilter.title }}
+				<svg class="filter-icon filter-arrowdown "><use xlink:href="#icon-arrow-bottom"></use></svg>
+			</h3>
+			<ul class="{{key}}-list list-block">
 			{% for item in myFilter.items %}
 				<li>
 					{% if key == "prices" %}
@@ -55,10 +58,15 @@
 				</li>
 			{% endfor %}
 			</ul>
+		</div>
 		{% elseif myFilter|length %}
 			{% for var in myFilter %}
-				<h3>{{ var.title }}</h3>
-				<ul class="testee">
+			<div class="filter-block ">
+				<h3 class="title-triger">
+					{{ var.title }}
+					<svg class="filter-icon filter-arrowdown "><use xlink:href="#icon-arrow-bottom"></use></svg>
+				</h3>
+				<ul class="{{key}}-list list-block">
 					{% for item in var.items %}
 					<li>
 						{% if item.type == "link" %}
@@ -74,10 +82,10 @@
 					</li>
 					{% endfor %}
 				</ul>
+			</div>
 			{% endfor %}
 		{% endif %}
 	{% endfor %}
-
-	<button type="submit" class="filter-button">{{ Translation('filtrar') }}</button>
+	<!-- <button type="submit" class="filter-button">{{ Translation('filtrar') }}</button> -->
 </form>
 {% endif %}

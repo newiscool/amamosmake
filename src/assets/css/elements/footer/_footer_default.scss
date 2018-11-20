@@ -121,9 +121,6 @@
         overflow: hidden;
         transition: $transition;
         padding: 0px 0 10px;
-        @media (max-width:992px){
-            padding: 0;
-        }
         a{
           display: block;
           color:#fff;
@@ -141,7 +138,6 @@
   
         &.support__contact{
             justify-content: space-between;
-            max-width: 250px;
             flex-wrap: wrap;
             span{
                 margin: 5px 0;
@@ -390,3 +386,20 @@
       border-bottom: 1px solid $cor01;
       margin: 0;
   }
+
+
+  a.whatsapp-floaticon {
+    position: fixed;
+    right: 20px;
+    font-size: 40px;
+    background: $cor01;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    bottom: 10px;
+    opacity: 0.8;
+}

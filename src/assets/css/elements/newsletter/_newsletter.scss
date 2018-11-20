@@ -80,14 +80,17 @@
   font-size: 13px;
   font-weight: 500;
   letter-spacing: -.1px;
-  text-transform: uppercase;
+  text-transform: uppercase;  
+
 
   @media (min-width: 1200px) {
     margin-right: 20px;
   }
 
-  @media (max-width: 1199px) {
+  @media (max-width: 992px) {
     margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
   }
 
   span,
@@ -116,7 +119,7 @@
 
     strong {
       font-size: 18px;
-      line-height: 11px;
+      line-height: 20px;
     }
   }
 }
@@ -183,8 +186,9 @@
   outline: none;
   padding: 18px 20px 18px 45px;
   transition: all 150ms ease-in-out;
+  width: 100%;
 
-   ::placeholder {
+  ::placeholder {
     color: #bababa;
     font-style: italic;
   }

@@ -178,9 +178,9 @@
     }
     .addCart,
     .to-view {
-      @include button(lighten($cor02, 30%), lighten($cor02, 90%));
-      @include button-action('', '', lighten($cor02, 30%), lighten($cor02, 80%));
-      @include button-action('', 'span', lighten($cor02, 30%), '');
+      // @include button(lighten($cor02, 30%), lighten($cor02, 90%));
+      // @include button-action('', '', lighten($cor02, 30%), lighten($cor02, 80%));
+      // @include button-action('', 'span', lighten($cor02, 30%), '');
       span {
         @include link($cor02);
       }

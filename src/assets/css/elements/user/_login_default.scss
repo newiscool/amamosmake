@@ -22,7 +22,7 @@
       }
       fieldset {
         label {
-          @include text(#333, '', 16px, 16px, 300, '', '', inline-block);
+          // @include text(#333, '', 16px, 16px, 300, '', '', inline-block);
           margin-bottom: 5px;
           width: 100% !important;
           input {
@@ -37,13 +37,13 @@
         padding: 0 !important;
       }
       .botao-efetuar-login {
-        @include button(white, #333, none, 4px, none, '', 0, '', '', 100%);
+        // @include button(white, #333, none, 4px, none, '', 0, '', '', 100%);
         cursor: pointer;
         height: 40px;
         margin-top: 25px;
         padding: 13px 0;
         &:before {
-          @include text(white, '', 14px, 14px, 500, uppercase, center, inline-block);
+          // @include text(white, '', 14px, 14px, 500, uppercase, center, inline-block);
           content: 'Login';
         }
         img {
@@ -76,7 +76,6 @@
             width: 100% !important;
           }
           .botao-novo-cadastro {
-            @include button(white, #333, none, 4px, none, '', 0, '', '', 100%);
             cursor: pointer;
             height: 40px;
             margin-top: 25px;

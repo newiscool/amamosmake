@@ -32,14 +32,14 @@
       "favicon": "",
 
       "vitrine1": "Oba, Baixaram de preço",
-      "quantidade1": "9",
+      "quantidade1": "15",
       "filtros1": "available",
       "ordem1": "rand",
       "showCase1active":"1",
       "categories1":"",
     
-      "vitrine2": "Nossas promoções",
-      "quantidade2": "9",
+      "vitrine2": "Produtos mais vendidos",
+      "quantidade2": "15",
       "filtros2": "promotion",
       "ordem2": "rand",
       "showCase2active":"1",
@@ -133,8 +133,8 @@
       "servicos07":"",
       "servicos07nome":"",
 
-      "ruler1":"Cadastre-se e ganhe",
-      "ruler2":"R$ 10,00 de desconto!",
+      "ruler1":"Assine nossa newsletter",
+      "ruler2":"e ganhe R$ 10,00 de desconto!",
 
       "ruler3":"FRETE GRÁTIS",
       "ruler4":"PARA SUL E SUDESTE NAS COMPRAS ACIMA DE R$199,99",

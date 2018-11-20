@@ -24,6 +24,7 @@
         <link rel="stylesheet" href="{{ asset('css/others/owl.carousel.css') }}">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        
         <!-- ============== end Styles =============== -->
 
         {{ tray.analytics }}
@@ -47,22 +48,23 @@
     <body>
 
 <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5bc635bb08387933e5bb8be0/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
+{% if not utils.is_mobile %}
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5bc635bb08387933e5bb8be0/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+{% endif %}
 
 
 
 <!--End of Tawk.to Script-->
-
         {% element 'snippets/svg-sprite' %}
         {{ googleTagManager.top(pages.current, tagManagerData) }}
         {{ store.chat }}
@@ -79,7 +81,9 @@ s0.parentNode.insertBefore(s1,s0);
             {% endif %}
 
             {% if pages.current == 'home'  %}
-                {% element 'snippets/newsletter' %}
+                {% if not utils.is_mobile %}
+                    {% element 'snippets/newsletter' %}
+                {% endif %}
             {% endif %}
 <!---->
             <div class="container">

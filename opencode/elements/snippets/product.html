@@ -1,36 +1,40 @@
 
 <li itemscope itemtype="http://schema.org/SomeProducts">
-    <div class="border {% if not product.available %} off {% endif %}">
-        <figure class="product-image">
-            <a href="{{ product.link }}">
-                <img class="img-responsive" src="{{ product.images[0].full }}" alt="{{ product.name }}">
-            </a>
-        </figure>
+    <div class="border {% if product.available and product.stock > 0 %} disponivel {% else %} indisponivel {% endif %}">
         {% if product.price_offer > 0 %}
             <div class="product__offer">
                 {% set percent = 100 - ( product.price_offer / product.price ) * 100 %}
                 <span> -{{ percent|number_format }}%</span>
             </div>
         {% endif %}
-        {% if product.available  %}
+        {% if product.available and product.stock > 0  %}
             <div class="labels">
-                    {% if product.new %}
-                        {% if Image('new') %}
-                            <span class=" botao-new">{{ Image('new') }}</span>
-                        {% else %}
-                            <span class="label new">Novo</span>
-                        {% endif %}
+                {% if product.new %}
+                    {% if Image('new') %}
+                        <span class="botao-new">{{ Image('new') }}</span>
+                    {% else %}
+                        <span class="label new">Novo</span>
                     {% endif %}
-                    {% if product.featured %}
+                {% endif %}
+                {% if product.featured %}
                     {% if Image('featured') %}
                         <span class="featured">{{ Image('featured') }}</span>
                     {% else %}
                         <span class="label featured">Destaque</span>
                     {% endif %}
                 {% endif %}
-
             </div>
-            {% endif %}
+        {% endif %}
+        {% if product.available and product.stock == 0  %}
+            {% if Image('unavailable_button') %}
+                <div class="labels">
+                    <span class="unavailable">{{ Image('unavailable_button') }}</span>
+                </div>
+            {% else %}
+                <div class="labels">
+                    <span class="label label-default unavailable">Esgotado</span>
+                </div>
+            {% endif %} 
             {% if product.additional_button %}
                 {% if Image('additional_button') %}
                         <span class="free-shipping">{{ Image('additional_button') }}</span>
@@ -38,7 +42,13 @@
                         <span class="free-shipping">Frete Grátis Sul e Sudeste</span>
                 {% endif %}
             {% endif %}
+        {% endif %}
 
+            <figure class="product-image">
+                <a href="{{ product.link }}">
+                    <img class="img-responsive" src="{{ product.images[0].full }}" alt="{{ product.name }}">
+                </a>
+            </figure>
 
         {% if product.has_variation %}
             <div class="variation-qtd">
@@ -75,10 +85,6 @@
         <div class="formas-pagamento-box">{{ product.payment }}</div>
             <div class="showcase__buy">
                 <a class="buy__button" href="{{ product.link }}">Comprar</a>
-            </div>
-        {% else %}
-            <div class="labels">
-                <span class="label label-default unavailable">Indisponível</span>
             </div>
         {% endif %}
     </div>
