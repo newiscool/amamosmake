@@ -452,14 +452,12 @@
 }
 
 .owl-buttons .owl-prev {
-  left: -30px;
   @media (max-width: 992px) {
     left: 0;
   }
 }
 
 .owl-buttons .owl-next {
-  right: -30px;
   @media (max-width: 992px) {
     right: 0;
   }

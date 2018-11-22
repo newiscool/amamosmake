@@ -50,7 +50,7 @@
                             <svg class="search__icon icon--search"><use xlink:href="#icon-cart"></use> </svg>
                             <span class="label-item">Como Comprar</span>
                             <div class="dropdown-content">
-                                    <button class="hidden-lg closeModalinfo"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                    <button class=" closeModalinfo"><i class="fa fa-times" aria-hidden="true"></i></button>
                                     <span>
                                         <p class="first-paragraph hidden-lg"><strong>Como comprar?</strong></p>
                                         <p><strong>Para comprar na Amamos Make é muito fácil:</strong></p>
@@ -68,7 +68,7 @@
                             <svg class="search__icon icon--search"><use xlink:href="#icon-troca-facil"></use> </svg>
                             <span class="label-item">Troca Fácil</span>
                             <div class="dropdown-content">
-                                <button class="hidden-lg closeModalinfo"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                <button class=" closeModalinfo"><i class="fa fa-times" aria-hidden="true"></i></button>
                                 <span>
                                     <p class="first-paragraph hidden-lg"><strong>Troca fácil</strong></p>
                                     <p>Você pode trocar qualquer produto, seja por insatisfação com a compra, 
@@ -87,7 +87,7 @@
                             <svg class="search__icon icon--search"><use xlink:href="#icon-delivery-truck"></use> </svg>
                             <span class="label-item">Prazos e Entrega</span>
                             <div class="dropdown-content">
-                                <button class="hidden-lg closeModalinfo"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                <button class=" closeModalinfo"><i class="fa fa-times" aria-hidden="true"></i></button>
                                 <span>
                                     <p class="first-paragraph hidden-lg"><strong>Prazos e entregas</strong></p>
                                     <p>Todos pedidos são enviados em até 1 dia útil após a 
@@ -105,10 +105,14 @@
                             <svg class="search__icon icon--search"><use xlink:href="#icon-delivery-truck"></use> </svg>
                             <span class="label-item">Frete Grátis</span>
                             <div class="dropdown-content">
-                                <button class="hidden-lg closeModalinfo"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                <button class=" closeModalinfo"><i class="fa fa-times" aria-hidden="true"></i></button>
                                 <span>
                                     <p class="first-paragraph hidden-lg"><strong>Frete grátis</strong></p>
-                                    <p>Frete grátis para o estado de São Paulo nas compras acima de R$199,99</p>
+                                    <p>Regras para frete grátis, selecione o seu estado:</p>
+                                    <div class="bloco-frete">
+
+                                        {% element 'snippets/tabela-frete' %}
+                                    </div>
                                 </span>
                             </div>
                         </li>

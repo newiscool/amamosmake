@@ -93,6 +93,7 @@
       line-height: 40px;
       padding: 0 20px;
       transition: all 150ms ease-in-out;
+      box-shadow: none;
 
       &::placeholder {
         color: $cor02;
@@ -359,9 +360,9 @@
 
   }
 
-  .info-lane {
-    display: none;
-  }
+  // .info-lane {
+  //   display: none;
+  // }
 
   .env-menu-mobile {
     margin: 0;
@@ -394,7 +395,7 @@
 @media (min-width: 1200px) {
   .cart__dropdown {
     background-color: white;
-    box-shadow: 0 0 3px 0 rgba(3, 3, 3, .31);
+    border: 1px solid $cor02;
     top: 100%;
     right: 0;
     padding: 0;

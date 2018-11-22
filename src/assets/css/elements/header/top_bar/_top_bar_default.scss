@@ -27,8 +27,17 @@
 .help__link {
   color: $cor02;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   margin-left: 3px;
+  @media (max-width:992px){
+    font-size: 11px;
+  }
+}
+
+p#demo {
+  color:$cor01;
+  font-weight: 800;
+  margin: 0;
 }
 
 .help__icon {
@@ -45,6 +54,8 @@
 
   &:last-child {
     margin-right: 0;
+    display: flex;
+    align-items: center;
   }
 }
 

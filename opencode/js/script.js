@@ -19,12 +19,30 @@ jQuery(document).ready(function ($) {
                 autoWidth:true,
                 autoPlay: false,
                 goToFirstSpeed: 2000,
-                navigation: false,
+                navigation: true,
                 navigationText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
                 pagination: true,
                 paginationSpeed: 1000,
                 singleItem: true,
-                stopOnHover: true
+                stopOnHover: true,
+                responsiveClass:true,
+                responsive : {
+                    // breakpoint from 0 up
+                    0 : {
+                        pagination: true,
+                        navigation: false,
+                    },
+                    // breakpoint from 480 up
+                    480 : {
+                        pagination: true,
+                        navigation: false,
+                    },
+                    // breakpoint from 768 up
+                    768 : {
+                        pagination: true,
+                        navigation: false,
+                    }
+                }
             });
 
 
@@ -34,10 +52,17 @@ jQuery(document).ready(function ($) {
                 itemsCustom: [[320, 2], [600, 2], [768, 2], [992, 3], [1200, 4]],
                 itemsScaleUp: false,
                 itemsTabletSmall: false,
-                navigation: false,
+                navigation: true,
                 navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
                 pagination: true,
-                singleItem: false
+                singleItem: false,
+                responsiveClass:true,
+                responsive: {
+                    0:{
+                      navigation:false, // from this breakpoint 678 to 959
+                      pagination:true // only within 678 and next - 959
+                    }
+                }
             });
 
             jQuery(".banners-carousel ul").owlCarousel({
@@ -46,10 +71,17 @@ jQuery(document).ready(function ($) {
                 itemsCustom: [[320, 1], [768, 1], [992, 1], [1200, 2]],
                 itemsScaleUp: false,
                 itemsTabletSmall: false,
-                navigation: false,
+                navigation: true,
                 navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
                 pagination: true,
-                singxleItem: false
+                singxleItem: false,
+                responsiveClass:true,
+                responsive: {
+                    0:{
+                      navigation:false, // from this breakpoint 678 to 959
+                      pagination:true // only within 678 and next - 959
+                    }
+                }
             });
 
             /*jQuery(".dep_lista ").owlCarousel({
@@ -85,6 +117,7 @@ jQuery(document).ready(function ($) {
                     vertical:true,
                     nextArrow: '<i class="fa fa-angle-down" aria-hidden="true"></i>',
                     prevArrow: '<i class="fa fa-angle-up" aria-hidden="true"></i>',
+                    responsiveClass:true,
                     responsive: [
                         {
                           breakpoint: 992,
@@ -119,7 +152,14 @@ jQuery(document).ready(function ($) {
                 navigation: false,
                 navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
                 pagination: true,
-                singxleItem: false
+                singxleItem: false,
+                responsiveClass:true,
+                responsive: {
+                    0:{
+                      navigation:false, // from this breakpoint 678 to 959
+                      pagination:true // only within 678 and next - 959
+                    }
+                }
             });
             
 
@@ -131,6 +171,13 @@ jQuery(document).ready(function ($) {
                 navigation: false,
                 navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
                 pagination: true,
+                responsiveClass:true,
+                responsive: {
+                    0:{
+                      navigation:false, // from this breakpoint 678 to 959
+                      pagination:true // only within 678 and next - 959
+                    }
+                }
             });
 
             jQuery(".banners-extra__list").owlCarousel({
@@ -142,7 +189,14 @@ jQuery(document).ready(function ($) {
                 navigation: false,
                 navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
                 pagination: true,
-                singxleItem: false
+                singxleItem: false,
+                responsiveClass:true,
+                responsive: {
+                    0:{
+                      navigation:false, // from this breakpoint 678 to 959
+                      pagination:true // only within 678 and next - 959
+                    }
+                }
             });
             
             jQuery("#product-page .produto-imagem-miniaturas li span").on("click",function(e){
@@ -167,6 +221,18 @@ jQuery(document).ready(function ($) {
                     singleItem: false
                 });
             }
+
+            // if (window.innerWidth < 992) {
+            //     jQuery("section.info-lane.center").owlCarousel({
+            //         autoPlay: true,
+            //         items: 2,
+            //         itemsCustom: [[320, 1], [600, 2], [768, 3]],
+            //         navigation: false,
+            //         navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+            //         pagination: true,
+            //         singleItem: false
+            //     });
+            // }
 
             
 
@@ -364,15 +430,10 @@ jQuery(document).ready(function ($) {
 
 var elements = document.querySelectorAll('.product__right-wrapper');
 Stickyfill.add(elements);
-
-
 if(jQuery('.product__addcart').length > 0) {
-
     var prodId;
-
     jQuery('.product__addcart').on('click', function() {
         prodId = jQuery(this).data('id');
-
         addCart(prodId);
     });
 }
@@ -381,10 +442,6 @@ jQuery( document ).ready(function() {
     jQuery("body").addClass("active__body");
     jQuery("li[class='']").addClass("bbox");
 });
-
-
-
-
 
 jQuery( document ).ready(function() {
     if (window.innerWidth < 992) {
@@ -410,9 +467,18 @@ if (window.innerWidth < 992) {
     // });
 }
     
-    
-    
+jQuery("svg.search__icon").click(function () {    
+    var item = jQuery(this).closest('.condicoes-item');
+    var hasOpen = !item.hasClass('drop');
+    jQuery('.condicoes-item').removeClass('drop');
+    if(hasOpen) item.addClass("drop");
+    else{ item.removeClass("drop") }
 
+});
+
+jQuery(".closeModalinfo").click(function () {    
+    jQuery('.condicoes-item').removeClass('drop');
+});
 
     if (window.innerWidth < 992) {
         // jQuery( "svg.arrow-down" ).on( "click", function() {
@@ -444,16 +510,16 @@ if (window.innerWidth < 992) {
 
 
         jQuery("svg.search__icon").click(function () {    
-            var item = jQuery(this).closest('.condicoes-item');
+            var item = jQuery(this).closest('.dropdown-content');
             var hasOpen = !item.hasClass('drop');
-            jQuery('.condicoes-item').removeClass('drop');
+            jQuery('.dropdown-content').removeClass('drop');
             if(hasOpen) item.addClass("drop");
             else{ item.removeClass("drop") }
         
         });
 
         jQuery(".closeModalinfo").click(function () {    
-            jQuery('.condicoes-item').removeClass('drop');
+            jQuery('.dropdown-content').removeClass('drop');
         });
         
 
@@ -480,3 +546,14 @@ if (window.innerWidth < 992) {
        jQuery('#modal-video-produto .modal-body').html('');
    });
    
+
+
+
+   jQuery(function() {
+    jQuery('#colorselector').change(function(){
+      jQuery('.colors').hide();
+      jQuery('#' + jQuery(this).val()).show();
+    });
+  });
+  // [forked from](http://jsfiddle.net/FvMYz/)
+  // [show-hide-based-on-select-option-jquery)(http://stackoverflow.com/questions/2975521/show-hide-div-based-on-select-option-jquery/2975565#2975565)

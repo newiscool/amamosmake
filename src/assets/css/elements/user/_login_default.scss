@@ -43,8 +43,14 @@
         margin-top: 25px;
         padding: 13px 0;
         &:before {
-          // @include text(white, '', 14px, 14px, 500, uppercase, center, inline-block);
           content: 'Login';
+          font-size: 14px;
+          line-height: 14px;
+          font-weight: 500;
+          text-transform: uppercase;
+          text-align: center;
+          display: inline-block;
+          color: #fff;
         }
         img {
           display: none;
@@ -99,3 +105,5 @@
     }
   }
 }
+
+
