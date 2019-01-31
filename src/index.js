@@ -7,6 +7,9 @@ import axios from 'axios';
 import config from './config.json';
 import { minicartFetch } from "./actions/index";
 
+import './libs/pagination/infinite';
+import './libs/thumbs';
+
 const store = configureStore();
 
 Element.prototype.remove = function() {
@@ -24,7 +27,6 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
 import Quickview from './components/quickview/index.jsx';
 let buttons = Array.from(document.querySelectorAll('[data-quickview-button]'));
 
-console.log("teste");
 if(config.quickview.actived) {
     let rootQuickview = document.querySelector('[data-quickview]');
     // Buttons Quickview

@@ -1,4 +1,4 @@
-<div class="user hidden-md hidden-xs">    
+<!-- <div class="user hidden-md hidden-xs">    
     <span class="user__info">
         <a href="{{ links.login }}" class="user__title">Minha conta</a>
         <a href="{{ links.orders }}" class="user__desc">Faça seu login</a>
@@ -6,4 +6,18 @@
     <svg class="cat__icon icon--arrow-bottom">
         <use xlink:href="#icon-arrow-bottom"></use>
     </svg>
+</div> -->
+
+
+<div class="user hidden-md hidden-xs">
+  <span class="tray-hide" data-logged-user="true">
+      <a href="{{ links.central }}" class="user__title">Olá <span data-customer="name"></span></h4>
+      <a href="{{ links.logout }}" class="user__desc">Sair</a>
+  </span>
+  <span class="tray-hide" data-logged-user="false">
+      <span class="user__info">
+          <a href="{{ links.login }}" class="user__title">Minha conta</a>
+          <a href="{{ links.login }}" class="user__desc">Faça seu login</a>
+      </span>
+  </span>
 </div>

@@ -1,4 +1,7 @@
 .page-checkout_cart {
+  .main{
+    padding: 0;
+  }
   br {
     display: block !important;
   }
@@ -67,6 +70,10 @@
 .carrinho-tabs {
   margin: 0 0 15px;
   width: 100%;
+  max-width: 1140px;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
   ol {
     font-size: 0;
     display: flex;
@@ -829,8 +836,8 @@ table#tabela_carrinho {
 }
 
 div#Relacionados {
-  display: none;
   margin-bottom: 40px;
+  display: none;
   li {
     display: inline-block;
     padding: 15px;

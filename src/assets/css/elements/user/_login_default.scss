@@ -1,10 +1,15 @@
 .page-login {
+  .main{padding:160px 0 0 ;}
   .container-titulo-login {
     display: none;
   }
   h3 {
-    @include text(#333, '', 20px, '', 400, uppercase);
-    margin: 10px 0 60px;
+    color: $cor02;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: 600;
   }
   .board {
     align-items: center;
@@ -22,9 +27,14 @@
       }
       fieldset {
         label {
-          // @include text(#333, '', 16px, 16px, 300, '', '', inline-block);
+          color: $cor02;
+          font-size: 16px;
+          line-height: 16px;
+          font-weight: 300;
+          display: inline-block;
           margin-bottom: 5px;
           width: 100% !important;
+          text-align: center;
           input {
             margin-top: 10px;
             padding-left: 15px;
@@ -34,27 +44,18 @@
       }
       p {
         margin: 0 !important;
-        padding: 0 !important;
+        text-align: center;
       }
       .botao-efetuar-login {
-        // @include button(white, #333, none, 4px, none, '', 0, '', '', 100%);
+        background: #000;
+        color: #fff;
+        font-size: 14px;
+        width: 50%;
         cursor: pointer;
         height: 40px;
         margin-top: 25px;
         padding: 13px 0;
-        &:before {
-          content: 'Login';
-          font-size: 14px;
-          line-height: 14px;
-          font-weight: 500;
-          text-transform: uppercase;
-          text-align: center;
-          display: inline-block;
-          color: #fff;
-        }
-        img {
-          display: none;
-        }
+        text-transform: uppercase;
       }
     }
 
@@ -63,39 +64,71 @@
       padding: 15px;
       vertical-align: top;
       width: 50%;
+      border: solid #cecece;
+      border-width: 0px 0px 0px 1px;
       @media(max-width: 767px) {
         text-align: center;
         width: 100%;
       }
       form {
+        text-align: center;
         fieldset {
-          p, label {
-            display: none;
-            input {
-              display: none;
+          // p, label {
+          //   display: none;
+          //   input {
+          //     display: none;
+          //   }
+          // }
+          label{
+            width: 60%;
+            margin: 15px 0;
+            input{
+              padding: 15px;
+              width: 100%;
+              font-size: 12px;
             }
           }
+          .mensagensErro{
+            font-size: 11px;
+            color: red;
+          }
           .cadastro-desc {
-            @include text(#333, '', 16px, 16px, 300, '', '', inline-block);
+            color: #333;
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 300;
+            display: inline-block;
             margin-bottom: 5px;
-            padding: 0;
             width: 100% !important;
+            text-align: center;
+            &:after {
+              content: "Digite seu email e verifique se ja possui cadastro";
+              display: block;
+            }
+          }
+          p.cadastro-campo.campo-email {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            .label{
+              &:before{
+                content: 'Verifique seu email';
+                font-size: 12px;
+              }
+            }
           }
           .botao-novo-cadastro {
+            color: #fff;
+            background: $cor01;
+            font-size: 18px;
+            width: 60%;
             cursor: pointer;
             height: 40px;
             margin-top: 25px;
             padding: 13px 0;
-            @media (min-width: 768px) and (max-width: 991px) {
-              margin-top: 37px;
-            }
-            &:before {
-              @include text(white, '', 14px, 14px, 500, uppercase, center, inline-block);
-              content: 'Cadastrar';
-            }
-            img {
-              display: none;
-            }
+            text-transform: uppercase;
             @media (max-width: 700px) {
               width: 100%;
             }
@@ -106,4 +139,28 @@
   }
 }
 
+tray-login *{
+  font-family: $font-family !important;
+  form#form-identify{
+    input#input-identify{
+      border: 1px solid $cor02;
+    }
+    strong.tray-title{
+      font-weight: 100 !important;
+    }
+  }
+  button#tray-login-identify {
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .tray-btn-facebook{
+    font-weight: 500 !important;
+    text-transform: uppercase;
+  }
+}
 
+.tray-login {
+  .tray-title{
+  font-weight: 100 !important;
+  }
+}

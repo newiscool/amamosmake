@@ -18,5 +18,5 @@ gulp.task('styles', () => {
 });
 
 gulp.task('default', () => {
-   gulp.watch('src/assets/css/**/*.s[a|c]ss', ['styles']);
+    gulp.watch(['src/assets/css/**/*.s[a|c]ss', 'src/libs/**/*.s[a|c]ss'], ['styles']);
 });

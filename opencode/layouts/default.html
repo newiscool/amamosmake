@@ -9,10 +9,11 @@
         <meta name="google-site-verification" content="stqk13yl1APJc2CKhF1BIe58tucXUdRaVuY3a9zyt7Y" />
         <!-- [if IE]<meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
         {{ tray.meta }}
-	    <!--{{ tray.styles }}-->
+	    <!-- {{ tray.styles }} -->
         <!-- ============== end Metas Tags =============== -->
 
         <!-- ============== Js Pace load =============== -->
+        
 	    <script type="text/javascript" src="{{ asset('js/pace.min.js') }}"></script>
 	    <script type="text/javascript" src="{{ asset('js/tray_functions.js') }}"></script>
         <!-- ============== end Js Pace load =============== -->
@@ -32,6 +33,9 @@
 
         <!-- ============== JS Tray =============== -->
         {{ tray.scripts }}
+        <script>
+            var $tray = jQuery;
+        </script>
         <!-- ============== end JS Tray =============== -->
 
         <div id="fb-root"></div>
@@ -46,6 +50,7 @@
 
     </head>
     <body>
+        
 
 <!--Start of Tawk.to Script-->
 {% if not utils.is_mobile %}
@@ -72,35 +77,50 @@
         {% if pages.current not in ['checkout_cart', 'checkout_payment'] %}
             {% element 'header' %}
         {% else %}
-            {% element 'header_checkout' %}
+        {% element 'header_checkout' %}
+        {% endif %}
+        
+        {% if pages.current == 'home'  %}
+            <main class="main">
+                {% if pages.current == 'home' and banner.home %}
+                <section id="full-banner">{{ banner.home }}</section>
+                {% endif %}
+                
+                {% if pages.current == 'home'  %}
+                {% if not utils.is_mobile %}
+                {% element 'snippets/newsletter' %}
+                {% endif %}
+                {% endif %}
+                <section class="{{pages.current}}">
+                    {{ content_for_layout }}
+                </section>
+            </main>
+        {% else %}
+            <main class="main center">
+                {% if pages.current == 'home' and banner.home %}
+                <section id="full-banner">{{ banner.home }}</section>
+                {% endif %}
+                
+                {% if pages.current == 'home'  %}
+                {% if not utils.is_mobile %}
+                {% element 'snippets/newsletter' %}
+                {% endif %}
+                {% endif %}
+                <section class="{{pages.current}}">
+                    {{ content_for_layout }}
+                </section>
+            </main>
         {% endif %}
 
-        <main class="main">
-            {% if pages.current == 'home' and banner.home %}
-                <section id="full-banner">{{ banner.home }}</section>
-            {% endif %}
-
-            {% if pages.current == 'home'  %}
-                {% if not utils.is_mobile %}
-                    {% element 'snippets/newsletter' %}
-                {% endif %}
-            {% endif %}
-<!---->
-            <div class="container">
-                {{ content_for_layout }}
-            </div>
-
-
-
-        </main>
-
         {% element 'footer' %}
-
         <div data-quickview></div>
-
         {% element 'snippets/modal' %}
         {{ googleTagManager.bottom(pages.current, tagManagerData) }}
+
+        {% if pages.current not in ['checkout_cart', 'checkout_payment'] %}
         {{ html.script('dist/application.min.js?' ~ utils.assets_version) }}
+        {% endif %}
+
         {% element 'snippets/pageview' %}
 
         <script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
@@ -108,5 +128,7 @@
         <script defer type="text/javascript" src="{{ asset('js/script.js') }}"></script>
         <script defer type="text/javascript" src="{{ asset('js/newiscool.js') }}"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
+        <script src="//platform-api.sharethis.com/js/sharethis.js#property=5c3fca92058f100011a5a7ce&product=inline-share-buttons"></script>
     </body>
 </html>

@@ -1,29 +1,24 @@
 <h1 class="hidden">Amamos Make - A loja online pra quem ama estar bonita</h1>
 <div class="container">
 <!-- VITRINE 1 -->
+
 {% if settings.showCase1active > 0  %}
     <section class="showcase-carousel">
         {% if settings.categories1 > 0  %}
             {% set products = Products({
-                'filter': [settings.filtros1],
+                'filter': ['new', 'available'],
                 'limit': settings.quantidade1,
-                'order': settings.ordem1,
                 'order': {
-                    'quantity_sold': 'asc',
                     'stock': 'desc',
-                    'id': 'asc'
                 },
                 'categories': [ settings.categories1 ]
             }) %}
         {% else %}
             {% set products = Products({
-                'filter': [settings.filtros1],
+                'filter': ['new', 'available'],
                 'limit': settings.quantidade1,
-                'order': settings.ordem1,
                 'order': {
-                    'quantity_sold': 'desc',
                     'stock': 'desc',
-                    'id': 'desc'
                 },
             }) %}
         {% endif %}
@@ -32,44 +27,54 @@
             "products": products} %}
     </section>
 {% endif %}
-
-
 <section class="banners-extras">
     <div class="center banners-extras__center">
-        <div class="banners-extras__item">
+        <ul class="info-list flex_width-v">
+            <li class="info-list__item">
+                <span class="help__link"> <img src="{{ asset('img/Logo-premio-branco2019b.png') }}" alt="{{ store.name }}"></span>
+            </li>		
+            <li class="info-list__item">
+                <span class="help__link"> Ja votou?</span>
+                <span class="help__link"> Estamos Concorrendo como<br> <b>Loja Favorita</b> de Cosméticos e Perfumaria</span>
+                <span class="info-list__title ">
+                    <a href="https://www.ebit.com.br/premio-ebit/vote/amamos-make" target="_blank">Vote na gente!	
+                        <svg class="icon-heart ">
+                            <use xlink:href="#icon-heart"></use>
+                        </svg>
+                    </a>
+                </span>
+            </li>		
+        </ul>
+        <!-- <div class="banners-extras__item">
             {{ banner.extra4 }}
-        </div>
-        <div class="banners-extras__item">
+        </div> -->
+        <!-- <div class="banners-extras__item">
             {{ banner.extra5 }}
         </div>
         <div class="banners-extras__item">
             {{ banner.extra6 }}
-        </div>
+        </div> -->
     </div>
 </section>
-
 <!-- VITRINE 2 -->
 {% if settings.showCase2active > 0  %}
     <section class="showcase-carousel">
         {% if settings.categories2 > 0  %}
             {% set products = Products({
-                'filter': [settings.filtros2],
+                'filter': ['available'],
                 'limit': settings.quantidade2,
-                'order': settings.ordem2,
                 'order': {
                     'stock': 'desc',
-                    'id': 'desc'
+                    'price': 'desc',
                 },
-                'categories': [ settings.categories2 ]
+                'categories': [ '68' ]
             }) %}
         {% else %}
             {% set products = Products({
-                'filter': [settings.filtros2],
+                'filter': ['available'],
                 'limit': settings.quantidade2,
-                'order': settings.ordem2,
                 'order': {
                     'stock': 'desc',
-                    'id': 'desc'
                 },
             }) %}
         {% endif %}
@@ -79,34 +84,37 @@
     </section>
 {% endif %}
 
-<!--
-<section class="banners-extras">
-    <div class="center banners-extras__center">
-        <div class="banners-extras__item">
-            {{ banner.extra7 }}
+<section class="amamosvip-banner">
+    <div class="amamosvip_header">
+        <div class="amamosvip_header_block-left">
+            <span>AmamosVip</span>
+            <h2>Viva a Amamos Make do melhor jeito:</h2>
+            <p>Amamos vip é o clube da AMAMOS MAKE. </p>
+            <p>A cada compra feita em nossa loja, </p>
+            <p>você ganha pontos para trocar por descontos.</p>
+            <a href="/amamos-vip" class="amamosvip_link">Saiba mais</a>
         </div>
-        <div class="banners-extras__item">
-            {{ banner.extra8 }}
-        </div>
-        <div class="banners-extras__item">
-            {{ banner.extra9 }}
+        <div class="amamosvip_header_block-right">
+            <img src="https://images.tcdn.com.br/500514/themes/96/img/banner-Mulheres.png" alt="mulheres-amamosvip">
         </div>
     </div>
 </section>
- VITRINE 3 -->
 
+
+
+ <!-- VITRINE 3 -->
 {% if settings.showCase3active > 0  %}
     <section class="showcase-carousel">
         {% if settings.categories3 > 0  %}
             {% set products = Products({
-                'filter': [settings.filtros3],
+                'filter': ['available'],
                 'limit': settings.quantidade3,
-                'order': settings.ordem3,
+                'order': rand,
                 'order': {
                     'stock': 'desc',
                     'id': 'desc'
                 },
-                'categories': [ settings.categories3 ]
+                'categories': [ '223' ]
             }) %}
         {% else %}
             {% set products = Products({
@@ -124,10 +132,49 @@
             "products": products} %}
     </section>
 {% endif %}
-
-
 </div>
+<!-- {% element 'snippets/banner_info' %} -->
+    {% if pages.current == 'home' %}    
+        {% element 'snippets/videos_section' %}
+    {% endif %}
 
+<section class="banners-extras_promo">
+    <div class=" banners-extras__center">
+        <div class="banners-extras__item">
+            {{ banner.extra7 }}
+            <span class="span-title">Promo 30</span>
+            <span class="span-desc">Os produtinhos mais amados por ate R$30,00! Maquiagem boa e barata é na Amamos Make. Clique e aproveite nossas promoções!</span>
+        </div>
+        <div class="banners-extras__item">
+            {{ banner.extra8 }}
+            <span class="span-title">promoções</span>
+            <span class="span-desc">Compre maquiagem com descontos que só a Amamos Make leva até você! Mas não perca tempo, garanta já o seu!</span>
+        </div>
+        <div class="banners-extras__item">
+            {{ banner.extra9 }}
+            <span class="span-title">os mais vendidos</span>
+            <span class="span-desc">Fique por dentro dos produtos mais procurados do mercado com descontos imperdíveis! Não deixe para depois, clique e aproveite!</span>
+        </div>
+    </div>
+</section>
 
-<!--
-    {% element 'snippets/banner_info' %} -->
+<section class="facebook-recomenda">
+    <h2>O que falam da Amamos Make</h2>
+    <ul class="facebook-recomenda_list">
+        <li class="facebook-recomenda_list_item">
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgabriela.pires.581%2Fposts%2F1933311083413873&width=320" width="320" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        </li>
+        <li class="facebook-recomenda_list_item">
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcamilaguilherme.oliveira%2Fposts%2F762546290750903&width=320" width="320" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        </li>
+        <li class="facebook-recomenda_list_item">
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Flarissaxdbassi%2Fposts%2F2060236240973055%3A0&width=320" width="320" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        </li>
+        <li class="facebook-recomenda_list_item">
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fnany.silva.3110%2Fposts%2F1059903354178660&width=320" width="320" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        </li>
+        <li class="facebook-recomenda_list_item">
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcroncolatto%2Fposts%2F1683648284986330%3A0&width=320" width="320" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        </li>
+    </ul>
+</section>

@@ -1,3 +1,5 @@
+
+
 <div id="product-page" class="product-page">
     <div class="produto-wrapper" itemscope itemtype="http://schema.org/Product">
         <section class="product__general-information">
@@ -23,9 +25,9 @@
                         </div>
                     {% endif %}
                     <h1 class="product__name " itemprop="name">{{ product.name }}</h1>
+                
                     <form id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                         {{ productHelper.pricing(price) }}
-                        {{ productHelper.gifts() }}
                         <div class="tag-freeshiping">
                             {% if product.additional_button %}
                                 {% if Image('additional_button') %}
@@ -35,11 +37,15 @@
                                 {% endif %}
                             {% endif %}
                         </div>
+                        {{ productHelper.gifts() }}
+                        <span id="btnTeste" alt="" title="" class="pointer" data-tray-tst="choose_toast" onclick="selecionaBrinde('5','335','Lápis Delineador com Apontador Ruby Rose Preto','0')"></span>
                         <div class="product__variations">{{ productHelper.variants() }}</div>
                         <div class="product__kit">{{ productHelper.kit() }}</div>
                         {% if productHelper.form() %}
                             <div class="tray-product-form-wrapper">{{ productHelper.form() }}</div>
                         {% endif %}
+
+
                     </form>
                 </header>
 
@@ -118,12 +124,14 @@
                         </li>
                     </ul>
                 </div>
-
-            <div class="social-midias">{{ productHelper.social() }}</div>
+                <p class="product-details">{{ productHelper.bonus() }}</p>
         </div>
         </section>
 
         <section id="ProdBlock" class="product__tabs col-xs-12 ">
+            <div class="social-midias">
+                <div class="sharethis-inline-share-buttons"></div>
+            </div>
             <a name="formaPagto"></a>
             <div id="descricao" class="prodBox dispblock drop">
                 <div class="board">
@@ -137,9 +145,18 @@
                 <h3 class="triger_btn-tabs">{{ productTabs.comments.description }}<svg class="cat__icon icon--arrow-bottom "><use xlink:href="#icon-arrow-bottom"></use></svg></h3>
                 <div class="board tabs_wrap">{% element 'product/comments' %}</div>
             </div>
-            <div id="coments" class="prodBox {{productTabs.custom.description }}">
-                <h3 class="triger_btn-tabs">{{ productTabs.AdditionalTab8.description }}<svg class="cat__icon icon--arrow-bottom "><use xlink:href="#icon-arrow-bottom"></use></svg></h3>
-                <div class="board ">{{ productTabs.custom.content }}</div>
+            <div id="itensInclusos" class="prodBox dispblock">
+                <h3 class="triger_btn-tabs">Opinião da profissional<svg class="cat__icon icon--arrow-bottom "><use xlink:href="#icon-arrow-bottom"></use></svg></h3>
+                <div class="board tabs_wrap">
+                    <p>{{ product.included_items }}</p>
+                </div>
+<!-- <div class="ftProfissional">
+<img src="https://images.tcdn.com.br/500514/themes/96/img/carol.png" alt="foto-da-maquiadora">
+<div class="nomeblock">
+<span class="nomeProfissional">Caroline Noronha</span>
+<span class="profProfissional">Maquiadora profissional e expert Amamos Make</span>
+</div>
+</div> -->
             </div>
             {{ productTabs.downloads.content }}
             <div data-app="product.payment-methods" id="formasPagto" class="prodBox dispblock" style="display:none;"></div>
@@ -159,16 +176,21 @@
             </div>
         </section>
     {% endif %}
+    
+    {% element 'snippets/showcaseproduct' %}
 
-    <div id="prognoos_ib"></div>
-    {% if settings.history_position == 1 %}
-        <section class="products-visited col-sm-12">
-            <h3 class="related-title">Últimos produtos visitados</h3>
-            {% element 'snippets/history' {
-                'store.id': store.id,
-                'pages.current': pages.current,
-                'category.id': category.id
-            } %}
-        </section>
+    {% if pages.current == 'catalog' %}
+        <div id="prognoos_ib"></div>
+        {% if settings.history_position == 1 %}
+            <section class="products-visited col-sm-12">
+                <h3 class="related-title">Últimos produtos visitados</h3>
+                {% element 'snippets/history' {
+                    'store.id': store.id,
+                    'pages.current': pages.current,
+                    'category.id': category.id
+                } %}
+            </section>
+        {% endif %}
     {% endif %}
 </div>
+

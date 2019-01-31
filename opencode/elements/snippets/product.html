@@ -1,5 +1,5 @@
 
-<li itemscope itemtype="http://schema.org/SomeProducts">
+<li class="showcase_list-item" itemscope itemtype="http://schema.org/SomeProducts">
     <div class="border {% if product.available and product.stock > 0 %} disponivel {% else %} indisponivel {% endif %}">
         {% if product.price_offer > 0 %}
             <div class="product__offer">
@@ -20,7 +20,7 @@
                     {% if Image('featured') %}
                         <span class="featured">{{ Image('featured') }}</span>
                     {% else %}
-                        <span class="label featured">Destaque</span>
+                        <span class="label featured">+ Brinde</span>
                     {% endif %}
                 {% endif %}
             </div>

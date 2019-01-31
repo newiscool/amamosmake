@@ -1,11 +1,10 @@
 {
-  "name": "Newiscool-theme",
-  "homepage": "http://www.agencianewiscool.com.br",
+  "name": "Newiscool Basic",
+  "homepage": "http://www.newiscool.com.br",
   "authors": [
-    "Alan Diego Dantas dos Santos <contato@agencianewiscool.com.br>",
-    
+    "Alan Santos"
   ],
-  "description": "Tema desenvolvido pela agencia New is cool para agilizar no processo de criação de lojas virtuais na plataforma TRAY",
+  "description": "Tema de desenvolvimento basico para lojas da plataforma tray",
   "license": "MIT",
   "ignore": [
     "**/.*",

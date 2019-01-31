@@ -31,26 +31,26 @@
 
       "favicon": "",
 
-      "vitrine1": "Oba, Baixaram de preço",
+      "vitrine1": "Lançamentos e Novidades",
       "quantidade1": "15",
       "filtros1": "available",
       "ordem1": "rand",
       "showCase1active":"1",
       "categories1":"",
     
-      "vitrine2": "Produtos mais vendidos",
+      "vitrine2": "Os mais amados por até R$ 30,00",
       "quantidade2": "15",
       "filtros2": "promotion",
       "ordem2": "rand",
       "showCase2active":"1",
       "categories2":"",
 
-      "vitrine3": "Kits e Presentes",
-      "quantidade3": "9",
-      "filtros3": "",
+      "vitrine3": "Olha esses kits! Você vai amar",
+      "quantidade3": "15",
+      "filtros3": "available",
       "ordem3": "rand",
-      "showCase3active":"0",
-      "categories3":"",
+      "showCase3active":"1",
+      "categories3":"223",
 
       "copyright" : "CNPJ: 27.615.225/0001-09 - End: Rua Dr Gelás, 288 - Bassan - Marília/SP CEP: 17.506-161 - Tel: (14) 4101.2310 - E-mail: sac@amamosmake.com - Horário de atendimento: Seg à Sex das 9h às 18h - Sáb das 9h às 12h",
          
@@ -136,8 +136,8 @@
       "ruler1":"Assine nossa newsletter",
       "ruler2":"e ganhe R$ 10,00 de desconto!",
 
-      "ruler3":"Black Friday Amamos Make",
-      "ruler4":"Quinta feira, Apartir das 22:00 horas",
+      "ruler3":"Frete grátis para todo estado de São Paulo",
+      "ruler4":"Nas compras acima de R$ 119,99",
 
       "ruler5":"Loja certificada",
       "ruler6":"Garantia de compra segura",

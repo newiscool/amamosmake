@@ -1,0 +1,105 @@
+{% set categoryCurrent = (product.category_id) %}
+{% set categoryRosto = ['46', '38', '42', '44', '40', '52', '50', '208', '215',categoryCurrent] %}
+{% set categoryBoca = ['60', '62', '210', categoryCurrent] %}
+{% set categoryOlhos = ['58', '132', '54','102','56','214', categoryCurrent] %}
+{% set categorySobrancelhas = ['129', '131', categoryCurrent] %}
+{% set categoryAcessorios = ['184', '186', '212', categoryCurrent] %}
+{% set categoryDemaquilante = ['94', '96', categoryCurrent] %}
+{% set categoryPincel = ['194', '196', '198', '200', '202', '204', '217', categoryCurrent] %}
+
+
+
+{% set CategoryFilterRosto = [] %}
+{% for key,value in categoryRosto %}
+    {% if categoryCurrent != value %}
+        {% set CategoryFilterRosto = CategoryFilterRosto + { (value) : value}  %}
+    {% endif %}
+{% endfor %}
+
+{% set CategoryFilterBoca = [] %}
+{% for key,value in categoryBoca %}
+    {% if categoryCurrent != value %}
+        {% set CategoryFilterBoca = CategoryFilterBoca + { (value) : value}  %}
+    {% endif %}
+{% endfor %}
+
+{% set CategoryFilterOlhos = [] %}
+{% for key,value in categoryOlhos %}
+    {% if categoryCurrent != value %}
+        {% set CategoryFilterOlhos = CategoryFilterOlhos + { (value) : value}  %}
+    {% endif %}
+{% endfor %}
+
+{% set CategoryFilterSobrancelhas = [] %}
+{% for key,value in categorySobrancelhas %}
+    {% if categoryCurrent != value %}
+        {% set CategoryFilterSobrancelhas = CategoryFilterSobrancelhas + { (value) : value}  %}
+    {% endif %}
+{% endfor %}
+
+{% set CategoryFilterAcessorios = [] %}
+{% for key,value in categoryAcessorios %}
+    {% if categoryCurrent != value %}
+        {% set CategoryFilterAcessorios = CategoryFilterAcessorios + { (value) : value}  %}
+    {% endif %}
+{% endfor %}
+
+{% set CategoryFilterDemaquilante = [] %}
+{% for key,value in categoryDemaquilante %}
+    {% if categoryCurrent != value %}
+        {% set CategoryFilterDemaquilante = CategoryFilterDemaquilante + { (value) : value}  %}
+    {% endif %}
+{% endfor %}
+
+{% set CategoryFilterPincel = [] %}
+{% for key,value in categoryPincel %}
+    {% if categoryCurrent != value %}
+        {% set CategoryFilterPincel = CategoryFilterPincel + { (value) : value}  %}
+    {% endif %}
+{% endfor %}
+    
+    <div class="showcase-carousel">
+        {% if categoryCurrent == 46 or categoryCurrent == 38 or categoryCurrent == 42 or categoryCurrent == 44 or categoryCurrent == 40 or categoryCurrent == 52 or categoryCurrent == 50 or categoryCurrent == 208  or categoryCurrent == 215 %}
+            {% set products = Products({ 'filter': ['available'], 'limit': '12', 'order': { 'stock': 'desc', 'quantity_sold': 'desc', }, 'categories': [CategoryFilterRosto|join("  , ")], }) %}
+            {% element 'snippets/showcase' {
+                "showcaseTitle": '<h2 class="banners-extra__title title--main">Quem comprou este produto, Comprou também </h2>',
+                "products": products} %}
+        
+            {% elseif categoryCurrent == 60 or categoryCurrent == 62 or categoryCurrent == 210 %}
+            {% set products = Products({ 'filter': ['available'], 'limit': '12', 'order': { 'stock': 'desc', 'quantity_sold': 'desc', }, 'categories': [CategoryFilterBoca|join("  , ")], }) %}
+            {% element 'snippets/showcase' {
+                "showcaseTitle": '<h2 class="banners-extra__title title--main">Quem comprou este produto, Comprou também </h2>',
+                "products": products} %}
+        
+            {% elseif categoryCurrent == 58 or categoryCurrent == 132 or categoryCurrent == 54 or categoryCurrent == 102 or categoryCurrent == 56 or categoryCurrent == 214 %}
+            {% set products = Products({ 'filter': ['available'], 'limit': '12', 'order': { 'stock': 'desc', 'quantity_sold': 'desc', }, 'categories': [categoryOlhos|join("  , ")], }) %}
+            {% element 'snippets/showcase' {
+                "showcaseTitle": '<h2 class="banners-extra__title title--main">Quem comprou este produto, Comprou também </h2>',
+                "products": products} %}
+        
+            {% elseif categoryCurrent == 129 or categoryCurrent == 131  %}
+            {% set products = Products({ 'filter': ['available'], 'limit': '12', 'order': { 'stock': 'desc', 'quantity_sold': 'desc', }, 'categories': [categorySobrancelhas|join("  , ")], }) %}
+            {% element 'snippets/showcase' {
+                "showcaseTitle": '<h2 class="banners-extra__title title--main">Quem comprou este produto, Comprou também </h2>',
+                "products": products} %}
+        
+            {% elseif categoryCurrent == 184 or categoryCurrent == 186 or categoryCurrent == 212 %}
+            {% set products = Products({ 'filter': ['available'], 'limit': '12', 'order': { 'stock': 'desc', 'quantity_sold': 'desc', }, 'categories': [categoryAcessorios|join("  , ")], }) %}
+            {% element 'snippets/showcase' {
+                "showcaseTitle": '<h2 class="banners-extra__title title--main">Quem comprou este produto, Comprou também </h2>',
+                "products": products} %}
+        
+            {% elseif categoryCurrent == 94 or categoryCurrent == 96  %}
+            {% set products = Products({ 'filter': ['available'], 'limit': '12', 'order': { 'stock': 'desc', 'quantity_sold': 'desc', }, 'categories': [categoryDemaquilante|join("  , ")], }) %}
+            {% element 'snippets/showcase' {
+                "showcaseTitle": '<h2 class="banners-extra__title title--main">Quem comprou este produto, Comprou também </h2>',
+                "products": products} %}
+        
+            {% elseif categoryCurrent == 194 or categoryCurrent == 196 or categoryCurrent == 198 or categoryCurrent == 200 or categoryCurrent == 202 or categoryCurrent == 204 or categoryCurrent == 217 %}
+            {% set products = Products({ 'filter': ['available'], 'limit': '12', 'order': { 'stock': 'desc', 'quantity_sold': 'desc', }, 'categories': [categoryPincel|join("  , ")], }) %}
+            {% element 'snippets/showcase' {
+                "showcaseTitle": '<h2 class="banners-extra__title title--main">Quem comprou este produto, Comprou também </h2>',
+                "products": products} %}
+    
+    {% endif %}
+</div>

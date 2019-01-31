@@ -1,0 +1,31 @@
+{% if settings.showCase1active > 0  %}
+    <section class="showcase-carousel">
+        {% if settings.categories1 > 0  %}
+            {% set products = Products({
+                'filter': [settings.filtros1],
+                'limit': settings.quantidade1,
+                'order': settings.ordem1,
+                'order': {
+                    'quantity_sold': 'asc',
+                    'stock': 'desc',
+                    'id': 'asc'
+                },
+                'categories': [ settings.categories1 ]
+            }) %}
+        {% else %}
+            {% set products = Products({
+                'filter': [settings.filtros1],
+                'limit': settings.quantidade1,
+                'order': settings.ordem1,
+                'order': {
+                    'quantity_sold': 'desc',
+                    'stock': 'desc',
+                    'id': 'desc'
+                },
+            }) %}
+        {% endif %}
+        {% element 'snippets/showcase' {
+            "showcaseTitle": '<h2 class="banners-extra__title title--main">' ~  settings.vitrine1  ~ '</h2>',
+            "products": products} %}
+    </section>
+{% endif %}

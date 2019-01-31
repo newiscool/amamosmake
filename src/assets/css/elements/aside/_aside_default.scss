@@ -2,10 +2,11 @@
   .smart_filter {
     background-color: white;
     bottom: 0;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 3/10);
+    box-shadow:none;
+    border-top: 1px solid #f0f0f0;
     display: block !important;
     height: 100vh;
-    left: -310px;
+    left: -315px;
     max-height: 100vh;
     overflow-y: scroll;
     position: fixed;
@@ -22,7 +23,7 @@
       padding: 0;
       position: absolute;
       right: 15px;
-      top: 20px;
+      top: 10px;
       width: 30px;
       z-index: 30;
       background: transparent;
@@ -39,7 +40,7 @@
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 3/10);
     display: block !important;
     height: 100vh;
-    left: -310px;
+    left: -330px;
     max-height: 100vh;
     overflow-y: scroll;
     padding: 0;
@@ -48,8 +49,14 @@
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
     top: 0;
-    width: 300px;
+    width: 100%;
     z-index: 500;
+    ul.nv-01.menu1 {
+      position: fixed;
+      width: 100%;
+      z-index: 9;
+      background: rebeccapurple;
+    }
 
     .container {
       max-width: 300px;
@@ -92,7 +99,7 @@
 
 .ac_sm_ft {
   .smart_filter {
-    left: 0;
+    left: -15px;
     z-index: 99999;
     form {
       position: absolute;
@@ -108,7 +115,7 @@
     left: 0;
 
     .dropdown-switcher {
-      display: none;
+      display: block;
     }
   }
 }
@@ -120,7 +127,7 @@
 }
 @media(max-width: 991px) {
   header#header {
-    position: sticky;
+    position: relative;
     top: 0;
     background: #fff;
     z-index: 999;

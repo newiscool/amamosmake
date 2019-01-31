@@ -1,41 +1,67 @@
-{% element 'snippets/breadcrumb' %}
-{% if not utils.is_mobile %}
-    <figure class="banner-title">{{ banner.title }}</figure>
+<div class="catalog-block"> 
+{% element('snippets/breadcrumb') %}
+{% if utils.is_mobile %}
+    <h3 class="hidden-lg hidden-md title-category">{{ category.name }}</h3>
+{% endif %}
+{% if banner.title %}
+<figure class="banner-title hidden-sm hidden-xs">{{ banner.title }}</figure>
 {% endif %}
 
+{% set paginateInfinite = true %}
 {% if products|length > 0 %}
 <aside class="smart_filter col-xs-3 visible-lg">
-    <h1 class="head_title">Filtros</h1>
     <button class="mobileFilter btn btn-primary pull-right hidden-lg">
         <i class="fa fa-times" aria-hidden="true"></i>
     </button>
+    <div class="categories">
+        <div class="categories__title hidden-lg hidden-md">Filtrar</div>
+    </div>
     {% element('snippets/smart_filter') %}
 </aside>
+
 <section class="products-categorys col-xs-12 col-lg-9">
     <div class="row">
         <div class="col-xs-12 pagination-search-and-category top">
-            <button class="mobileFilter btn btn-primary pull-left hidden-lg" data-id="sm-filter">Filtrar</button>
+            <button class="mobileFilter btn btn-primary pull-left hidden-lg" data-id="sm-filter">Filtro</button>
             <span class="catalogo-display">{{ paginate.counter('Resultado <strong>{:count} Produtos</strong> em <strong>{:pages} Páginas</strong>') }}</span>
             <div class="filter-category">
                 {% element 'snippets/filter' {'brands': category.brands } %}
             </div>
+            {% if not paginateInfinite %}
+                {% element 'snippets/pagination' %}
+            {% endif %}
         </div>
 
-        <div class="products col-xs-12">
+        <div class="products col-xs-12"
+            data-infinite="{{ paginateInfinite ? 'true' : 'false' }}"
+            data-infinite-result=".showcase__list" 
+            data-infinite-button="Ver mais produtos" 
+            data-infinite-button-loading="Carregando" 
+            data-infinite-auto="true" >
+
             {% element 'snippets/showcase' {"products": products} %}
+
+            {% if paginateInfinite %}
+                <div class="paginates">
+                    {% element 'snippets/pagination' %}
+                </div>
+            {% endif %}
         </div>
 
-
-        <div class="category__description">
-            {{ category.small_description }}
-        </div>
-
+        {% if not paginateInfinite %}
         <div class="col-xs-12 pagination-search-and-category bottom">
             <span class="catalogo-display">{{ paginate.counter('Resultado <strong>{:count} Produtos</strong> em <strong>{:pages} Páginas</strong>') }}</span>
+            
             {% element 'snippets/pagination' %}
+        </div>
+        {% endif %}
+             
+        <div class="category__description">
+            {{ category.small_description }}
         </div>
     </div>
 </section>
 {% else %}
 <p class="message--no-products">Nenhum produto encontrado nessa categoria.</p>
 {% endif %}
+</div>

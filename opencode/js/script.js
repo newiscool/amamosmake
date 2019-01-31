@@ -1,3 +1,8 @@
+
+jQuery( document ).ready(function() {
+    // jQuery(".page-checkout_cart #Relacionados").load("paginas-da-loja.html"); 
+    // jQuery(".page-checkout_cart #Relacionados ").html(teste);
+})
 // if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript requires jQuery')}
 // +function ($) {'use strict';
 // 	var version = $.fn.jquery.split(' ')[0].split('.')
@@ -60,6 +65,24 @@ jQuery(document).ready(function ($) {
                 responsive: {
                     0:{
                       navigation:false, // from this breakpoint 678 to 959
+                      pagination:true // only within 678 and next - 959
+                    }
+                }
+            });
+
+     
+
+            jQuery(".facebook-recomenda_list").owlCarousel({
+                autoPlay: true,
+                items: 4,
+                itemsCustom: [[320, 1], [600, 2], [768, 2], [992, 2], [1200, 3]],
+                navigation: true,
+                navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+                pagination: true,
+                responsiveClass:true,
+                responsive: {
+                    0:{
+                      navigation:true, // from this breakpoint 678 to 959
                       pagination:true // only within 678 and next - 959
                     }
                 }
@@ -212,9 +235,18 @@ jQuery(document).ready(function ($) {
 
             if (window.innerWidth < 992) {
                 jQuery(".banners-extras__center").owlCarousel({
-                    autoPlay: true,
+                    autoPlay: false,
                     items: 4,
                     itemsCustom: [[320, 1], [600, 2], [768, 3]],
+                    navigation: false,
+                    navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+                    pagination: true,
+                    singleItem: false
+                });
+                jQuery(".amamosvip_body-list").owlCarousel({
+                    autoPlay: false,
+                    items: 3,
+                    itemsCustom: [[320, 2], [600, 2], [768, 3]],
                     navigation: false,
                     navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
                     pagination: true,
@@ -255,81 +287,8 @@ jQuery(document).ready(function ($) {
         }
     }(jQuery);
 
-    +function ($) {
-        'use strict';
-
-        var $smartFilterMobile = jQuery('.mobileFilter');
-        var $mobileMenu = jQuery('.mobileMenu');
-        var $mask = jQuery('#mask');
-
-        jQuery($smartFilterMobile).click(function () {
-            jQuery('body').toggleClass('ac_sm_ft');
-        });
-        jQuery($mobileMenu).click(function () {
-            jQuery('body').toggleClass('ac_sm_menu');
-        });
-        jQuery($mask).click(function () {
-            jQuery('body').removeClass('ac_sm_menu ac_sm_ft');
-        });
-    }(jQuery);
-
-    +function ($) {
-        'use strict';
-
-        var errorVariacao = jQuery('#span_erro_carrinho');
-        jQuery('#form_comprar .variacao-produto').append(errorVariacao);
-        jQuery('#bt-submit-comments').remove();
-        jQuery('#form-comments').append('<button id="bt-submit-comments" class="image pointer">Enviar</button>');
-        jQuery('.page-contact #imagem').remove();
-        jQuery('.page-contact .formulario-contato').append('<button  name="imagem" id="imagem">Enviar</button>');
-        jQuery('.page-central_troca form input[type=image]').after('<button type="submit" class="button-submit" name="submit">Gerar Ordem de Devolu&#231;&#227;o</button>')
-            .remove();
-        jQuery('.page-central_gera_troca form input[type=image]').after('<button type="submit" class="button-submit" name="submit">Gerar Ordem de Devolu&#231;&#227;o</button>')
-            .remove();
-        jQuery('.page-search #vitrine-catalogo fieldset [type=image]').after('<button type="submit" class="button-submit" name="submit">Buscar</button>')
-            .remove();
-        jQuery('.page-central_senha input[type=image]').after('<button type="submit" class="button-submit" name="submit">Avan&#231;ar</button>')
-            .remove();
-    }(jQuery);
-
-    +function ($) {
-        jQuery('.caixa-botoes .bt-avancar').html('Avançar');
-
-        jQuery(document).ready(function ($) {
-            jQuery('table').each(function (index, el) {
-                var titles = [];
-
-                jQuery(this).find('th').each(function (index, el) {
-                    titles.push(jQuery(this).html());
-                });
-
-                jQuery(this).find('tr').each(function (index, el) {
-                    jQuery(this).find('td').each(function (index, el) {
-                        jQuery(this).attr('data-table-title', titles[index]);
-                    });
-                });
-            });
-        });
-    }(jQuery);
-
     if (screen.width < 767) {
         var i = 1;
-
-        jQuery('.smart_filter [name=form-filter] h3').each(function (index, el) {
-            var self = jQuery(this);
-
-            if (self.next('ul').find('label').length) {
-                var name = self.next('ul').find('input').attr('name');
-                var name = name + i;
-                self.attr('data-filter-label', name)
-                    .addClass('smart-filter-label')
-                    .attr('data-filter-label-content', self.html());
-                self.next('ul').attr('data-filter-container', name)
-                    .addClass('smart-filter-container');
-                i++;
-            }
-        });
-
         jQuery('.smart_filter .smart-filter-label').each(function (index, el) {
             var self = jQuery(this);
             var name = self.attr('data-filter-label');
@@ -398,6 +357,33 @@ jQuery(document).ready(function ($) {
         });
 
     }
+    $(function(){
+        $('#linksPag a').click(function(){
+            //ajax
+            setTimeout(function() {
+                jQuery('a.FotoLista img').attr('class', "vistadosImg");
+                if($('.vistadosImg').length > 0) {
+                    var aux;
+                    $.each($('.vistadosImg'), function() {
+                        aux = $(this).attr('src');
+                        aux = aux.replace('/90_', '/');
+                        $(this).attr('src', aux);
+                    });
+                }
+                return false;
+            },500)
+        })
+    })
+      
+        jQuery('a.FotoLista img').attr('class', "vistadosImg");
+        if($('.vistadosImg').length > 0) {
+            var aux;
+            $.each($('.vistadosImg'), function() {
+                aux = $(this).attr('src');
+                aux = aux.replace('/90_', '/');
+                $(this).attr('src', aux);
+            });
+        }
 
     if($('#nav_bar .nv-01 > .you-need').length > 0) {
 
@@ -427,16 +413,24 @@ jQuery(document).ready(function ($) {
     });
 
 });
++function ($) {
+    'use strict';
 
-var elements = document.querySelectorAll('.product__right-wrapper');
-Stickyfill.add(elements);
-if(jQuery('.product__addcart').length > 0) {
-    var prodId;
-    jQuery('.product__addcart').on('click', function() {
-        prodId = jQuery(this).data('id');
-        addCart(prodId);
+    var $smartFilterMobile = jQuery('.mobileFilter');
+    var $mobileMenu = jQuery('.mobileMenu');
+    var $mask = jQuery('#mask');
+
+    jQuery($smartFilterMobile).click(function () {
+        jQuery('body').toggleClass('ac_sm_ft');
     });
-}
+    jQuery($mobileMenu).click(function () {
+        jQuery('body').toggleClass('ac_sm_menu');
+    });
+    jQuery($mask).click(function () {
+        jQuery('body').removeClass('ac_sm_menu ac_sm_ft');
+    });
+}(jQuery);
+
 
 jQuery( document ).ready(function() {
     jQuery("body").addClass("active__body");
@@ -454,6 +448,17 @@ jQuery( document ).ready(function() {
                 jQuery(".dropdown-switcher").addClass("active__dropdown");
             }
         });
+
+        jQuery( ".btn-show-hiddem_search" ).on( "click", function() {
+            jQuery(this).addClass("closestats");
+            if(jQuery("#search_01").hasClass("drop-active")) {
+                jQuery("#search_01").removeClass("drop-active");
+                jQuery(".btn-show-hiddem_search").removeClass("closestats");
+            } else {
+                jQuery("#search_01").addClass("drop-active");
+            }
+        });
+
     }
 
 
@@ -479,6 +484,8 @@ jQuery("svg.search__icon").click(function () {
 jQuery(".closeModalinfo").click(function () {    
     jQuery('.condicoes-item').removeClass('drop');
 });
+
+
 
     if (window.innerWidth < 992) {
         // jQuery( "svg.arrow-down" ).on( "click", function() {
@@ -557,3 +564,163 @@ jQuery(".closeModalinfo").click(function () {
   });
   // [forked from](http://jsfiddle.net/FvMYz/)
   // [show-hide-based-on-select-option-jquery)(http://stackoverflow.com/questions/2975521/show-hide-div-based-on-select-option-jquery/2975565#2975565)
+
+
+
+    jQuery('.checkbox').on("change", function () {
+        var links = [], //array for links
+        sum = 0;
+    jQuery('.checkbox').each(function () {
+        links.push(jQuery(this).attr('data-link')); //get links
+        //sum of all price values of this into price
+        sum += +jQuery(this).attr('data-cart');
+    });
+    jQuery('.price').html(sum);
+
+    jQuery("a").attr("href", links.join(",")); // change link
+
+});
+
+    jQuery(window).load(function(){
+        jQuery('.facebook-recomenda_list_item iframe').attr('class', "facebookIframe");
+    })
+
+
+// instafeed
+
+// How to get an access token:
+// http://jelled.com/instagram/access-token
+
+// {{model.user.username}}, {{likes}} likes
+
+// var galleryFeed = new Instafeed({
+//     get: "user",
+//     userId: 4709328436,
+//     accessToken: "4709328436.1677ed0.e5773cc995394182b05ea30b458c9d14",
+//     resolution: "standard_resolution",
+//     useHttp: "true",
+//     limit: 10,
+//     template: 
+//       // '<a href="{{image}}">'+
+//         '<div class="img-featured-container">'+
+//           '<div class="img-backdrop"></div>'+
+//           '<div class="description-container">'+
+//             // '<p class="caption">{{caption}}</p>'+
+//             '<span class="likes"><i class="icon ion-heart"></i> {{likes}}</span>'+
+//             '<span class="comments"><i class="icon ion-chatbubble"></i> {{comments}}</span>'+
+//           '</div>'+
+//           '<img src="{{image}}" class="img-responsive">'+
+//         '</div>',
+//       // '</a>'+
+//     target: "instafeed-gallery-feed",
+//     after: function() {
+//       // disable button if no more results to load
+//       if (!this.hasNext()) {
+//         btnInstafeedLoad.setAttribute('disabled', 'disabled');
+//       }
+      
+//       var owl = jQuery(".owl-carousel"),
+//           owlSlideSpeed = 300;
+  
+//       // init owl    
+//     jQuery(document).ready(function(){
+//         owl.owlCarousel({
+//             // navContainer: '.owl-nav-custom',
+//             // dotsContainer: '.owl-dots-custom',
+//             margin:10,
+//             loop:true,
+//             margin:10,
+//             nav:true,
+//             responsive:{
+//                 0:{
+//                     items:1
+//                 },
+//                 200:{
+//                     items:2
+//                 },
+//                 400:{
+//                     items:3
+//                 },
+//                 768:{
+//                     items:4
+//                 }
+//             }
+//         });
+//     });
+    
+//     // keyboard controls
+//     jQuery(document.documentElement).keydown(function(event) {
+//         if (event.keyCode == 37) {
+//             owl.trigger('prev.owl.carousel', [owlSlideSpeed]);
+//         }
+//         else if (event.keyCode == 39) {
+//             owl.trigger('next.owl.carousel', [owlSlideSpeed]);
+//         }
+//     });
+// }
+// });
+
+// galleryFeed.run();
+
+// var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
+// btnInstafeedLoad.addEventListener("click", function() {
+//     galleryFeed.next()
+// });
+
+
+//      jQuery( "div#modal-form-content .botao" ).addClass( "myClass" );
+    //     setTimeout(function() {
+    //         // jQuery(".pointer").trigger('click');
+    //         console.log('passou aqui')
+    //     },500)
+    // jQuery("#btnTeste").on('click', function(){
+    //     jQuery( "div#modal-form-content" ).addClass( "myClass" );
+    //     console.log("foiii")
+    //     //ajax
+    //     return false;
+    // })
+    // jQuery("#product-page .produto-imagem-miniaturas li span").on("click",function(e){
+    //     var fotoClicada = (event.currentTarget.getAttribute("id"));
+    //     var fotoClicadaNew = fotoClicada;
+    //     console.log("passou aqui");
+    //     var fotoMostra = jQuery("#foto_p");
+    //     var elementoMostra = jQuery(fotoMostra).find("#" + fotoClicadaNew);
+    //     jQuery("#foto_p span").removeClass("teste");
+    //     jQuery("#foto_p span").addClass("removeFoto");
+    //     elementoMostra.removeClass("removeFoto");
+    //     elementoMostra.addClass("mostraFoto");
+    // });
+
+    jQuery(window).load(function(){
+    if (window.innerWidth < 992) {
+        if (jQuery("#carousel").children().length <= 0) {
+        } else {
+            console.log("passou aqui")
+            jQuery('.jcarousel-skin-tango').slick({
+                centerMode: true,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                variableWidth: true,
+                dots: true,
+                arrows: false,  
+            });
+            console.log("não vazio");
+        }
+    }
+        if (jQuery("#carousel").children().length <= 0) {
+            console.log("vazio");
+        } else {
+            jQuery("#foto_p").addClass("fotoDisplayNone");
+            console.log("não vazio");
+        }
+})
+    jQuery("#btnTeste").trigger('click');
+
+    // jQuery(document).ready(function(){
+    //     if (window.innerWidth < 992) {
+    //         jQuery( "#btn-voltarmenu" ).on( "click", function() {
+    //             console.log("clicado")
+    //             jQuery(".dropdown-switcher").removeClass("active__dropdown");
+    //         });
+    //     }
+    // })
