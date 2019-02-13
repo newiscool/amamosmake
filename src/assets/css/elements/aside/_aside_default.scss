@@ -35,27 +35,39 @@
   }
 
   #nav_bar {
-    background-color: white;
-    bottom: 0;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 3/10);
-    display: block !important;
-    height: 100vh;
-    left: -330px;
-    max-height: 100vh;
-    overflow-y: scroll;
-    padding: 0;
-    position: fixed;
-    -webkit-transition: all 300ms ease;
-    -o-transition: all 300ms ease;
-    transition: all 300ms ease;
-    top: 0;
-    width: 100%;
-    z-index: 500;
-    ul.nv-01.menu1 {
+    // background-color: white;
+    // display: block !important;
+    // height: 100vh;
+    // left: -360px;
+    // max-height: 100vh;
+    // overflow-y: scroll;
+    // position: fixed;
+    // transition: all 300ms ease;
+    // top: 0;
+    // width: 100%;
+    // z-index: 500;
+    .container-navbar {
       position: fixed;
+      z-index: 9998;
+      top: 0;
       width: 100%;
-      z-index: 9;
-      background: rebeccapurple;
+      max-width: 100%;
+      height: 100%;
+      transition: transform .4s ease;
+      .nav-wrapper {
+        position: static;
+        height: 100%;
+        overflow: scroll;
+        overflow-x: visible;
+        overflow-y: auto;
+        width: 100%;
+        overscroll-behavior: none;
+        ul.nv-01 {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+      }
     }
 
     .container {

@@ -1,101 +1,168 @@
 <nav class="hidden-sm hidden-xs" id="nav_bar">
-    <div class="hidden-lg nav-cabecalho-mobile-wrapper">
+  <div class="hidden-lg nav-cabecalho-mobile-wrapper">
+      <div class="login-box tray-hide" data-logged-user="true">
+          <span class="texto-cima">Ol&aacute;, <span data-customer="name">{{ customer.name }}</span>!</span>
+    <span class="texto-baixo">
+      <a href="{{ links.central }}">Minha conta</a> | <a href="{{ links.logout }}">Sair</a>
+    </span>
+      </div>
+      <div class="login-box tray-hide" data-logged-user="false">
+          <span class="texto-cima">Bem-vindo!</span>
+    <span class="texto-baixo">
+      <a href="{{ links.login }}">Entrar</a> | <a href="{{ links.register }}">Cadastro</a>
+    </span>
+      </div>
+      <button class="hidden-lg mobileMenu">
+          <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+  </div>
+  <div class="container-navbar">
+      <div class="navbar-full">
+      <ul class="nv-01">            
+          {% for category in categories %}
+          {% if loop.index <= 8 %}
+          <li class="cat_id-{{ category.id }} dropdown">
+              <a href="{{ category.link }}" class="dropdown-link">
+                  {{ category.name }}
+              </a>
+              {% if category.children %}
+                  <svg class="cat__icon icon--arrow-bottom hidden-lg hidden-md">
+                      <use xlink:href="#icon-arrow-bottom"></use>
+                  </svg>
+                  
+              {% endif %}           
+              {% if category.children %}
+              {% set varCat = category.id %}                
+              <div class="dropdown-switcher">                   
+                  <ul class="nv-02 carrossel-navbar">
+                      {% for child in category.children %}
+                          <li class="cat_id-{{ child.id }} dropdown dropdown-nv2">
+                              <a href="{{ child.link }}">
+                                  {{child.name }}
+                              </a>
+                              {% if child.children %}
+                                  <svg class="arrow-down hidden-lg hidden-md">
+                                      <use xlink:href="#icon-arrow-bottom"></use>
+                                  </svg>
+                              {% endif %}
+                              {% if not child.children %}
+                                  <a href="{{ category.link }}" class="link-vertodos">
+                                      <span>Ver todos: {{ child.name }}</span>
+                                  </a>
+                              {% endif %}
+                              
+                              {% if child.children %}
+                                  <ul class="nv-03">
+                                  {% for child in child.children %}
+                                      <li class="cat_id-{{ child.id }} dropdown">
+                                          <a href="{{ child.link }}">{{child.name }}</a>
+                                        
+                                      </li>
+                                    
+                                  {% endfor %}
+                                      <li class="cat_id-{{ child.id }} dropdown">
+                                          <a href="{{ child.link }}" class="link-vertodos">
+                                              <span>Ver todos: {{ child.name }}</span>
+                                          </a>
+                                      </li>
+                                  </ul>
+                              {% endif %}
+                          </li>
+                      {% endfor %}
+                      
+                      {% if utils.is_mobile %}
+                          <a href="{{ category.link }}" class="link-vertodos">
+                              <span>Ver todos: {{ category.name }}</span>
+                          </a>
+                      {% endif %}
+                  </ul>
+                  <div class="product_navbar hidden-sm hidden-xs">
+                      {% set products = Products({
+                          'filter': [settings.filtros1],
+                          'limit': 1,
+                          'order': settings.ordem1,
+                          'order': {
+                              'stock': 'desc',
+                              'id': 'desc'
+                          },
+                          'categories': [ varCat ] 
+                      }) %}
+                      {% element 'snippets/showcase' {"products": products} %}
+                  </div>
+              </div>
+         
+              {% endif %}
+          </li>
+          {% endif %}
+          {% endfor %}
+      </ul>
+  </div>
+  </div>
+</nav>
+
+{% if utils.is_mobile %}
+<div id="wrapper" class="menuClose">
+  <input type="checkbox" id="menu" name="menu" class="menu-checkbox">
+  <div id="nav_bar" class="menu">
+      <div class="hidden-lg nav-cabecalho-mobile-wrapper">
         <div class="login-box tray-hide" data-logged-user="true">
-            <span class="texto-cima">Ol&aacute;, <span data-customer="name">{{ customer.name }}</span>!</span>
-			<span class="texto-baixo">
-				<a href="{{ links.central }}">Minha conta</a> | <a href="{{ links.logout }}">Sair</a>
-			</span>
+          <span class="texto-cima">Olá, <span data-customer="name">{{ customer.name }}</span>!</span>
+          <span class="texto-baixo">
+            <a href="{{ links.central }}">Minha conta</a> | <a href="{{ links.logout }}">Sair</a>
+          </span>
         </div>
         <div class="login-box tray-hide" data-logged-user="false">
-            <span class="texto-cima">Bem-vindo!</span>
-			<span class="texto-baixo">
-				<a href="{{ links.login }}">Entrar</a> | <a href="{{ links.register }}">Cadastro</a>
-			</span>
+          <span class="texto-cima">Bem-vindo!</span>
+          <span class="texto-baixo"><a href="{{ links.login }}">Entrar</a> | <a href="{{ links.register }}">Cadastro</a></span>
         </div>
-        <button class="hidden-lg mobileMenu">
-            <i class="fa fa-times" aria-hidden="true"></i>
-        </button>
-    </div>
-    <div class="container-navbar">
-        <div class="navbar-full">
-        <ul class="nv-01">            
-            {% for category in categories %}
-            {% if loop.index <= 8 %}
-            <li class="cat_id-{{ category.id }} dropdown">
-                <a href="{{ category.link }}" class="dropdown-link">
-                    {{ category.name }}
-                </a>
-                {% if category.children %}
-                    <svg class="cat__icon icon--arrow-bottom hidden-lg hidden-md">
-                        <use xlink:href="#icon-arrow-bottom"></use>
-                    </svg>
-                    
-                {% endif %}           
-                {% if category.children %}
-                {% set varCat = category.id %}                
-                <div class="dropdown-switcher">                   
-                    <ul class="nv-02 carrossel-navbar">
-                        {% for child in category.children %}
-                            <li class="cat_id-{{ child.id }} dropdown dropdown-nv2">
-                                <a href="{{ child.link }}">
-                                    {{child.name }}
-                                </a>
-                                {% if child.children %}
-                                    <svg class="arrow-down hidden-lg hidden-md">
-                                        <use xlink:href="#icon-arrow-bottom"></use>
-                                    </svg>
-                                {% endif %}
-                                {% if not child.children %}
-                                    <a href="{{ category.link }}" class="link-vertodos">
-                                        <span>Ver todos: {{ child.name }}</span>
-                                    </a>
-                                {% endif %}
-                                
-                                {% if child.children %}
-                                    <ul class="nv-03">
-                                    {% for child in child.children %}
-                                        <li class="cat_id-{{ child.id }} dropdown">
-                                            <a href="{{ child.link }}">{{child.name }}</a>
-                                          
-                                        </li>
-                                      
-                                    {% endfor %}
-                                        <li class="cat_id-{{ child.id }} dropdown">
-                                            <a href="{{ child.link }}" class="link-vertodos">
-                                                <span>Ver todos: {{ child.name }}</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                {% endif %}
-                            </li>
+      </div>
+    <label class="menu-toggle close-menu" for="menu"><i class="fa fa-times" aria-hidden="true"></i></label>
+    <ul class="menu-toggle_list">
+        {% for category in categories %}
+          {% if loop.index <= 7 %}
+          <li class="menu-toggle-list_item">
+              {% if not category.children %}
+                <a href="{{ category.link }}" class="menu-toggle-list-item_link">{{ category.name }}</a>
+              {% endif %}
+              {% if category.children %}
+                <label for="menu-{{category.id}}">{{ category.name }}</label>
+                <input type="checkbox" id="menu-{{category.id}}" name="menu-{{category.id}}" class="menu-checkbox">
+                <div class="menu">
+                  <label class="menu-toggle" for="menu-{{category.id}}"><i class="fas fa-caret-left"></i><span>Voltar</span> </span></label>
+                  <a href="{{ category.link }}" class="link-principal">{{ category.name }}</a> 
+                  
+                    <ul class="menu-toggle_list">
+                      {% for child in category.children %}
+                        <li class="menu-toggle-list_item">
+                          {% if not child.children %}
+                            <a href="{{ child.link }}" class="menu-toggle-list-item_link">{{ child.name }}</a>
+                            {%endif%}
+                            {% if child.children %}
+                            <label for="menu-{{child.id}}">{{ child.name }}</label>
+                            <input type="checkbox" id="menu-{{child.id}}" name="menu-{{child.id}}" class="menu-checkbox">
+                            <div class="menu">
+                              <label class="menu-toggle" for="menu-{{child.id}}"><i class="fas fa-caret-left"></i><span>Voltar</span>  </label>
+                              <a href="{{ child.link }}" class="link-principal">{{ child.name }}</a>
+                              {% for child2 in child.children %}
+                              <ul class="menu-toggle_list">
+                                <li class="menu-toggle-list_item">
+                                    <a href="{{ child2.link }}" class="menu-toggle-list-item_link">{{ child2.name }}</a>
+                                  </li>
+                                </ul>
+                              {% endfor %}
+                            </div>
+                          {% endif %}
+                          </li>
                         {% endfor %}
-                        
-                        {% if utils.is_mobile %}
-                            <a href="{{ category.link }}" class="link-vertodos">
-                                <span>Ver todos: {{ category.name }}</span>
-                            </a>
-                        {% endif %}
                     </ul>
-                    <div class="product_navbar hidden-sm hidden-xs">
-                        {% set products = Products({
-                            'filter': [settings.filtros1],
-                            'limit': 1,
-                            'order': settings.ordem1,
-                            'order': {
-                                'stock': 'desc',
-                                'id': 'desc'
-                            },
-                            'categories': [ varCat ] 
-                        }) %}
-                        {% element 'snippets/showcase' {"products": products} %}
-                    </div>
                 </div>
-           
-                {% endif %}
-            </li>
-            {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
-    </div>
-</nav>
+              {% endif %}
+          </li>
+
+          {% endif %}
+        {% endfor %}
+      </li>
+    </ul>
+  </div>
+</div><!-- #wrapper -->
+{% endif %}
