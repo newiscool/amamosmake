@@ -1,3 +1,26 @@
+jQuery(window).load(function(){
+    if (window.innerWidth < 992) {
+        if (jQuery("#carousel").children().length <= 0) {
+        } else {
+            // console.log("passou aqui")
+            jQuery('.jcarousel-skin-tango').slick({
+                centerMode: true,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                variableWidth: true,
+                dots: true,
+                arrows: false,  
+            });
+            // console.log("não vazio");
+        }
+    }
+        if (jQuery("#carousel").children().length <= 0) {
+            // console.log("vazio");
+        } else {
+            jQuery("#foto_p").addClass("fotoDisplayNone");
+            // console.log("não vazio");
+        }
+})
 if (window.innerWidth < 992) {
     jQuery( ".checkMenu" ).on( "click", function() {
         // console.log("passouAq")
@@ -690,29 +713,7 @@ jQuery(".closeModalinfo").click(function () {
     //     elementoMostra.addClass("mostraFoto");
     // });
 
-    jQuery(window).load(function(){
-    if (window.innerWidth < 992) {
-        if (jQuery("#carousel").children().length <= 0) {
-        } else {
-            // console.log("passou aqui")
-            jQuery('.jcarousel-skin-tango').slick({
-                centerMode: true,
-                slidesToShow: 1,
-                adaptiveHeight: true,
-                variableWidth: true,
-                dots: true,
-                arrows: false,  
-            });
-            // console.log("não vazio");
-        }
-    }
-        if (jQuery("#carousel").children().length <= 0) {
-            // console.log("vazio");
-        } else {
-            jQuery("#foto_p").addClass("fotoDisplayNone");
-            // console.log("não vazio");
-        }
-})
+ 
     jQuery("#btnTeste").trigger('click');
 
 

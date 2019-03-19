@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="pt-br" data-store="{{ store.id }}" class="page-{{ pages.current }}">
     <head>
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <!-- ============== Favicon =============== -->
-        <link rel="icon" type="image/png" href="{{ asset(settings.favicon) }}" />
         <!-- ============== Meta Tags =============== -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,20 +11,20 @@
         {{ tray.meta }}
 	    <!-- {{ tray.styles }} -->
         <!-- ============== end Metas Tags =============== -->
-
+        
         <!-- ============== Js Pace load =============== -->
         
-	    <script type="text/javascript" src="{{ asset('js/pace.min.js') }}"></script>
-	    <script type="text/javascript" src="{{ asset('js/tray_functions.js') }}"></script>
+	    <!-- <script type="text/javascript" src="{{ asset('js/pace.min.js') }}"></script> -->
+        <script type="text/javascript" src="{{ asset('js/tray_functions.js') }}"></script>
+        
         <!-- ============== end Js Pace load =============== -->
-
+        
         <!-- ============== Styles =============== -->
+        <link rel="icon" type="image/png" href="{{ asset(settings.favicon) }}" />
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,700,800" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ asset('css/others/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/others/owl.carousel.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/jquery.multilevelpushmenu.css') }}">
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         
         <!-- ============== end Styles =============== -->
@@ -127,10 +127,16 @@
         <script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/stickyfill.min.js') }}"></script>
         <script defer type="text/javascript" src="{{ asset('js/script.js') }}"></script>
-        <script src="{{ asset('js/jquery.multilevelpushmenu.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/helium.js') }}"></script>
         <script defer type="text/javascript" src="{{ asset('js/newiscool.js') }}"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
         <script src="//platform-api.sharethis.com/js/sharethis.js#property=5c3fca92058f100011a5a7ce&product=inline-share-buttons"></script>
+        <script type="text/javascript">
+            window.addEventListener('load', function(){
+                
+                helium.init();
+        
+            }, false);
+        </script>
     </body>
 </html>

@@ -146,170 +146,160 @@ table p {
   max-width: 1140px;
   width: calc(100% - 30px); }
 
-/* line 1, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
-.banners-extras {
-  background: #ef4d88; }
-  /* line 3, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
-  .banners-extras ul.info-list.flex_width-v {
-    padding: 25px 0;
-    display: flex;
-    justify-content: center;
-    width: 100%; }
-    /* line 8, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
-    .banners-extras ul.info-list.flex_width-v .info-list__item {
-      display: flex; }
-      /* line 10, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
-      .banners-extras ul.info-list.flex_width-v .info-list__item span {
-        width: 100%;
-        color: #fff;
-        font-size: 16px;
-        margin: 5px 15px; }
-        /* line 15, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
-        .banners-extras ul.info-list.flex_width-v .info-list__item span a {
-          color: #000;
-          padding: 10px;
-          background: #fff;
-          color: #ef4d88;
-          display: flex;
-          align-items: center; }
+/* line 2, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+.banners-extras ul.info-list.flex_width-v {
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+  /* line 7, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+  .banners-extras ul.info-list.flex_width-v .info-list__item {
+    display: flex; }
+    /* line 9, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+    .banners-extras ul.info-list.flex_width-v .info-list__item span {
+      width: 100%;
+      color: #E70D91;
+      font-size: 16px;
+      margin: 5px 15px; }
+      /* line 14, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+      .banners-extras ul.info-list.flex_width-v .info-list__item span a {
+        color: #000;
+        padding: 10px;
+        background: #fff;
+        color: #E70D91;
+        display: flex;
+        align-items: center; }
 
-/* line 27, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+/* line 26, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
 .info-lane {
   align-items: center;
   display: flex;
-  height: 60px;
+  height: 35px;
   justify-content: space-between;
   margin-top: 0;
   transition: all 150ms ease-in-out;
-  text-transform: uppercase;
-  background: #ef4d88; }
+  text-transform: uppercase; }
   @media (max-width: 992px) {
-    /* line 27, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+    /* line 26, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
     .info-lane {
       height: 75px; } }
-  /* line 40, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+  /* line 37, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
   .info-lane .banner-ebit_top {
     display: flex;
     align-items: center;
     justify-content: space-between; }
   @media (max-width: 992px) {
-    /* line 45, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+    /* line 42, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
     .info-lane .flex_width-v {
       flex: 0 0 20%; } }
   @media (max-width: 992px) {
-    /* line 50, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+    /* line 47, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
     .info-lane .flex_width-c {
       flex: 0 0 65%;
       text-align: center; } }
-  /* line 56, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+  /* line 53, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
   .info-lane ul {
     display: flex;
     justify-content: space-between; }
-    /* line 60, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
-    .info-lane ul li span {
-      color: #fff; }
-      /* line 62, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
-      .info-lane ul li span a {
-        color: #000;
-        padding: 10px;
-        background: #fff;
-        color: #ef4d88;
-        display: flex;
-        align-items: center; }
-        @media (max-width: 992px) {
-          /* line 62, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
-          .info-lane ul li span a {
-            padding: 0;
-            color: #fff;
-            background: none;
-            text-decoration: underline; } }
-        /* line 75, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
-        .info-lane ul li span a svg {
-          margin: 0 5px; }
+    /* line 58, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+    .info-lane ul li span a {
+      padding: 10px;
+      color: #E70D91;
+      display: flex;
+      align-items: center; }
+      @media (max-width: 992px) {
+        /* line 58, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+        .info-lane ul li span a {
+          padding: 0;
+          color: #fff;
+          background: none;
+          text-decoration: underline; } }
+      /* line 69, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+      .info-lane ul li span a svg {
+        margin: 0 5px; }
 
-/* line 84, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+/* line 78, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
 .help {
   align-items: center;
   display: flex;
   flex: 0 0 auto; }
 
-/* line 90, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+/* line 84, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
 .help__desc {
   color: #959595;
   font-size: 14px;
   font-weight: 600; }
 
-/* line 96, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+/* line 90, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
 .help__link {
   color: #000;
   font-size: 14px;
   font-weight: 500;
   margin-left: 3px; }
   @media (max-width: 992px) {
-    /* line 96, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+    /* line 90, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
     .help__link {
       font-size: 11px; } }
 
-/* line 106, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+/* line 100, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
 p#demo {
   color: #E70D91;
   font-weight: 800;
   margin: 0; }
 
-/* line 112, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+/* line 106, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
 .help__icon {
   margin-right: 5px; }
 
-/* line 116, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+/* line 110, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
 .info-list {
   align-items: center;
   display: flex; }
 
-/* line 121, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+/* line 115, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
 .info-list__item {
   align-items: center; }
-  /* line 124, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+  /* line 118, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
   .info-list__item:last-child {
     margin-right: 0;
     display: flex;
-    align-items: center;
-    flex-direction: column; }
+    align-items: center; }
     @media (max-width: 992px) {
-      /* line 124, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+      /* line 118, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
       .info-list__item:last-child {
         flex-wrap: wrap;
         line-height: 15px; } }
 
-/* line 137, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+/* line 130, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
 .info-list__title,
 .info-list__desc {
   font-size: 13px;
   font-weight: 700; }
-  /* line 141, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+  /* line 134, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
   .info-list__title a,
   .info-list__desc a {
     color: #000; }
 
-/* line 146, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+/* line 139, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
 .info-list__title {
   align-items: center;
   display: inline-flex;
   margin: 0 5px;
   color: #000; }
 
-/* line 153, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+/* line 146, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
 .info-list__desc {
   color: #000;
   margin-left: 3px; }
 
-/* line 158, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+/* line 151, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
 .info-list__icon {
   fill: #E70D91;
   height: 18px;
   margin-right: 5px;
   width: 18px; }
 
-/* line 165, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
+/* line 158, src/assets/css/elements/header/top_bar/_top_bar_default.scss */
 .icon--question {
   fill: #E70D91;
   height: 15px;
@@ -8474,64 +8464,64 @@ button {
   overflow: hidden; }
   /* line 709, src/assets/css/_default.scss */
   .banners-extras__center .banners-extras__item {
-    flex: 0 0 100%; }
+    flex: 0 0 30%; }
 
-/* line 715, src/assets/css/_default.scss */
+/* line 714, src/assets/css/_default.scss */
 .owl-theme .owl-controls {
   margin: 0; }
 
 @media (min-width: 1200px) {
-  /* line 719, src/assets/css/_default.scss */
+  /* line 718, src/assets/css/_default.scss */
   .products-categorys {
     padding-left: 20px; } }
 
-/* line 726, src/assets/css/_default.scss */
+/* line 725, src/assets/css/_default.scss */
 main {
   min-height: 80vh;
   padding-top: 160px;
   position: relative; }
   @media (max-width: 992px) {
-    /* line 726, src/assets/css/_default.scss */
+    /* line 725, src/assets/css/_default.scss */
     main {
       padding-top: 30px; } }
 
 @media (min-width: 1200px) {
-  /* line 738, src/assets/css/_default.scss */
+  /* line 737, src/assets/css/_default.scss */
   body.moving .info-lane {
-    margin-top: -60px; }
-  /* line 743, src/assets/css/_default.scss */
+    margin-top: -36px; }
+  /* line 741, src/assets/css/_default.scss */
   body.moving #nav_bar {
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2); }
-  /* line 749, src/assets/css/_default.scss */
+  /* line 747, src/assets/css/_default.scss */
   body.moving--down #nav_bar {
     margin-top: -59px; } }
 
-/* line 755, src/assets/css/_default.scss */
+/* line 753, src/assets/css/_default.scss */
 .page-login main {
   min-height: auto; }
 
-/* line 759, src/assets/css/_default.scss */
+/* line 757, src/assets/css/_default.scss */
 .central-breadcrumb {
   display: none; }
 
-/* line 764, src/assets/css/_default.scss */
+/* line 762, src/assets/css/_default.scss */
 .movie__one {
   margin-top: 25px;
   padding: 20px 0 0; }
-  /* line 767, src/assets/css/_default.scss */
+  /* line 765, src/assets/css/_default.scss */
   .movie__one .title-showcase {
     text-align: left;
     margin-top: 0; }
     @media (min-width: 992px) {
-      /* line 767, src/assets/css/_default.scss */
+      /* line 765, src/assets/css/_default.scss */
       .movie__one .title-showcase {
         margin: 15px 0; } }
-  /* line 774, src/assets/css/_default.scss */
+  /* line 772, src/assets/css/_default.scss */
   .movie__one .title-showcase-sub {
     margin-bottom: 15px;
     font-size: 15px;
     font-weight: 100; }
-  /* line 782, src/assets/css/_default.scss */
+  /* line 780, src/assets/css/_default.scss */
   .movie__one .movie__container {
     width: 100%;
     max-width: 1170px;
@@ -8539,19 +8529,19 @@ main {
     display: flex;
     align-items: stretch; }
     @media (max-width: 640px) {
-      /* line 782, src/assets/css/_default.scss */
+      /* line 780, src/assets/css/_default.scss */
       .movie__one .movie__container {
         padding: 0 15px; } }
     @media (max-width: 991px) {
-      /* line 782, src/assets/css/_default.scss */
+      /* line 780, src/assets/css/_default.scss */
       .movie__one .movie__container {
         flex-wrap: wrap; } }
-  /* line 797, src/assets/css/_default.scss */
+  /* line 795, src/assets/css/_default.scss */
   .movie__one .movie__item {
     border-radius: 3px;
     overflow: hidden;
     position: relative; }
-    /* line 801, src/assets/css/_default.scss */
+    /* line 799, src/assets/css/_default.scss */
     .movie__one .movie__item iframe {
       width: 100%;
       height: 321px;
@@ -8559,7 +8549,7 @@ main {
       left: 0;
       top: 0;
       position: relative; }
-    /* line 810, src/assets/css/_default.scss */
+    /* line 808, src/assets/css/_default.scss */
     .movie__one .movie__item svg {
       width: 70px;
       height: 70px;
@@ -8569,7 +8559,7 @@ main {
       top: 50%;
       transform: translate(-50%, -50%);
       z-index: 11; }
-    /* line 820, src/assets/css/_default.scss */
+    /* line 818, src/assets/css/_default.scss */
     .movie__one .movie__item .btn-modal-movie {
       position: absolute;
       top: 0;
@@ -8580,7 +8570,7 @@ main {
       width: 100%;
       cursor: pointer;
       max-height: 320px; }
-      /* line 830, src/assets/css/_default.scss */
+      /* line 828, src/assets/css/_default.scss */
       .movie__one .movie__item .btn-modal-movie:before {
         cursor: pointer;
         content: '';
@@ -8593,30 +8583,30 @@ main {
         right: 0;
         height: 320px;
         transform: translateY(-50%); }
-  /* line 846, src/assets/css/_default.scss */
+  /* line 844, src/assets/css/_default.scss */
   .movie__one .modal_item-save {
     display: none; }
-  /* line 850, src/assets/css/_default.scss */
+  /* line 848, src/assets/css/_default.scss */
   .movie__one .modal-dialog {
     width: 100%;
     max-width: 720px; }
-  /* line 854, src/assets/css/_default.scss */
+  /* line 852, src/assets/css/_default.scss */
   .movie__one .modal-content {
     background: none;
     box-shadow: none;
     border: none;
     position: relative; }
     @media (max-width: 992px) {
-      /* line 854, src/assets/css/_default.scss */
+      /* line 852, src/assets/css/_default.scss */
       .movie__one .modal-content {
         transform: translateY(-50%); } }
-    /* line 864, src/assets/css/_default.scss */
+    /* line 862, src/assets/css/_default.scss */
     .movie__one .modal-content h4 {
       position: absolute;
       left: 10px;
       top: 10px;
       display: none; }
-    /* line 870, src/assets/css/_default.scss */
+    /* line 868, src/assets/css/_default.scss */
     .movie__one .modal-content .close {
       position: absolute;
       left: 50%;
@@ -8628,148 +8618,148 @@ main {
       height: 35px;
       opacity: 0.5;
       transform: translateX(-50%); }
-  /* line 883, src/assets/css/_default.scss */
+  /* line 881, src/assets/css/_default.scss */
   .movie__one .modal-header {
     position: relative;
     z-index: 1;
     border: none; }
-  /* line 888, src/assets/css/_default.scss */
+  /* line 886, src/assets/css/_default.scss */
   .movie__one .modal-body {
     height: 335px;
     position: relative;
     z-index: 0; }
-    /* line 892, src/assets/css/_default.scss */
+    /* line 890, src/assets/css/_default.scss */
     .movie__one .modal-body iframe {
       width: 100%;
       height: 100%; }
-  /* line 898, src/assets/css/_default.scss */
+  /* line 896, src/assets/css/_default.scss */
   .movie__one .movie__item,
   .movie__one .movie__product {
     width: 50%; }
     @media (max-width: 991px) {
-      /* line 898, src/assets/css/_default.scss */
+      /* line 896, src/assets/css/_default.scss */
       .movie__one .movie__item,
       .movie__one .movie__product {
         width: 100%;
         min-height: 280px;
         margin: 25px 0 0; } }
-  /* line 910, src/assets/css/_default.scss */
+  /* line 908, src/assets/css/_default.scss */
   .movie__one .movie__product .showcase-list {
     padding: 0; }
     @media (min-width: 992px) {
-      /* line 910, src/assets/css/_default.scss */
+      /* line 908, src/assets/css/_default.scss */
       .movie__one .movie__product .showcase-list {
         padding: 0 25px; } }
-    /* line 917, src/assets/css/_default.scss */
+    /* line 915, src/assets/css/_default.scss */
     .movie__one .movie__product .showcase-list::-webkit-scrollbar {
       height: 5px;
       width: 5px; }
-    /* line 923, src/assets/css/_default.scss */
+    /* line 921, src/assets/css/_default.scss */
     .movie__one .movie__product .showcase-list::-webkit-scrollbar-track {
       background-color: #ebebeb;
       border-radius: 30px; }
-    /* line 928, src/assets/css/_default.scss */
+    /* line 926, src/assets/css/_default.scss */
     .movie__one .movie__product .showcase-list::-webkit-scrollbar-thumb {
       background-color: #222;
       border-radius: 30px; }
-  /* line 936, src/assets/css/_default.scss */
+  /* line 934, src/assets/css/_default.scss */
   .movie__one .movie__product .showcase-column .showcase__installment {
     height: auto; }
-  /* line 941, src/assets/css/_default.scss */
+  /* line 939, src/assets/css/_default.scss */
   .movie__one .movie__product .showcase-column .left {
     display: flex;
     align-items: center; }
-  /* line 946, src/assets/css/_default.scss */
+  /* line 944, src/assets/css/_default.scss */
   .movie__one .movie__product .showcase-column img {
     min-height: 100px;
     min-width: 100px;
     max-width: 100px; }
     @media (max-width: 500px) {
-      /* line 946, src/assets/css/_default.scss */
+      /* line 944, src/assets/css/_default.scss */
       .movie__one .movie__product .showcase-column img {
         min-height: 70px;
         min-width: 70px;
         max-width: 70px; } }
-  /* line 957, src/assets/css/_default.scss */
+  /* line 955, src/assets/css/_default.scss */
   .movie__one .movie__product .showcase-column .border {
     display: flex;
     align-items: stretch;
     min-height: 100px;
     margin-bottom: 40px; }
     @media (max-width: 500px) {
-      /* line 957, src/assets/css/_default.scss */
+      /* line 955, src/assets/css/_default.scss */
       .movie__one .movie__product .showcase-column .border {
         border-bottom: 1px solid #eee;
         align-items: flex-start;
         min-height: auto;
         padding: 20px 0; } }
-  /* line 972, src/assets/css/_default.scss */
+  /* line 970, src/assets/css/_default.scss */
   .movie__one .movie__product .showcase-column .right {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%; }
     @media (max-width: 500px) {
-      /* line 972, src/assets/css/_default.scss */
+      /* line 970, src/assets/css/_default.scss */
       .movie__one .movie__product .showcase-column .right {
         padding: 0 10px 0 0;
         flex-wrap: wrap; }
-        /* line 980, src/assets/css/_default.scss */
+        /* line 978, src/assets/css/_default.scss */
         .movie__one .movie__product .showcase-column .right > * {
           width: 100% !important;
           max-width: 100% !important; } }
-  /* line 987, src/assets/css/_default.scss */
+  /* line 985, src/assets/css/_default.scss */
   .movie__one .movie__product .showcase-column .product-name {
     margin: 0 0 10px 0;
     font-size: 13px !important;
     line-height: 13px !important; }
-    /* line 991, src/assets/css/_default.scss */
+    /* line 989, src/assets/css/_default.scss */
     .movie__one .movie__product .showcase-column .product-name a {
       color: #252323;
       font-size: 13px !important;
       line-height: 13px !important;
       font-weight: 500;
       letter-spacing: -0.9px; }
-  /* line 1000, src/assets/css/_default.scss */
+  /* line 998, src/assets/css/_default.scss */
   .movie__one .movie__product .showcase-column .short {
     color: #7d7d7d;
     font-size: 12px;
     font-weight: 300; }
-  /* line 1006, src/assets/css/_default.scss */
+  /* line 1004, src/assets/css/_default.scss */
   .movie__one .movie__product .showcase-column .content {
     padding: 0 10px;
     width: 100%;
     max-width: 245px; }
-  /* line 1014, src/assets/css/_default.scss */
+  /* line 1012, src/assets/css/_default.scss */
   .movie__one .movie__product .showcase-column .product-price .price-item {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     margin: 5px 0; }
-  /* line 1021, src/assets/css/_default.scss */
+  /* line 1019, src/assets/css/_default.scss */
   .movie__one .movie__product .showcase-column .product-price .preco-de {
     font-size: 13px;
     color: #7d7d7d;
     text-decoration: line-through;
     margin-right: 10px; }
-  /* line 1027, src/assets/css/_default.scss */
+  /* line 1025, src/assets/css/_default.scss */
   .movie__one .movie__product .showcase-column .product-price .preco-por {
     color: #E70D91;
     font-size: 15px; }
-    /* line 1030, src/assets/css/_default.scss */
+    /* line 1028, src/assets/css/_default.scss */
     .movie__one .movie__product .showcase-column .product-price .preco-por strong {
       font-weight: 500 !important; }
-  /* line 1035, src/assets/css/_default.scss */
+  /* line 1033, src/assets/css/_default.scss */
   .movie__one .movie__product .showcase-column .product-price .parcelamento {
     width: 100%; }
-    /* line 1037, src/assets/css/_default.scss */
+    /* line 1035, src/assets/css/_default.scss */
     .movie__one .movie__product .showcase-column .product-price .parcelamento br {
       display: none; }
   @media (max-width: 500px) {
-    /* line 1043, src/assets/css/_default.scss */
+    /* line 1041, src/assets/css/_default.scss */
     .movie__one .movie__product .showcase-column .action-buttons {
       margin-top: 15px; } }
-  /* line 1047, src/assets/css/_default.scss */
+  /* line 1045, src/assets/css/_default.scss */
   .movie__one .movie__product .showcase-column .action-buttons a.addCart,
   .movie__one .movie__product .showcase-column .action-buttons button.addCart {
     font-size: 12px;
@@ -8785,13 +8775,13 @@ main {
     border-radius: 3px;
     box-shadow: 0.307px 1.307px 8px 0px rgba(0, 0, 0, 0.25); }
     @media (max-width: 500px) {
-      /* line 1047, src/assets/css/_default.scss */
+      /* line 1045, src/assets/css/_default.scss */
       .movie__one .movie__product .showcase-column .action-buttons a.addCart,
       .movie__one .movie__product .showcase-column .action-buttons button.addCart {
         width: 100%;
         float: right;
         margin-right: 15px; } }
-  /* line 1068, src/assets/css/_default.scss */
+  /* line 1066, src/assets/css/_default.scss */
   .movie__one .movie__product .showcase-column .action-buttons a.details {
     font-size: 11px;
     display: inline-block;
@@ -8801,42 +8791,42 @@ main {
     text-align: center;
     padding: 5px 0; }
 
-/* line 1086, src/assets/css/_default.scss */
+/* line 1084, src/assets/css/_default.scss */
 .page-login button {
   background: #000;
   width: 100%; }
 
-/* line 1099, src/assets/css/_default.scss */
+/* line 1097, src/assets/css/_default.scss */
 .showcase ul {
   overflow: hidden; }
 
-/* line 1102, src/assets/css/_default.scss */
+/* line 1100, src/assets/css/_default.scss */
 .showcase ul li {
   flex: 0 0 25%; }
   @media (max-width: 768px) {
-    /* line 1102, src/assets/css/_default.scss */
+    /* line 1100, src/assets/css/_default.scss */
     .showcase ul li {
       flex: 0 0 50%; } }
 
-/* line 1111, src/assets/css/_default.scss */
+/* line 1109, src/assets/css/_default.scss */
 section.facebook-recomenda {
   padding: 60px 0; }
-  /* line 1113, src/assets/css/_default.scss */
+  /* line 1111, src/assets/css/_default.scss */
   section.facebook-recomenda h2 {
     text-align: center;
     margin: 0 0 20px;
     font-size: 30px; }
-  /* line 1118, src/assets/css/_default.scss */
+  /* line 1116, src/assets/css/_default.scss */
   section.facebook-recomenda .facebook-recomenda_list {
     max-width: 1140px;
     left: 50%;
     position: relative;
     transform: translateX(-50%);
     padding: 0 15px; }
-    /* line 1124, src/assets/css/_default.scss */
+    /* line 1122, src/assets/css/_default.scss */
     section.facebook-recomenda .facebook-recomenda_list .facebook-recomenda_list_item {
       max-width: 350px; }
-      /* line 1126, src/assets/css/_default.scss */
+      /* line 1124, src/assets/css/_default.scss */
       section.facebook-recomenda .facebook-recomenda_list .facebook-recomenda_list_item iframe.facebookIframe {
         max-height: 150px;
         border: solid #dddfe2 !important;
@@ -8845,11 +8835,11 @@ section.facebook-recomenda {
         width: 100%;
         pointer-events: none; }
 
-/* line 1138, src/assets/css/_default.scss */
+/* line 1136, src/assets/css/_default.scss */
 img.scaledImageFitWidth.img {
   display: none; }
 
-/* line 1143, src/assets/css/_default.scss */
+/* line 1141, src/assets/css/_default.scss */
 .row.no-gutter {
   margin-left: 0;
   margin-right: 0;
@@ -8858,28 +8848,28 @@ img.scaledImageFitWidth.img {
   left: 50%;
   transform: translateX(-50%); }
 
-/* line 1152, src/assets/css/_default.scss */
+/* line 1150, src/assets/css/_default.scss */
 .row.no-gutter [class*='col-']:not(:first-child),
 .row.no-gutter [class*='col-']:not(:last-child) {
   padding-right: 0;
   padding-left: 0; }
 
-/* line 1161, src/assets/css/_default.scss */
+/* line 1159, src/assets/css/_default.scss */
 body {
   padding: 0;
   line-height: normal; }
 
-/* line 1166, src/assets/css/_default.scss */
+/* line 1164, src/assets/css/_default.scss */
 .img-featured-container {
   overflow: hidden;
   position: relative;
   margin: 15px; }
 
-/* line 1172, src/assets/css/_default.scss */
+/* line 1170, src/assets/css/_default.scss */
 .img-featured-container img {
   width: 100%; }
 
-/* line 1176, src/assets/css/_default.scss */
+/* line 1174, src/assets/css/_default.scss */
 .img-featured-container .img-backdrop {
   background: linear-gradient(135deg, rgba(38, 163, 255, 0.85), rgba(83, 201, 179, 0.85));
   margin: 0;
@@ -8891,11 +8881,11 @@ body {
   opacity: 0;
   transition: all 0.3s ease; }
 
-/* line 1188, src/assets/css/_default.scss */
+/* line 1186, src/assets/css/_default.scss */
 .img-featured-container:hover > .img-backdrop {
   opacity: 1; }
 
-/* line 1193, src/assets/css/_default.scss */
+/* line 1191, src/assets/css/_default.scss */
 .img-featured-container .description-container {
   color: #fff;
   font-size: 16px;
@@ -8913,30 +8903,30 @@ body {
   opacity: 0;
   transition: all .2s ease; }
 
-/* line 1211, src/assets/css/_default.scss */
+/* line 1209, src/assets/css/_default.scss */
 .img-featured-container .description-container .fa-instagram {
   font-size: 40px; }
 
-/* line 1215, src/assets/css/_default.scss */
+/* line 1213, src/assets/css/_default.scss */
 .img-featured-container .description-container p {
   font-weight: 300;
   margin-bottom: 0; }
 
-/* line 1220, src/assets/css/_default.scss */
+/* line 1218, src/assets/css/_default.scss */
 .img-featured-container:hover .description-container {
   opacity: 1; }
 
-/* line 1224, src/assets/css/_default.scss */
+/* line 1222, src/assets/css/_default.scss */
 .img-featured-container .description-container .caption {
   display: none;
   margin-bottom: 10px; }
 
-/* line 1229, src/assets/css/_default.scss */
+/* line 1227, src/assets/css/_default.scss */
 .img-featured-container .description-container .likes,
 .img-featured-container .description-container .comments {
   margin: 0 5px; }
 
-/* line 1235, src/assets/css/_default.scss */
+/* line 1233, src/assets/css/_default.scss */
 #btn-instafeed-load {
   color: #fff;
   background: #26a3ff;
@@ -8946,18 +8936,18 @@ body {
   border: none; }
 
 @media screen and (min-width: 768px) {
-  /* line 1246, src/assets/css/_default.scss */
+  /* line 1244, src/assets/css/_default.scss */
   .img-featured-container .description-container .caption {
     display: block; } }
 
-/* line 1255, src/assets/css/_default.scss */
+/* line 1253, src/assets/css/_default.scss */
 .page-amamos-vip main {
   padding: 50px 0; }
 
-/* line 1259, src/assets/css/_default.scss */
+/* line 1257, src/assets/css/_default.scss */
 .amamosvip-banner {
   padding: 30px 0; }
-  /* line 1261, src/assets/css/_default.scss */
+  /* line 1259, src/assets/css/_default.scss */
   .amamosvip-banner .amamosvip_header {
     display: flex;
     align-items: center;
@@ -8966,56 +8956,56 @@ body {
     left: 50%;
     justify-content: space-around;
     transform: translateX(-50%); }
-    /* line 1269, src/assets/css/_default.scss */
+    /* line 1267, src/assets/css/_default.scss */
     .amamosvip-banner .amamosvip_header .amamosvip_header_block-left {
       max-width: 50%;
       display: flex;
       flex-wrap: wrap; }
-      /* line 1273, src/assets/css/_default.scss */
+      /* line 1271, src/assets/css/_default.scss */
       .amamosvip-banner .amamosvip_header .amamosvip_header_block-left span, .amamosvip-banner .amamosvip_header .amamosvip_header_block-left h2 {
         color: #E70D91; }
-      /* line 1276, src/assets/css/_default.scss */
+      /* line 1274, src/assets/css/_default.scss */
       .amamosvip-banner .amamosvip_header .amamosvip_header_block-left span {
         font-size: 25px; }
         @media (max-width: 992px) {
-          /* line 1276, src/assets/css/_default.scss */
+          /* line 1274, src/assets/css/_default.scss */
           .amamosvip-banner .amamosvip_header .amamosvip_header_block-left span {
             width: 100%; } }
-      /* line 1282, src/assets/css/_default.scss */
+      /* line 1280, src/assets/css/_default.scss */
       .amamosvip-banner .amamosvip_header .amamosvip_header_block-left h2 {
         font-size: 45px;
         margin: 20px 0; }
-      /* line 1285, src/assets/css/_default.scss */
+      /* line 1283, src/assets/css/_default.scss */
       .amamosvip-banner .amamosvip_header .amamosvip_header_block-left p {
         font-size: 14px;
         margin: 0;
         width: 100%;
         color: #7f7f7f; }
-    /* line 1292, src/assets/css/_default.scss */
+    /* line 1290, src/assets/css/_default.scss */
     .amamosvip-banner .amamosvip_header .amamosvip_header_block-right {
       padding: 0;
       max-width: 30%;
       position: relative; }
       @media (max-width: 992px) {
-        /* line 1296, src/assets/css/_default.scss */
+        /* line 1294, src/assets/css/_default.scss */
         .amamosvip-banner .amamosvip_header .amamosvip_header_block-right img {
           display: none; } }
     @media (max-width: 992px) {
-      /* line 1261, src/assets/css/_default.scss */
+      /* line 1259, src/assets/css/_default.scss */
       .amamosvip-banner .amamosvip_header {
         flex-wrap: wrap; }
-        /* line 1304, src/assets/css/_default.scss */
+        /* line 1302, src/assets/css/_default.scss */
         .amamosvip-banner .amamosvip_header .amamosvip_header_block-left {
           max-width: 100%;
           text-align: center; }
-          /* line 1307, src/assets/css/_default.scss */
+          /* line 1305, src/assets/css/_default.scss */
           .amamosvip-banner .amamosvip_header .amamosvip_header_block-left h2 {
             font-size: 30px;
             margin: 15px 0; }
-          /* line 1311, src/assets/css/_default.scss */
+          /* line 1309, src/assets/css/_default.scss */
           .amamosvip-banner .amamosvip_header .amamosvip_header_block-left p {
             font-size: 15px; } }
-  /* line 1317, src/assets/css/_default.scss */
+  /* line 1315, src/assets/css/_default.scss */
   .amamosvip-banner .amamosvip_link {
     border: 2px solid #E70D91;
     width: 100%;
@@ -9029,23 +9019,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; }
-    /* line 1330, src/assets/css/_default.scss */
+    /* line 1328, src/assets/css/_default.scss */
     .amamosvip-banner .amamosvip_link:hover {
       background: #E70D91;
       color: #fff; }
     @media (max-width: 992px) {
-      /* line 1317, src/assets/css/_default.scss */
+      /* line 1315, src/assets/css/_default.scss */
       .amamosvip-banner .amamosvip_link {
         max-width: 100%; } }
   @media (max-width: 992px) {
-    /* line 1259, src/assets/css/_default.scss */
+    /* line 1257, src/assets/css/_default.scss */
     .amamosvip-banner {
       padding: 30px 15px; } }
 
-/* line 1343, src/assets/css/_default.scss */
+/* line 1341, src/assets/css/_default.scss */
 .amamosvip_page {
   line-height: normal; }
-  /* line 1345, src/assets/css/_default.scss */
+  /* line 1343, src/assets/css/_default.scss */
   .amamosvip_page .amamosvip_header {
     display: flex;
     align-items: center;
@@ -9053,43 +9043,43 @@ body {
     max-width: 1140px;
     left: 50%;
     transform: translateX(-50%); }
-    /* line 1352, src/assets/css/_default.scss */
+    /* line 1350, src/assets/css/_default.scss */
     .amamosvip_page .amamosvip_header .amamosvip_header_block-left {
       max-width: 39%; }
-      /* line 1354, src/assets/css/_default.scss */
+      /* line 1352, src/assets/css/_default.scss */
       .amamosvip_page .amamosvip_header .amamosvip_header_block-left span, .amamosvip_page .amamosvip_header .amamosvip_header_block-left h2 {
         color: #E70D91; }
-      /* line 1357, src/assets/css/_default.scss */
+      /* line 1355, src/assets/css/_default.scss */
       .amamosvip_page .amamosvip_header .amamosvip_header_block-left span {
         font-size: 25px; }
-      /* line 1358, src/assets/css/_default.scss */
+      /* line 1356, src/assets/css/_default.scss */
       .amamosvip_page .amamosvip_header .amamosvip_header_block-left h2 {
         font-size: 45px;
         margin: 20px 0; }
-      /* line 1359, src/assets/css/_default.scss */
+      /* line 1357, src/assets/css/_default.scss */
       .amamosvip_page .amamosvip_header .amamosvip_header_block-left p {
         font-size: 18px;
         margin: 0; }
-    /* line 1361, src/assets/css/_default.scss */
+    /* line 1359, src/assets/css/_default.scss */
     .amamosvip_page .amamosvip_header .amamosvip_header_block-right {
       padding: 30px; }
     @media (max-width: 992px) {
-      /* line 1345, src/assets/css/_default.scss */
+      /* line 1343, src/assets/css/_default.scss */
       .amamosvip_page .amamosvip_header {
         flex-wrap: wrap;
         padding: 0 15px; }
-        /* line 1367, src/assets/css/_default.scss */
+        /* line 1365, src/assets/css/_default.scss */
         .amamosvip_page .amamosvip_header .amamosvip_header_block-left {
           max-width: 100%;
           text-align: center; }
-          /* line 1370, src/assets/css/_default.scss */
+          /* line 1368, src/assets/css/_default.scss */
           .amamosvip_page .amamosvip_header .amamosvip_header_block-left h2 {
             font-size: 30px;
             margin: 15px 0; }
-          /* line 1374, src/assets/css/_default.scss */
+          /* line 1372, src/assets/css/_default.scss */
           .amamosvip_page .amamosvip_header .amamosvip_header_block-left p {
             font-size: 15px; } }
-  /* line 1382, src/assets/css/_default.scss */
+  /* line 1380, src/assets/css/_default.scss */
   .amamosvip_page .amamosvip_body_block {
     display: flex;
     flex-wrap: wrap;
@@ -9099,18 +9089,18 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 100%; }
-    /* line 1391, src/assets/css/_default.scss */
+    /* line 1389, src/assets/css/_default.scss */
     .amamosvip_page .amamosvip_body_block h2 {
       width: 100%;
       font-size: 30px;
       text-align: center;
       color: #E70D91; }
-    /* line 1397, src/assets/css/_default.scss */
+    /* line 1395, src/assets/css/_default.scss */
     .amamosvip_page .amamosvip_body_block .amamosvip_body-list {
       display: flex;
       align-items: center;
       justify-content: space-between; }
-      /* line 1401, src/assets/css/_default.scss */
+      /* line 1399, src/assets/css/_default.scss */
       .amamosvip_page .amamosvip_body_block .amamosvip_body-list .amamosvip_body_list-item {
         display: flex;
         flex-wrap: wrap;
@@ -9119,53 +9109,53 @@ body {
         padding: 0 50px;
         align-items: center;
         text-align: center; }
-        /* line 1409, src/assets/css/_default.scss */
+        /* line 1407, src/assets/css/_default.scss */
         .amamosvip_page .amamosvip_body_block .amamosvip_body-list .amamosvip_body_list-item svg {
           height: 70px;
           width: 70px;
           fill: #000;
           margin: 25px 0; }
-        /* line 1415, src/assets/css/_default.scss */
+        /* line 1413, src/assets/css/_default.scss */
         .amamosvip_page .amamosvip_body_block .amamosvip_body-list .amamosvip_body_list-item span {
           width: 100%; }
-        /* line 1418, src/assets/css/_default.scss */
+        /* line 1416, src/assets/css/_default.scss */
         .amamosvip_page .amamosvip_body_block .amamosvip_body-list .amamosvip_body_list-item .amamosvip_list-title {
           font-weight: 600;
           font-size: 15px;
           padding: 15px 0; }
-        /* line 1423, src/assets/css/_default.scss */
+        /* line 1421, src/assets/css/_default.scss */
         .amamosvip_page .amamosvip_body_block .amamosvip_body-list .amamosvip_body_list-item .amamosvip_list-desc {
           font-size: 12px; }
         @media (max-width: 992px) {
-          /* line 1401, src/assets/css/_default.scss */
+          /* line 1399, src/assets/css/_default.scss */
           .amamosvip_page .amamosvip_body_block .amamosvip_body-list .amamosvip_body_list-item {
             max-width: 100%;
             padding: 0; }
-            /* line 1429, src/assets/css/_default.scss */
+            /* line 1427, src/assets/css/_default.scss */
             .amamosvip_page .amamosvip_body_block .amamosvip_body-list .amamosvip_body_list-item .amamosvip_list-title {
               font-size: 14px; } }
     @media (max-width: 992px) {
-      /* line 1382, src/assets/css/_default.scss */
+      /* line 1380, src/assets/css/_default.scss */
       .amamosvip_page .amamosvip_body_block {
         padding: 0 15px; } }
-  /* line 1439, src/assets/css/_default.scss */
+  /* line 1437, src/assets/css/_default.scss */
   .amamosvip_page .amamosvip_body_block-help {
     margin: 45px 0;
     position: relative;
     max-width: 1140px;
     left: 50%;
     transform: translateX(-50%); }
-    /* line 1445, src/assets/css/_default.scss */
+    /* line 1443, src/assets/css/_default.scss */
     .amamosvip_page .amamosvip_body_block-help h2 {
       font-size: 30px;
       color: #E70D91;
       text-align: center; }
-    /* line 1450, src/assets/css/_default.scss */
+    /* line 1448, src/assets/css/_default.scss */
     .amamosvip_page .amamosvip_body_block-help .amamosvip_body-list {
       display: flex;
       align-items: center;
       justify-content: space-between; }
-      /* line 1454, src/assets/css/_default.scss */
+      /* line 1452, src/assets/css/_default.scss */
       .amamosvip_page .amamosvip_body_block-help .amamosvip_body-list .amamosvip_body_list-item {
         max-width: 25%;
         display: flex;
@@ -9174,42 +9164,42 @@ body {
         padding: 25px;
         height: 290px;
         align-items: flex-start; }
-        /* line 1462, src/assets/css/_default.scss */
+        /* line 1460, src/assets/css/_default.scss */
         .amamosvip_page .amamosvip_body_block-help .amamosvip_body-list .amamosvip_body_list-item .amamosvip_list-title {
           width: 100%;
           font-size: 18px;
           font-weight: 600;
           padding: 20px 0 0; }
-        /* line 1468, src/assets/css/_default.scss */
+        /* line 1466, src/assets/css/_default.scss */
         .amamosvip_page .amamosvip_body_block-help .amamosvip_body-list .amamosvip_body_list-item .amamosvip_list-desc {
           font-size: 13px;
           text-align: left;
           line-height: 20px;
           height: 90px; }
         @media (max-width: 992px) {
-          /* line 1454, src/assets/css/_default.scss */
+          /* line 1452, src/assets/css/_default.scss */
           .amamosvip_page .amamosvip_body_block-help .amamosvip_body-list .amamosvip_body_list-item {
             max-width: 100%;
             padding: 0 5px;
             height: 350px; }
-            /* line 1478, src/assets/css/_default.scss */
+            /* line 1476, src/assets/css/_default.scss */
             .amamosvip_page .amamosvip_body_block-help .amamosvip_body-list .amamosvip_body_list-item .amamosvip_list-title {
               height: 61px; }
-            /* line 1481, src/assets/css/_default.scss */
+            /* line 1479, src/assets/css/_default.scss */
             .amamosvip_page .amamosvip_body_block-help .amamosvip_body-list .amamosvip_body_list-item .amamosvip_list-desc {
               height: 180px; } }
     @media (max-width: 992px) {
-      /* line 1439, src/assets/css/_default.scss */
+      /* line 1437, src/assets/css/_default.scss */
       .amamosvip_page .amamosvip_body_block-help {
         padding: 0 15px; } }
-  /* line 1491, src/assets/css/_default.scss */
+  /* line 1489, src/assets/css/_default.scss */
   .amamosvip_page .amamosvip_newsleter {
     display: flex;
     align-items: center;
     background: #f0f0f0;
     position: relative;
     margin-top: 100px; }
-    /* line 1497, src/assets/css/_default.scss */
+    /* line 1495, src/assets/css/_default.scss */
     .amamosvip_page .amamosvip_newsleter .amamosvip_newsletter-block {
       max-height: 570px;
       height: 570px;
@@ -9220,7 +9210,7 @@ body {
       display: flex;
       position: relative;
       align-items: center; }
-      /* line 1507, src/assets/css/_default.scss */
+      /* line 1505, src/assets/css/_default.scss */
       .amamosvip_page .amamosvip_newsleter .amamosvip_newsletter-block .amamosvip_newsletter-text {
         max-width: 100%;
         width: 100%;
@@ -9228,41 +9218,41 @@ body {
         justify-content: center;
         display: flex;
         flex-wrap: wrap; }
-        /* line 1514, src/assets/css/_default.scss */
+        /* line 1512, src/assets/css/_default.scss */
         .amamosvip_page .amamosvip_newsleter .amamosvip_newsletter-block .amamosvip_newsletter-text h2 {
           font-size: 35px; }
-        /* line 1515, src/assets/css/_default.scss */
+        /* line 1513, src/assets/css/_default.scss */
         .amamosvip_page .amamosvip_newsleter .amamosvip_newsletter-block .amamosvip_newsletter-text span {
           font-size: 20px;
           width: 100%; }
-        /* line 1516, src/assets/css/_default.scss */
+        /* line 1514, src/assets/css/_default.scss */
         .amamosvip_page .amamosvip_newsleter .amamosvip_newsletter-block .amamosvip_newsletter-text .amamosvip_link {
           display: block;
           max-width: 25%;
           margin-top: 25px; }
-      /* line 1523, src/assets/css/_default.scss */
+      /* line 1521, src/assets/css/_default.scss */
       .amamosvip_page .amamosvip_newsleter .amamosvip_newsletter-block .amamosvip_newsletter-img {
         position: absolute;
         right: 10%;
         bottom: 0; }
       @media (max-width: 992px) {
-        /* line 1497, src/assets/css/_default.scss */
+        /* line 1495, src/assets/css/_default.scss */
         .amamosvip_page .amamosvip_newsleter .amamosvip_newsletter-block {
           overflow: hidden;
           flex-wrap: wrap;
           height: 250px; }
-          /* line 1532, src/assets/css/_default.scss */
+          /* line 1530, src/assets/css/_default.scss */
           .amamosvip_page .amamosvip_newsleter .amamosvip_newsletter-block .amamosvip_newsletter-text {
             flex-wrap: wrap;
             padding: 0 15px; }
-            /* line 1535, src/assets/css/_default.scss */
+            /* line 1533, src/assets/css/_default.scss */
             .amamosvip_page .amamosvip_newsleter .amamosvip_newsletter-block .amamosvip_newsletter-text h2 {
               font-size: 30px;
               margin: 0; }
-            /* line 1539, src/assets/css/_default.scss */
+            /* line 1537, src/assets/css/_default.scss */
             .amamosvip_page .amamosvip_newsleter .amamosvip_newsletter-block .amamosvip_newsletter-text .amamosvip_link {
               max-width: 100%; }
-          /* line 1543, src/assets/css/_default.scss */
+          /* line 1541, src/assets/css/_default.scss */
           .amamosvip_page .amamosvip_newsleter .amamosvip_newsletter-block .amamosvip_newsletter-img {
             position: relative;
             left: 50%;
@@ -9270,14 +9260,14 @@ body {
             width: 100%;
             transform: translateX(-50%);
             display: none; }
-            /* line 1550, src/assets/css/_default.scss */
+            /* line 1548, src/assets/css/_default.scss */
             .amamosvip_page .amamosvip_newsleter .amamosvip_newsletter-block .amamosvip_newsletter-img img {
               position: relative;
               left: 50%;
               bottom: 0;
               width: 100%;
               transform: translateX(-50%); } }
-  /* line 1561, src/assets/css/_default.scss */
+  /* line 1559, src/assets/css/_default.scss */
   .amamosvip_page .amamosvip_footer {
     max-width: 1140px;
     left: 50%;
@@ -9287,10 +9277,10 @@ body {
     font-size: 12px;
     padding-right: 40px; }
     @media (max-width: 992px) {
-      /* line 1561, src/assets/css/_default.scss */
+      /* line 1559, src/assets/css/_default.scss */
       .amamosvip_page .amamosvip_footer {
         padding: 15px; } }
-  /* line 1573, src/assets/css/_default.scss */
+  /* line 1571, src/assets/css/_default.scss */
   .amamosvip_page .amamosvip_link {
     padding: 12px;
     border: 2px solid #E70D91;
@@ -9299,11 +9289,11 @@ body {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 2px; }
-    /* line 1581, src/assets/css/_default.scss */
+    /* line 1579, src/assets/css/_default.scss */
     .amamosvip_page .amamosvip_link:hover {
       background: #E70D91;
       color: #fff; }
-  /* line 1586, src/assets/css/_default.scss */
+  /* line 1584, src/assets/css/_default.scss */
   .amamosvip_page .blankspace {
     height: 61px; }
 
@@ -9317,18 +9307,18 @@ body {
   40%, 60% {
     transform: translate3d(4px, 0, 0); } }
 
-/* line 1609, src/assets/css/_default.scss */
+/* line 1607, src/assets/css/_default.scss */
 .amamosvip_body_list-item:hover svg {
   animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px; }
 
-/* line 1617, src/assets/css/_default.scss */
+/* line 1615, src/assets/css/_default.scss */
 section.banners-extras_promo {
   background: #232222;
   padding: 30px 0; }
-  /* line 1620, src/assets/css/_default.scss */
+  /* line 1618, src/assets/css/_default.scss */
   section.banners-extras_promo .banners-extras__center {
     display: flex;
     flex-wrap: wrap;
@@ -9340,17 +9330,17 @@ section.banners-extras_promo {
     left: 50%;
     position: relative;
     transform: translateX(-50%); }
-    /* line 1631, src/assets/css/_default.scss */
+    /* line 1629, src/assets/css/_default.scss */
     section.banners-extras_promo .banners-extras__center .banners-extras__item {
       margin: 0;
       flex: 0 0 30%;
       overflow: hidden;
       display: flex;
       flex-wrap: wrap; }
-      /* line 1638, src/assets/css/_default.scss */
+      /* line 1636, src/assets/css/_default.scss */
       section.banners-extras_promo .banners-extras__center .banners-extras__item img:hover {
         transform: scale(1); }
-      /* line 1642, src/assets/css/_default.scss */
+      /* line 1640, src/assets/css/_default.scss */
       section.banners-extras_promo .banners-extras__center .banners-extras__item .span-title {
         font-size: 20px;
         color: #fff;
@@ -9358,67 +9348,67 @@ section.banners-extras_promo {
         margin: 15px 0;
         text-transform: uppercase;
         width: 100%; }
-      /* line 1650, src/assets/css/_default.scss */
+      /* line 1648, src/assets/css/_default.scss */
       section.banners-extras_promo .banners-extras__center .banners-extras__item .span-desc {
         color: #fff;
         font-size: 14px;
         line-height: normal; }
   @media (max-width: 992px) {
-    /* line 1617, src/assets/css/_default.scss */
+    /* line 1615, src/assets/css/_default.scss */
     section.banners-extras_promo {
       padding: 15px; } }
 
-/* line 1662, src/assets/css/_default.scss */
+/* line 1660, src/assets/css/_default.scss */
 .brinde_produto {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   margin: 10px 0; }
-  /* line 1667, src/assets/css/_default.scss */
+  /* line 1665, src/assets/css/_default.scss */
   .brinde_produto h3 {
     margin: 0;
     font-size: 14px;
     padding: 0; }
-  /* line 1672, src/assets/css/_default.scss */
+  /* line 1670, src/assets/css/_default.scss */
   .brinde_produto .brinde_lista {
     max-width: 80% !important;
     width: 100% !important; }
-    /* line 1675, src/assets/css/_default.scss */
+    /* line 1673, src/assets/css/_default.scss */
     .brinde_produto .brinde_lista img {
       border: 1px solid #dfdfdf !important; }
 
-/* line 1681, src/assets/css/_default.scss */
+/* line 1679, src/assets/css/_default.scss */
 div#modal-form {
   display: none !important; }
 
-/* line 1684, src/assets/css/_default.scss */
+/* line 1682, src/assets/css/_default.scss */
 .product a:after {
   display: none; }
 
-/* line 1687, src/assets/css/_default.scss */
+/* line 1685, src/assets/css/_default.scss */
 .modal-dialog.modal-dialog-center {
   display: none; }
 
-/* line 1690, src/assets/css/_default.scss */
+/* line 1688, src/assets/css/_default.scss */
 span.txt-avista {
   display: none; }
 
-/* line 1693, src/assets/css/_default.scss */
+/* line 1691, src/assets/css/_default.scss */
 .modal-backdrop.fade.in {
   display: none; }
 
-/* line 1697, src/assets/css/_default.scss */
+/* line 1695, src/assets/css/_default.scss */
 a#link_5 {
   pointer-events: none; }
-  /* line 1699, src/assets/css/_default.scss */
+  /* line 1697, src/assets/css/_default.scss */
   a#link_5:after {
     display: none; }
 
-/* line 1704, src/assets/css/_default.scss */
+/* line 1702, src/assets/css/_default.scss */
 h3 {
   font-weight: 100px; }
 
-/* line 1709, src/assets/css/_default.scss */
+/* line 1707, src/assets/css/_default.scss */
 html.page-amamos-vip .main {
   width: 100%;
   max-width: 100%;
